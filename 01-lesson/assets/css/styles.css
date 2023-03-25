@@ -1,0 +1,70 @@
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  top: 0;
+  left: 1;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 1rem;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px 64px;
+  margin-top: 1rem;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.rounded-img {
+  width: 15%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+
+.contacts {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.col-special {
+  margin: 0;
+  padding: 0;
+}
+
+.col-special li {
+  display: inline-block;
+  width: 35%;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.col-special li:before {
+  content: '-';
+  padding: 3px;
+  margin-right: 1px;
+  color: black;
+  background-color: white;
+  display: inline-block;
+}
+
+.spacing {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
