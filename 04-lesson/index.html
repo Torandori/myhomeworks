@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="assests/css/styles.css"
+  <link rel="stylesheet" href="assests/css/styles.css">
 </head>
 <body>
-  <form action="#" method="post" name="short-form">
+  <form id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;" method="post" target="_blank" enctype="multipart/form-data">
     <div>
       <label for="flname">Повне ім'я</label>
       <input type="text" id="flname" name="name" placeholder="Василь Василюк" required>
@@ -19,22 +19,21 @@
     </div>
     <div>
       <label for="pass">Пароль</label>
-      <input type="password" id="pass" name="password" minlength="8 required">
+      <input type="password" id="pass" name="password" minlength="8" required>
     </div>
     <div>
       <label for="pass1">Пароль ще раз</label>
-      <input type="password" id="pass1" name="password" minlength="8 required">
+      <input type="password" id="pass1" name="password" minlength="8" required>
     </div>
     <div>
-      <label>Стать
-        <input type="radio" id="male" name="gender" value="male" checked required>
-        <label for="male">чоловіча</label> 
-        <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">жіноча</label> 
-      </label>
+      <label>Стать</label>
+      <input type="radio" id="male" name="gender" value="male" checked required>
+      <label for="male">чоловіча</label> 
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">жіноча</label> 
     </div>
     <div>
-      <lable for="age">Вік</lable>
+      <label for="age">Вік</label>
       <input type="number" id="age" name="age" min="15" max="120">
     </div>
     <div>
