@@ -49,6 +49,10 @@ p {
     font-weight: 400;
     margin-bottom: 30px;
 }
+.ending {
+    font-size: 14px;
+    line-height: 19px;
+}
 .container {
     margin-inline: auto;
     width: min(90%, 970px);
