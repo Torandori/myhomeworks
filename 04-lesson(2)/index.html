@@ -7,15 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="#" method="post" target="_blank" enctype="multipart/form-data">
+  <form id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;" method="post" target="_blank" enctype="multipart/form-data">
     <fieldset>
       <legend>Общие данные</legend>
       <div>
-        <label for="blocked-fieled">Заблокированное поле</label>
+        <label for="blocked-field">Заблокированное поле</label>
         <input type="text" id="blocked-field" name="blocked-field" placeholder="Измени меня если сможешь" disabled>
       </div>
       <div>
-        <label for="blocked field2">Может в этот раз выйдет</label>
+        <label for="blocked-field2">Может в этот раз выйдет</label>
         <input type="text" id="blocked-field2" name="active-field" value="Попробуй в другой раз" disabled>
       </div>
       <div>
@@ -24,11 +24,11 @@
       </div>
       <div>
         <label for="email">Можешь и мыло свое оставить</label>  
-        <input type="email" id="email" name="email" placeholder="EMAIL" required min="5" max="45">
+        <input type="email" id="email" name="email" placeholder="EMAIL" required>
       </div>
       <div>
         <label for="pass">Давай и пароль раз на то пошло</label>
-        <input type="password" id="pass" name="password" required min="8" required>
+        <input type="password" id="pass" name="password" required>
       </div>
       <div>
         <label for="birth-date">Как насчет даты рождения?</label>
@@ -39,30 +39,27 @@
         <input type="number" id="age" name="age" min="15" max="130">
       </div>
       <div>
-        <label>А по гендеру кто?
+        <label>А по гендеру кто?</label>
         <input type="radio" id="male" name="gender" value="male" checked>
         <label for="male">Мужчина</label>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Женщина</label>
-        </label>
       </div>
       <div>
-        <label>Чатик и/или сеточка?
-          <label for="social-media">
-            <input type="checkbox" id="social-media" name="social-media[]" value="facebook"> Фейсбук
-          </label>
-          <label for="social-media1">
-            <input type="checkbox" id="social-media1" name="social-media[]" value="illegal-media"> Нелегальная сеть
-          </label>
-          <label for="social-media2">
-            <input type="checkbox" id="social-media2" name="social-media[]" value="telegram"> Телега
-          </label>
-          <label for="social-media3">
-            <input type="checkbox" id="social-media3" name="social-media[]" value="slack"> Слакер
-          </label>
+        <label>Чатик и/или сеточка?</label>
+        <label for="social-media">
+          <input type="checkbox" id="social-media" name="social-media[]" value="facebook"> Фейсбук
+        </label>
+        <label for="social-media1">
+          <input type="checkbox" id="social-media1" name="social-media[]" value="illegal-media"> Нелегальная сеть
+        </label>
+        <label for="social-media2">
+          <input type="checkbox" id="social-media2" name="social-media[]" value="telegram"> Телега
+        </label>
+        <label for="social-media3">
+          <input type="checkbox" id="social-media3" name="social-media[]" value="slack"> Слакер
         </label>
       </div>
-      <br>
     </fieldset>
     <fieldset>
       <legend>Другая информация</legend>
@@ -75,7 +72,7 @@
         <input type="tel" id="phone" name="phone" value="+380" required>
       </div>
       <div>
-        <lable for="time">Может и время забьём?</lable>
+        <label for="time">Может и время забьём?</label>
         <input type="time" id="time" name="time" min="10:00" max="22:00">
       </div>
       <div>
@@ -83,12 +80,12 @@
         <input type="url" id="web-site" name="url" placeholder="https://example.com" pattern="https://.*">
       </div>
       <div>
-        <label for="numeber">Почти случайное число</label>
+        <label for="number">Почти случайное число</label>
         <input type="range" id="number" name="number" min="0" max="100">
       </div>
       <div>
         <label for="photo">Фото по желанию</label>
-        <input type="file" is="photo" name="photo" accept="image/png, image/jpeg">
+        <input type="file" id="photo" name="photo" accept="image/png, image/jpeg">
       </div>
     </fieldset>
     <fieldset>
@@ -115,7 +112,7 @@
       </div>
       <div>
         <label for="for-future">Пара слов для будущих поколений</label>
-        <textarea id="for-future" name="message" row="10" col="35">Писать сюда</textarea>
+        <textarea id="for-future" name="message" rows="10" cols="35">Писать сюда</textarea>
       </div>
     </fieldset>
     <fieldset>
@@ -128,8 +125,5 @@
       </div>
     </fieldset>
   </form>
-
-
-
 </body>
 </html>
