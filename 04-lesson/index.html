@@ -5,51 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assests/css/styles.css"
 </head>
 <body>
   <form action="#" method="post" name="short-form">
-    <label for="flname">Повне ім'я</label>
-    <input type="text" id="flname" name="name" placeholder="Василь Василюк" required>
-    <br>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="email@email.com" required>
-    <br>
-    <label for="pass">Пароль</label>
-    <input type="password" id="pass" name="password" minlength="8 required">
-    <br>
-    <label for="pass">Пароль ще раз</label>
-    <input type="password" id="pass" name="password" minlength="8 required">
-    <br>
-   
-    <label>Стать
-      <input type="radio" id="male" name="gender" value="male" checked required>
-      <label for="male">чоловіча</label> 
-      <input type="radio" id="female" name="gender" value="female" required>
-      <label for="female">жіноча</label> 
-    </label>
-    
-    <br>
-    <lable for="age">Вік</lable>
-    <input type="number" id="age" name="age" min="15" max="120">
-    <br>
-    <label for="courses">Курс</label>
-    <select name="courses" id="courses">
-      <option value="front-end">Front-End</option>
-      <option value="back-end">Back-End</option>
-      <option value="project-management">Project Management</option>
-      <option value="qa-manual">QA Manual</option>
-    </select>
-    <br>
-    <label for="address">Повна адреса</label>
-    <textarea id="address" name="full-address" rows="4" cols="25">Країна, регіон, місто/селище, вулиця</textarea>
-    <br>
-    <input type="checkbox" id="personal-data" name="personal-data">
-    <label for="personal-data">Я погоджуюсь з обробкою персональних даних</label>
-    <br>
-    <button type="reset" value="reset">Очистити форму</button>
-    <button type="submit" value="register">Зареєструватися</button>
+    <div>
+      <label for="flname">Повне ім'я</label>
+      <input type="text" id="flname" name="name" placeholder="Василь Василюк" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="email@email.com" required>
+    </div>
+    <div>
+      <label for="pass">Пароль</label>
+      <input type="password" id="pass" name="password" minlength="8 required">
+    </div>
+    <div>
+      <label for="pass1">Пароль ще раз</label>
+      <input type="password" id="pass1" name="password" minlength="8 required">
+    </div>
+    <div>
+      <label>Стать
+        <input type="radio" id="male" name="gender" value="male" checked required>
+        <label for="male">чоловіча</label> 
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">жіноча</label> 
+      </label>
+    </div>
+    <div>
+      <lable for="age">Вік</lable>
+      <input type="number" id="age" name="age" min="15" max="120">
+    </div>
+    <div>
+      <label for="courses">Курс</label>
+      <select name="courses" id="courses">
+        <option value="front-end">Front-End</option>
+        <option value="back-end">Back-End</option>
+        <option value="project-management">Project Management</option>
+        <option value="qa-manual">QA Manual</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="address">Повна адреса</label>
+      <textarea id="address" name="full-address" rows="4" cols="25">Країна, регіон, місто/селище, вулиця</textarea>
+    </div>
+    <div>
+      <input type="checkbox" id="personal-data" name="personal-data">
+      <label for="personal-data">Я погоджуюсь з обробкою персональних даних</label>
+    </div>
+    <div>
+      <button type="reset" value="reset">Очистити форму</button>
+      <button type="submit" value="register">Зареєструватися</button>
+    </div>
   </form>
-  
-  
 </body>
 </html>

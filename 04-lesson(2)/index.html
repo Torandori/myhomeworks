@@ -10,94 +10,122 @@
   <form action="#" method="post" target="_blank" enctype="multipart/form-data">
     <fieldset>
       <legend>Общие данные</legend>
-      <label for="blocked-fieled">Заблокированное поле</label>
-      <input type="text" id="blocked-field" name="blocked-field" placeholder="Измени меня если сможешь" disabled>
-      <br>
-      <label for="blocked field2">Может в этот раз выйдет</label>
-      <input type="text" id="blocked-field2" name="active-field" value="Попробуй в другой раз" disabled>
-      <br>
-      <label for="active-field">Всё-таки придется что-то написать</label>
-      <input type="text" id="active-field" name="active-field" placeholder="Пиши, не ломайся">
-      <br>
-      <label for="email">Можешь и мыло свое оставить</label>  
-      <input type="email" id="email" name="email" placeholder="EMAIL" required min="5" max="45">
-      <br> 
-      <label for="pass">Давай и пароль раз на то пошло</label>
-      <input type="password" id="pass" name="password" required min="8" required>
-      <br>
-      <label for="birth-date">Как насчет даты рождения?</label>
-      <input type="date" id="birth-date" name="birth-date" required>
-      <br>
-      <label for="age">Это сколько лет?</label>
-      <input type="number" id="age" name="age" min="15" max="130">
-      <br>
-      <label>А по гендеру кто?</label>
-      <input type="radio" id="male" name="gender" value="male" checked>
-      <label for="male">Мужчина</label>
-      <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Женщина</label>
-      <br>
-      <label>Чатик и/или сеточка?</label>
-      <input type="checkbox" id="social-media" name="social-media[]" value="facebook">
-      <label for="social-media">Фейсбук</label>
-      <input type="checkbox" id="social-media2" name="social-media[]" value="illegal-media">
-      <label for="checkbox">Нелегальная сеть</label>
-      <input type="checkbox" id="social-media3" name="social-media[]" value="telegram">
-      <label for="social-media3">Телега</label>
-      <input type="checkbox" id="social-media4" name="social-media[]" value="slack">
-      <label for="social-media4">Слакер</label>
+      <div>
+        <label for="blocked-fieled">Заблокированное поле</label>
+        <input type="text" id="blocked-field" name="blocked-field" placeholder="Измени меня если сможешь" disabled>
+      </div>
+      <div>
+        <label for="blocked field2">Может в этот раз выйдет</label>
+        <input type="text" id="blocked-field2" name="active-field" value="Попробуй в другой раз" disabled>
+      </div>
+      <div>
+        <label for="active-field">Всё-таки придется что-то написать</label>
+        <input type="text" id="active-field" name="active-field" placeholder="Пиши, не ломайся">
+      </div>
+      <div>
+        <label for="email">Можешь и мыло свое оставить</label>  
+        <input type="email" id="email" name="email" placeholder="EMAIL" required min="5" max="45">
+      </div>
+      <div>
+        <label for="pass">Давай и пароль раз на то пошло</label>
+        <input type="password" id="pass" name="password" required min="8" required>
+      </div>
+      <div>
+        <label for="birth-date">Как насчет даты рождения?</label>
+        <input type="date" id="birth-date" name="birth-date" required>
+      </div>
+      <div>
+        <label for="age">Это сколько лет?</label>
+        <input type="number" id="age" name="age" min="15" max="130">
+      </div>
+      <div>
+        <label>А по гендеру кто?
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Мужчина</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Женщина</label>
+        </label>
+      </div>
+      <div>
+        <label>Чатик и/или сеточка?
+          <label for="social-media">
+            <input type="checkbox" id="social-media" name="social-media[]" value="facebook"> Фейсбук
+          </label>
+          <label for="social-media1">
+            <input type="checkbox" id="social-media1" name="social-media[]" value="illegal-media"> Нелегальная сеть
+          </label>
+          <label for="social-media2">
+            <input type="checkbox" id="social-media2" name="social-media[]" value="telegram"> Телега
+          </label>
+          <label for="social-media3">
+            <input type="checkbox" id="social-media3" name="social-media[]" value="slack"> Слакер
+          </label>
+        </label>
+      </div>
       <br>
     </fieldset>
     <fieldset>
       <legend>Другая информация</legend>
       <label for="hair-color">Цвет волос</label>
-      <input type="color" id="hair-color" name="hair-color">
-      <br>
-      <label for="phone">Мобильный писать сюда</label>
-      <input type="tel" id="phone" name="phone" value="+380" required>
-      <br>
-      <lable for="time">Может и время забьём?</lable>
-      <input type="time" id="time" name="time" min="10:00" max="22:00">
-      <br>
-      <label for="web-site">А сайт имеется?</label>
-      <input type="url" id="web-site" name="url" placeholder="https://example.com" pattern="https://.*">
-      <br>
-      <label for="numeber">Почти случайное число</label>
-      <input type="range" id="number" name="number" min="0" max="100">
-      <br>
-      <label for="photo">Фото по желанию</label>
-      <input type="file" is="photo" name="photo" accept="image/png, image/jpeg">
-      <br>
+      <div>
+        <input type="color" id="hair-color" name="hair-color">
+      </div>
+      <div>
+        <label for="phone">Мобильный писать сюда</label>
+        <input type="tel" id="phone" name="phone" value="+380" required>
+      </div>
+      <div>
+        <lable for="time">Может и время забьём?</lable>
+        <input type="time" id="time" name="time" min="10:00" max="22:00">
+      </div>
+      <div>
+        <label for="web-site">А сайт имеется?</label>
+        <input type="url" id="web-site" name="url" placeholder="https://example.com" pattern="https://.*">
+      </div>
+      <div>
+        <label for="numeber">Почти случайное число</label>
+        <input type="range" id="number" name="number" min="0" max="100">
+      </div>
+      <div>
+        <label for="photo">Фото по желанию</label>
+        <input type="file" is="photo" name="photo" accept="image/png, image/jpeg">
+      </div>
     </fieldset>
     <fieldset>
       <legend>Не imput-ы</legend>
-      <label for="character">Любимый персонаж</label>
-      <select id="character" name="chatacter">
-        <option value="choose">Choose wisely</option>
-        <option value="shrek">Shrek</option>
-        <option value="tom">Tom</option>
-        <option value="ariel">Ariel</option>
-        <option value="donald-duck">Donald Duck</option>
-      </select>
-      <br>
-      <label for="characters">А если персонажи?</label>
-      <select id="characters" name="characters[]" multiple>
-        <option value="choose">Choose your destinity</option>
-        <option value="noob-saibot">Noob Saibot</option>
-        <option value="cyrax">Cyrax</option>
-        <option value="kabal">Kabal</option>
-        <option value="motaro">Motaro</option>
-      </select>
-      <br>
-      <label for="for-future">Пара слов для будущих поколений</label>
-      <textarea id="for-future" name="message" row="10" col="35">Писать сюда</textarea>
+      <div>
+        <label for="character">Любимый персонаж</label>
+        <select id="character" name="chatacter">
+          <option value="choose" selected disabled>Choose wisely</option>
+          <option value="shrek">Shrek</option>
+          <option value="tom">Tom</option>
+          <option value="ariel">Ariel</option>
+          <option value="donald-duck">Donald Duck</option>
+        </select>
+      </div>
+      <div>
+        <label for="characters">А если персонажи?</label>
+        <select id="characters" name="characters[]" multiple>
+          <option disabled="disabled" value="choose">Choose your destinity</option>
+          <option value="noob-saibot">Noob Saibot</option>
+          <option value="cyrax">Cyrax</option>
+          <option value="kabal">Kabal</option>
+          <option value="motaro">Motaro</option>
+        </select>
+      </div>
+      <div>
+        <label for="for-future">Пара слов для будущих поколений</label>
+        <textarea id="for-future" name="message" row="10" col="35">Писать сюда</textarea>
+      </div>
     </fieldset>
     <fieldset>
       <legend>Жмакалки</legend>
-      <button type="submit" value="confirm">Подтвердить</button>
-      <button type="reset" value="reset">Сбросить</button>
-      <button type="button" value="button">Тык</button>
-      <button type="button" disabled>Не тык</button>
+      <div>
+        <button type="submit" value="confirm">Подтвердить</button>
+        <button type="reset" value="reset">Сбросить</button>
+        <button type="button" value="button">Тык</button>
+        <button type="button" disabled>Не тык</button>
+      </div>
     </fieldset>
   </form>
 
