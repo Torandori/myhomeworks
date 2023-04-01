@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%
+}
+#my_form {
+    display: table;
+    margin: auto;
+}
+.container {
+    width: 400px;
+    margin: 100px auto;
+}
+.left-block {
+    display: inline-block;
+    width: 198px;
+    margin: 5px auto 5px 0;
+    
+}
+.right-block {
+    display: inline-block;
+    margin-right: 0;
+    width: 198px;
+    margin: 5px 0 5px auto;
+}
+.check {
+    display: inline-block;
+    margin: 0;
+}
+.btn {
+    margin: 5px 10px;
+}
+.checkbox {
+    margin: 5px auto 5px 0;
+
+}
+#age {
+    width: auto;
+}
+#courses {
+    width: auto;
+}
+#address {
+    vertical-align: bottom;
+}
