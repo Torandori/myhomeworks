@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 200vh
+}
+#my_form {
+    margin: auto;
+}
+.container {
+    width: 520px;
+    margin: 100px auto;
+}
+.container1 {
+    margin-bottom: 20px;
+}
+div.container-last {
+    margin-bottom: 100px;
+}
+.left-block {
+    display: inline-block;
+    width: 50%;
+    margin: 5px auto 5px 0;
+}
+
+.right-block {
+    display: inline-block;
+    margin-right: 0;
+    width: 49%;
+    margin: 5px 0 5px auto;
+}
+.buttons {
+    float: right;
+}
+#for-future {
+    vertical-align: bottom;
+}
+#hair-color {
+    width: 20%;
+}
