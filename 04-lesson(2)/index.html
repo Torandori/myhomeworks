@@ -5,125 +5,136 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assests/css/styles.css">
 </head>
 <body>
-  <form id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;" method="post" target="_blank" enctype="multipart/form-data">
-    <fieldset>
-      <legend>Общие данные</legend>
-      <div>
-        <label for="blocked-field">Заблокированное поле</label>
-        <input type="text" id="blocked-field" name="blocked-field" placeholder="Измени меня если сможешь" disabled>
+  <div class="container">
+    <form id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;" method="post" target="_blank" enctype="multipart/form-data">
+      <div class="container1">
+        <fieldset>
+          <legend>Общие данные</legend>
+          <div>
+            <label class="left-block" for="blocked-field">Заблокированное поле</label>
+            <input class="right-block" type="text" id="blocked-field" name="blocked-field" placeholder="Измени меня если сможешь" disabled>
+          </div>
+          <div>
+            <label class="left-block" for="blocked-field2">Может в этот раз выйдет</label>
+            <input class="right-block" type="text" id="blocked-field2" name="active-field" value="Попробуй в другой раз" disabled>
+          </div>
+          <div>
+            <label class="left-block" for="active-field">Всё-таки придется что-то написать</label>
+            <input class="right-block" type="text" id="active-field" name="active-field" placeholder="Пиши, не ломайся">
+          </div>
+          <div>
+            <label class="left-block" for="email">Можешь и мыло свое оставить</label>  
+            <input class="right-block" type="email" id="email" name="email" placeholder="EMAIL" required>
+          </div>
+          <div>
+            <label class="left-block" for="pass">Давай и пароль раз на то пошло</label>
+            <input class="right-block" type="password" id="pass" name="password" required>
+          </div>
+          <div>
+            <label class="left-block" for="birth-date">Как насчет даты рождения?</label>
+            <input class="right-block" type="date" id="birth-date" name="birth-date" required>
+          </div>
+          <div>
+            <label class="left-block" for="age">Это сколько лет?</label>
+            <input class="right-block" type="number" id="age" name="age" min="15" max="130">
+          </div>
+          <div>
+            <span class="left-block">А по гендеру кто?</span>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Мужчина</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женщина</label>
+          </div>
+          <div>
+            <span>Чатик и/или сеточка?</span>
+            <label for="social-media">
+              <input type="checkbox" id="social-media" name="social-media[]" value="facebook"> Фейсбук
+            </label>
+            <label for="social-media1">
+              <input type="checkbox" id="social-media1" name="social-media[]" value="illegal-media"> Нелегальная сеть
+            </label>
+            <label for="social-media2">
+              <input type="checkbox" id="social-media2" name="social-media[]" value="telegram"> Телега
+            </label>
+            <label for="social-media3">
+              <input type="checkbox" id="social-media3" name="social-media[]" value="slack"> Слакер
+            </label>
+          </div>
+        </fieldset>
       </div>
-      <div>
-        <label for="blocked-field2">Может в этот раз выйдет</label>
-        <input type="text" id="blocked-field2" name="active-field" value="Попробуй в другой раз" disabled>
+      <div class="container1">
+        <fieldset>
+          <legend>Другая информация</legend>
+          <div>
+            <label class="left-block" for="hair-color">Цвет волос</label>
+            <input class="right-block" type="color" id="hair-color" name="hair-color">
+          </div>
+          <div>
+            <label class="left-block" for="phone">Мобильный писать сюда</label>
+            <input class="right-block" type="tel" id="phone" name="phone" value="+380" required>
+          </div>
+          <div>
+            <label class="left-block" for="time">Может и время забьём?</label>
+            <input class="right-block" type="time" id="time" name="time" min="10:00" max="22:00">
+          </div>
+          <div>
+            <label class="left-block" for="web-site">А сайт имеется?</label>
+            <input class="right-block" type="url" id="web-site" name="url" placeholder="https://example.com" pattern="https://.*">
+          </div>
+          <div>
+            <label class="left-block" for="number">Почти случайное число</label>
+            <input class="right-block" type="range" id="number" name="number" min="0" max="100">
+          </div>
+          <div>
+            <label class="left-block" for="photo">Фото по желанию</label>
+            <input class="right-block" type="file" id="photo" name="photo" accept="image/png, image/jpeg">
+          </div>
+        </fieldset>
       </div>
-      <div>
-        <label for="active-field">Всё-таки придется что-то написать</label>
-        <input type="text" id="active-field" name="active-field" placeholder="Пиши, не ломайся">
+      <div class="container1">
+        <fieldset>
+          <legend>Не imput-ы</legend>
+          <div>
+            <label class="left-block" for="character">Любимый персонаж</label>
+            <select class="right-block" id="character" name="chatacter">
+              <option value="choose" selected disabled>Choose wisely</option>
+              <option value="shrek">Shrek</option>
+              <option value="tom">Tom</option>
+              <option value="ariel">Ariel</option>
+              <option value="donald-duck">Donald Duck</option>
+            </select>
+          </div>
+          <div>
+            <label class="left-block" for="characters">А если персонажи?</label>
+            <select class="right-block" id="characters" name="characters[]" multiple>
+              <option disabled="disabled" value="choose">Choose your destinity</option>
+              <option value="noob-saibot">Noob Saibot</option>
+              <option value="cyrax">Cyrax</option>
+              <option value="kabal">Kabal</option>
+              <option value="motaro">Motaro</option>
+            </select>
+          </div>
+          <div>
+            <label class="left-block" for="for-future">Пара слов для будущих поколений</label>
+            <textarea class="right-block" id="for-future" name="message" rows="8" cols="30" placeholder="Писать сюда"></textarea>
+          </div>
+        </fieldset>
       </div>
-      <div>
-        <label for="email">Можешь и мыло свое оставить</label>  
-        <input type="email" id="email" name="email" placeholder="EMAIL" required>
+      <div class="container-last">
+        <fieldset>
+          <legend>Жмакалки</legend>
+          <div class="buttons">
+            <button type="submit" value="confirm">Подтвердить</button>
+            <button type="reset" value="reset">Сбросить</button>
+            <button type="button" value="button">Тык</button>
+            <button type="button" disabled>Не тык</button>
+          </div>
+        </fieldset>
       </div>
-      <div>
-        <label for="pass">Давай и пароль раз на то пошло</label>
-        <input type="password" id="pass" name="password" required>
-      </div>
-      <div>
-        <label for="birth-date">Как насчет даты рождения?</label>
-        <input type="date" id="birth-date" name="birth-date" required>
-      </div>
-      <div>
-        <label for="age">Это сколько лет?</label>
-        <input type="number" id="age" name="age" min="15" max="130">
-      </div>
-      <div>
-        <label>А по гендеру кто?</label>
-        <input type="radio" id="male" name="gender" value="male" checked>
-        <label for="male">Мужчина</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Женщина</label>
-      </div>
-      <div>
-        <label>Чатик и/или сеточка?</label>
-        <label for="social-media">
-          <input type="checkbox" id="social-media" name="social-media[]" value="facebook"> Фейсбук
-        </label>
-        <label for="social-media1">
-          <input type="checkbox" id="social-media1" name="social-media[]" value="illegal-media"> Нелегальная сеть
-        </label>
-        <label for="social-media2">
-          <input type="checkbox" id="social-media2" name="social-media[]" value="telegram"> Телега
-        </label>
-        <label for="social-media3">
-          <input type="checkbox" id="social-media3" name="social-media[]" value="slack"> Слакер
-        </label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Другая информация</legend>
-      <label for="hair-color">Цвет волос</label>
-      <div>
-        <input type="color" id="hair-color" name="hair-color">
-      </div>
-      <div>
-        <label for="phone">Мобильный писать сюда</label>
-        <input type="tel" id="phone" name="phone" value="+380" required>
-      </div>
-      <div>
-        <label for="time">Может и время забьём?</label>
-        <input type="time" id="time" name="time" min="10:00" max="22:00">
-      </div>
-      <div>
-        <label for="web-site">А сайт имеется?</label>
-        <input type="url" id="web-site" name="url" placeholder="https://example.com" pattern="https://.*">
-      </div>
-      <div>
-        <label for="number">Почти случайное число</label>
-        <input type="range" id="number" name="number" min="0" max="100">
-      </div>
-      <div>
-        <label for="photo">Фото по желанию</label>
-        <input type="file" id="photo" name="photo" accept="image/png, image/jpeg">
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Не imput-ы</legend>
-      <div>
-        <label for="character">Любимый персонаж</label>
-        <select id="character" name="chatacter">
-          <option value="choose" selected disabled>Choose wisely</option>
-          <option value="shrek">Shrek</option>
-          <option value="tom">Tom</option>
-          <option value="ariel">Ariel</option>
-          <option value="donald-duck">Donald Duck</option>
-        </select>
-      </div>
-      <div>
-        <label for="characters">А если персонажи?</label>
-        <select id="characters" name="characters[]" multiple>
-          <option disabled="disabled" value="choose">Choose your destinity</option>
-          <option value="noob-saibot">Noob Saibot</option>
-          <option value="cyrax">Cyrax</option>
-          <option value="kabal">Kabal</option>
-          <option value="motaro">Motaro</option>
-        </select>
-      </div>
-      <div>
-        <label for="for-future">Пара слов для будущих поколений</label>
-        <textarea id="for-future" name="message" rows="10" cols="35">Писать сюда</textarea>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Жмакалки</legend>
-      <div>
-        <button type="submit" value="confirm">Подтвердить</button>
-        <button type="reset" value="reset">Сбросить</button>
-        <button type="button" value="button">Тык</button>
-        <button type="button" disabled>Не тык</button>
-      </div>
-    </fieldset>
-  </form>
+    </form>
+  </div>
 </body>
 </html>
