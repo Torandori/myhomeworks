@@ -122,7 +122,7 @@ p+p {
 #skills .programms1 {
     display: inline-block;
     text-align: center;
-    margin-right: 0;
+    margin-right: 88px;
 }
 #skills #figma {
     margin-bottom: 80px;
@@ -141,6 +141,11 @@ p+p {
 #skills .programms1 div img:last-child {
     margin-right: 0;
 }
+#skills div.programms {
+    margin-left: 0;
+    text-align: left;
+}
+
 
 /*===#SKILLS===*/
 
