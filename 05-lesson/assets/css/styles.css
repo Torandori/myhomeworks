@@ -197,10 +197,14 @@ button {
     border-radius: 999rem;
     margin-bottom: 30px;
 }
-.social-media {
+ul.social-media {
     margin-bottom: 60px;
 }
-.social-media a + a {
+ul.social-media li {
+display: inline-block;
+}
+ul.social-media li + li {
     margin-left: 46px;
 }
+
 /*===#CONTACTS===*/
