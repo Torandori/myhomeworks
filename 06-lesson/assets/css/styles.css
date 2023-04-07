@@ -39,14 +39,14 @@ h1 {
 /*==MAIN==*/
 .container {
 	width: min(90%, 534px);
-	height: 270px;
 	margin: 0 auto;
-	background-color: #88839E;
-	margin-bottom: 45px;
-	color: #FFFFFF;
+
 }
 ul {
 	list-style: none;
+	background-color: #88839E;
+	margin-bottom: 45px;
+	color: #FFFFFF;
 }
 ul li:nth-child(2n) {
 	background-color: #7A7593;
@@ -95,23 +95,21 @@ input[type=checkbox]:checked + label::after {
 	top: 5px;
 }
 li:has(input[type=checkbox]:checked) {
-	border-bottom: 3px solid #FFFFFF;
 	width: 534px;
 	display: inline-block;
 	position: relative;
 	border-top: -6px;
 }
-input[type=checkbox]:checked + .pickles span:before {
+/* input[type=checkbox]:checked + label {
 	content: "";
 	display: block;
 	width: 534px;
 	height: 2.5px;
 	background-color: #FFFFFF;
 	position: absolute;
-	top: -15px;
-	left: -175.5px;
-}
-input[type=checkbox]:checked + .apples span:before {
+	top: 12px;
+} */
+/* input[type=checkbox]:checked + .apples span:before {
 	content: "";
 	display: block;
 	width: 534px;
@@ -160,7 +158,7 @@ input[type=checkbox]:checked + .sake span:before {
 	position: absolute;
 	top: -18px;
 	left: -184.5px;
-}
+} */
 input[type=checkbox]:checked + label {
 	color: #9B96AC;
 }
@@ -224,13 +222,15 @@ input[type=checkbox]:checked + .sake span::after {
 	left: -137px;
 	top: 8px;
 } 
-li:nth-child(2n+1):active,
-li:nth-child(2n):active {
-	background: #FF8984;
+ul li:nth-child(2n):active,
+ul li:nth-child(2n+1):active {
+	background-color: #FF8984;
 }
 li:nth-child(2n+1):hover,
 li:nth-child(2n):hover  {
 	background-color: #625E77;
+	border-bottom: 3px solid #FFFFFF;
+	border-top: 3px solid #FFFFFF;
 }
 /*==#MAIN==*/
 /*==ENDING==*/
