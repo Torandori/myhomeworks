@@ -38,9 +38,10 @@ body {
   font-size: 1rem;
 }
 .container {
-  width: min(90%, 1200px);
-  margin: 0 auto;
+    width: 1200px;
+    margin: 0 auto;
 }
+
 .logo {
   float: left;
   margin-top: 7px;
@@ -52,7 +53,7 @@ nav {
   float: right;
 }
 .header-buttons button + button {
-  margin-left: 32px;
+  margin-left: 23px;
 }
 .btn {
   cursor: pointer;
