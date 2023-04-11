@@ -14,7 +14,6 @@ body {
   width: 1170px;
   margin: 0 auto;
   font-size: 0;
-
 }
 .h1 {
   margin-top: 45px;
@@ -32,7 +31,6 @@ body {
 .block-item.half {
   width: 50%;
 }
-
 li {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
@@ -104,7 +102,6 @@ main .container {
   opacity: 0.5;
   transition: all .2s ease-in;
 }
-
 li:hover {
   cursor: pointer;
 }
@@ -117,13 +114,10 @@ li.block-item.half:hover .item-content:before {
 	left: 174px;
 	top: 130px;
 } 
-
 .wi::before {
   position: relative;
   top: 8px;
   left: 7px;
-
-
 }
 .degree {
   position: relative;
@@ -131,7 +125,3 @@ li.block-item.half:hover .item-content:before {
   right: 4px; 
 }
 
-.block-items {
-  /* border-top: 4px solid #fff;
-  border-left: 4px solid #fff; */
-}
