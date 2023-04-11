@@ -11,7 +11,7 @@ body {
   color: #FFFFFF;
 }
 .container {
-  width: 1170px;
+  width: min(90%, 1166px);
   margin: 0 auto;
   font-size: 0;
 }
@@ -75,8 +75,8 @@ li {
   background-color: #666699;
 }
 .item-content {
-  padding-top: 26px;
-  padding-bottom: 36px;
+  padding-top: 25px;
+  padding-bottom: 35px;
   color: #FFFFFF;
   opacity: 80%;
 }
@@ -88,9 +88,9 @@ li {
 }
 .h1 .title-icon {
   font-size: 1.687rem;
-  position: absolute;
-  top: 59px;
-  left: 395px;
+  position: relative;
+  top: -8px;
+  left: -4px;
 }
 main .container {
   margin-bottom: 35px;
