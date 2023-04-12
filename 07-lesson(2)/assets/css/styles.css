@@ -31,6 +31,10 @@ body {
 .block-item.half {
   width: 50%;
 }
+
+ul {
+  background-color: #fff;
+}
 li {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
