@@ -15,7 +15,6 @@ html, body {
 img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
   vertical-align: top;
 }
 a, button {
@@ -31,21 +30,18 @@ body {
   color: var(--text-color);
   font-size: 1rem;
 }
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 17px 0;
 }
 .container {
   width: 1200px;
   margin: 0 auto;
-  border: 2px solid blue;
-  margin-bottom: 68px;
+  /* border: 2px solid blue; */
+  margin-bottom: 70px;
 }
-
-
 nav ul {
   display: flex;
 }
@@ -55,7 +51,7 @@ nav ul li {
 nav ul li a {
   color: #2F281E;
   text-decoration: none;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 ul.main-menu li a:hover {
   color: var(--orange-color)
@@ -83,13 +79,11 @@ ul.main-menu li a:hover {
   border: 1px solid #BCD0E5;
   margin-right: 29px;
   padding: 13px 26px;
-
 }
 .btn-white:hover {
   background-color: #2F281E;
   color: #fff;
 }
-
 /*===SECTION-FIRST===*/
 
 .container.flex {
@@ -117,17 +111,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 13px 43px;
-  text-align: center;
-  line-height: 24px; */
 }
 /*===#SECTION-FIRST===*/
-
 .icon-back {
   width: 50px;
   height: 50px;
   border: none;
-  border-radius: 15%;
+  border-radius: 30%;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -154,7 +144,7 @@ h1 {
   font-weight: 700;
   line-height: 44px;
   text-align: center;
-  margin-bottom: 47px;
+  margin-bottom: 50px;
   padding-top: 28px;
 }
 .title-under-icon {
@@ -171,10 +161,9 @@ h1 {
   justify-content: space-between;
   margin-bottom: 70px;
 }
-
-li {
+/* li {
   border: 2px solid orange;
-}
+} */
 div.flex-btn-second-sec {
   display: flex;
   justify-content: center;
@@ -191,37 +180,31 @@ div.flex-btn-second-sec {
   background-repeat: no-repeat;
   background-position: center bottom;
 }
-
 .h3 {
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   color: var(--sub-text-color);
 }
-
 /*===FOOTER===*/
 ul.footer-list-one, ul.footer-list-two {
   display: flex;
   flex-direction: column;
 }
-
 .input {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding-left: 4px;
 }
 .footer-list {
   display: flex;
-  
 }
 .container.footer-container {
   display: flex;
   justify-content: space-between;
 }
-
 ul.footer-list-one li,  ul.footer-list-two li {
-  padding: 9.5px 0;
+  padding: 11.5px 0;
 }
 ul.footer-list-one li:first-child,  ul.footer-list-two li:first-child {
   padding-bottom: 19px;
@@ -234,24 +217,29 @@ ul.footer-list-one li:first-child,  ul.footer-list-two li:first-child {
   padding: 15px 10px;
   width: 340px;
 }
-.form {
+/* .form {
   border: 2px solid green;
-  /* margin-left: 130px; */
-}
+} */
 .container.footer-container {
   display: flex;
-  justify-content: ;
+  padding-bottom: 70px;
 }
-
 .logo-footer {
   width: auto;
   height: auto;
   align-self: flex-start;
 }
-
 ul.footer-list-one + ul.footer-list-two {
  padding-left: 139px;
-  
+}
+ul li a:hover {
+  color: var(--orange-color)
+}
+::placeholder {
+  color: #BCD0E5;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
 }
 
 /*===#FOOTER===*/
