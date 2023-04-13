@@ -1,0 +1,109 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/*=HEADER=*/
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	/* border: 1px solid red; */
+	/* border: 1px solid blue; */
+}
+.heading {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 48px;
+	height: 80px;
+	margin-bottom: 70px;
+}
+.lang {
+	font-family: 'Tourney';
+	font-weight: 600;
+	font-size: 22px;
+	padding-bottom: 3px;
+	letter-spacing: 2px;
+}
+.descr-up {
+	font-family: 'Staatliches';
+	font-size: 22px;
+	letter-spacing: 0.7px;
+	line-height: 27.5px;
+}
+.descr-wrap0 {
+	width: 50px;
+}
+.descr-wrap1 {
+	width: 262px;
+}
+.slash {
+	padding: 10px;
+}
+.logo {
+	margin-left: auto;
+}
+/*=#HEADER=*/
+/*=SECTIONS=*/
+.wrap-title-section {
+	display: flex;
+	gap: 11px;
+}
+.title-section {
+	font-family: 'Francois One';
+	letter-spacing: 1.2px;
+	font-size: 36px;
+	line-height: 48px;
+	text-transform: uppercase;
+	/* margin-bottom: 40px; */
+}
+.small-text {
+	font-family: 'Farro';
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 13px;
+	letter-spacing: 0.04em;
+}
+.pt-sans-reg {
+	font-family: 'PT Sans';
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 48px;
+
+}
+.margin {
+	margin-bottom: 60px;
+}
+.pt-sans-it {
+	font-family: 'PT Sans';
+	font-style: italic;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 48px;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.mark {
+	background-color: #DADADA;
+}
+/*=#SECTIONS=*/
+
+
+
+{
+	font-family: 'PT Sans';
+	font-family: 'Francois One';
+	font-family: 'Farro';
+	font-family: 'Staatliches';
+	/* font-weight: 600; */
+}
+
