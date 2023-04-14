@@ -7,13 +7,10 @@ html, body {
   width: 100%;
   height: 100%;
 }
-
 /*=HEADER=*/
 .container {
 	width: 1200px;
 	margin: 0 auto;
-	/* border: 1px solid red; */
-	/* border: 1px solid blue; */
 }
 .heading {
 	display: flex;
@@ -56,11 +53,11 @@ html, body {
 }
 .title-section {
 	font-family: 'Francois One';
+	font-weight: 400;
 	letter-spacing: 1.2px;
 	font-size: 36px;
 	line-height: 48px;
 	text-transform: uppercase;
-	/* margin-bottom: 40px; */
 }
 .small-text {
 	font-family: 'Farro';
@@ -74,10 +71,6 @@ html, body {
 	font-size: 28px;
 	font-weight: 400;
 	line-height: 48px;
-
-}
-.margin {
-	margin-bottom: 60px;
 }
 .pt-sans-it {
 	font-family: 'PT Sans';
@@ -86,7 +79,6 @@ html, body {
 	font-weight: 400;
 	line-height: 48px;
 }
-
 .wrap {
 	display: flex;
 	flex-direction: column;
@@ -94,16 +86,50 @@ html, body {
 }
 .mark {
 	background-color: #DADADA;
+	display: inline-block;
+	height: 44px;
+}
+.height1 {
+	height: 132px;
+}
+.height2 {
+	height: 39px;
+}
+.height3 {
+	height: 86px;
+}
+.height4 {
+	height: 96px;
+}
+.height5 {
+	height: 142px;
+}
+.height6 {
+	height: 36px;
+}
+.height7 {
+  height: 134px;
+}
+.height8 {
+  height: 133px;
+}
+.height9 {
+  height: 132px;
 }
 /*=#SECTIONS=*/
-
-
-
-{
-	font-family: 'PT Sans';
-	font-family: 'Francois One';
-	font-family: 'Farro';
-	font-family: 'Staatliches';
-	/* font-weight: 600; */
+.main-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 59px;
+	width: 1200px;
+	margin: 0 auto;
 }
-
+.padding {
+	padding-top: 13px;
+}
+.colon {
+	padding-right: 4px;
+}
+.pizza {
+	padding-left: 1px;
+}
