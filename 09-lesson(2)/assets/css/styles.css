@@ -65,7 +65,7 @@ body {
 .lang-wrap {
     display: flex;
     transform: rotate(-90deg);
-    width: 65px;
+    width: 68px;
     height: 17.05px;
     gap: 5px;
     font-size: 16px;
@@ -76,6 +76,8 @@ body {
 .descr {
     width: 155.65px;
     align-self: center;
+    font-style: 18px;
+    line-height: 21.83px;
 }
 .title-wrap {
     display: flex;
