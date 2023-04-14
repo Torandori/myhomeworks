@@ -13,7 +13,6 @@ body {
 .container {
     width: min(90%, 970px);
     margin: 0 auto;
-    background-color: lightgreen;
 }
 
 /*===HEADER===*/
