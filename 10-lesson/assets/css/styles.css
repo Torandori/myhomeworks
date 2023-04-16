@@ -176,6 +176,7 @@ section {
 	letter-spacing: 1px;
 	margin-left: 120px;
 	margin-top: -8px;
+	margin-bottom: 40px;
 }
 .h1-page2::before {
 	content: '';
@@ -197,6 +198,13 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
+	padding-left: 12px;
+}
+.block-page2 {
+	padding: 20px 0;
+	border-top: 1px solid #BDBDBD;
+	border-bottom: 1px solid #BDBDBD;
+
 }
 
 /*=#PAGE2=*/
