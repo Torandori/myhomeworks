@@ -1,0 +1,202 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.body {
+		background: url("../img/bg-picture.svg") no-repeat fixed top 150px right -12%;
+}
+
+
+/*=HEADER=*/
+.container {
+	width: min(90%, 1200px);
+	margin: 0 auto;
+}
+.container1 {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+.heading {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 48px;
+	height: 80px;
+	margin-bottom: 70px;
+}
+.lang {
+	font-family: 'Tourney';
+	font-weight: 600;
+	font-size: 22px;
+	padding-bottom: 3px;
+	letter-spacing: 2px;
+}
+.descr-up {
+	font-family: 'Staatliches';
+	font-size: 22px;
+	letter-spacing: 0.7px;
+	line-height: 27.5px;
+	text-decoration: none;
+	color: #000000;
+}
+.descr-wrap0 {
+	width: 50px;
+}
+.descr-wrap1 {
+	width: 262px;
+}
+.slash {
+	padding: 10px;
+}
+.logo {
+	margin-left: auto;
+}
+/*=#HEADER=*/
+/*=ASIDE=*/
+ul {
+	list-style: none;
+}
+ul.list-page1 {
+	padding-top: 10px;
+}
+ul.list-page1 li {
+	margin-bottom: 71px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #BDBDBD;
+}
+ul.list-page1 li a {
+	text-decoration: none;
+	color: #000000;
+}
+aside {
+	width: 385px;
+	padding-left: 10px;
+}
+.main1 {
+	width: calc(100% - 415px);
+	padding-top: 20px;
+}
+.sidebar {
+	position: sticky;
+	top: 10px;
+}
+/*=#ASIDE=*/
+
+/*=SECTIONS=*/
+.wrap-title-section {
+	display: flex;
+	gap: 11px;
+}
+.title-section {
+	font-family: 'Francois One';
+	font-weight: 400;
+	letter-spacing: 1.2px;
+	font-size: 36px;
+	line-height: 48px;
+	text-transform: uppercase;
+}
+.wrap-title-section .title-section {
+	margin-bottom: 40px;
+}
+.wrap-title-section .title-section::before {
+	content: '';
+	width: 100px;
+	height: 8px;
+	background-color: #000000;
+	position: relative;
+	top: -20px;
+	display: block;
+}
+.small-text {
+	font-family: 'Farro';
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 13px;
+	letter-spacing: 0.04em;
+	padding-top: 10px;
+}
+.pt-sans-reg {
+	font-family: 'PT Sans';
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 48px;
+}
+.pt-sans-it {
+	font-family: 'PT Sans';
+	font-style: italic;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 48px;
+}
+section {
+	margin-bottom: 90px;
+}
+.margin-inside {
+	margin-bottom: 33px;
+}
+.margin-inside1 {
+	margin-bottom: 30px;
+}
+.margin-inside2 {
+	margin-bottom: 31px;
+}
+.margin-inside3 {
+	margin-bottom: 39px;
+}
+.margin-inside4 {
+	margin-bottom: 40px;
+}
+.margin-inside5 {
+	margin-bottom: 40px;
+}
+.mark {
+	background-color: #DADADA;
+	display: inline-block;
+	height: 48px;
+}
+.colon {
+	padding-right: 4px;
+}
+.pizza {
+	padding-left: 1px;
+}
+/*=#SECTIONS=*/
+/*=PAGE2=*/
+.h1-page2 {
+	font-family: 'Roboto';
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 48px;
+	letter-spacing: 1px;
+	margin-left: 120px;
+	margin-top: -8px;
+}
+.h1-page2::before {
+	content: '';
+	width: 100px;
+	height: 8px;
+	background-color: #000000;
+	position: relative;
+	top: 30px;
+	left: -120px;
+	display: block;
+}
+.item {
+	width: 270px;
+	height: 180px;
+	border-radius: 8px;
+	background-color: #E6E6E6;
+}
+.list-page2 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+/*=#PAGE2=*/

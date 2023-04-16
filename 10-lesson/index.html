@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="body">
+  <header>
+    <div class="container container1 heading">
+      <div class="descr-wrap0">
+        <div class="lang">ENG</div>
+      </div>
+      <div class="descr-wrap1">
+        <a href="index.html" class="descr-up">Documentation</a><span class="slash descr-up">/</span><a href="second-page.html" class="descr-up">Who's using</a>
+      </div>
+      <img class="logo" src="assets/img/company-logo-black.svg" alt="Konstrukt logo" width="238" height="54">
+    </div>
+  </header>
+  <div class="container">
+    <aside>
+      <nav class="sidebar">
+        <ul class="list-page1">
+          <li><a href="#introduction" class="title-section">Introduction</a></li>
+          <li><a href="#components" class="title-section">Core components</a></li>
+          <li><a href="#react" class="title-section">React fundamentals</a></li>
+          <li><a href="#input" class="title-section">Handling text input</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main1">
+      <section id="introduction">
+        <div class="wrap-title-section">
+          <h2 class="title-section">Introduction</h2>
+          <small class="small-text">Chapter 1</small>
+        </div>
+        <p class="pt-sans-reg">Welcome to the very start of your React Native journey! If you're looking for environment setup instructions, they've moved to <u>their own section</u>. Continue reading for an introduction to the documentation, Native Components, React, and more!</p>
+      </section>
+      <section id="components">
+          <div class="wrap-title-section">
+            <h2 class="title-section">Core components</h2>
+            <small class="small-text">Chapter 2</small>
+          </div>
+          <p class="pt-sans-reg">React Native is an open source framework for building Android and iOS applications using React and the app platform&apos;s native capabiles. With React Native, you use JavaScript to access your platform&apos;s APIs as well as to describe the appearance and behavior of your UI using React components: <i>bundles of reusable, nestable code</i>. You can learn more about React in the next section. But first, let&apos;s cover how components work in React Native.</p>
+      </section>
+      <section id="react">
+          <div class="wrap-title-section">
+            <h2 class="title-section">React fundamentals</h2>
+            <small class="small-text">Chapter 3</small>
+          </div>
+          <p class="pt-sans-reg margin-inside">React Native runs on <u>React</u>, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
+          <p class="pt-sans-reg margin-inside">We&apos;re going to cover the core concepts behind React:</p>
+          <p class="pt-sans-reg margin-inside1"><b>+ components.</b> The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in.</p>
+          <p class="pt-sans-reg margin-inside2"><b>+ JSX.</b> React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so:  <mark class="mark">&lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;</mark>.</p>
+          <p class="pt-sans-reg margin-inside3">The React docs have a <u>comprehensive guide to JSX</u> you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <mark class="mark">name</mark> for the cat, name, and embedding it with curly braces inside <mark class="mark">&lt;Text&gt;</mark></p>
+          <p class="pt-sans-reg margin-inside4"><b>+ props</b>. Props is short for “properties”.</p>
+          <p class="pt-sans-reg"><b>+ state.</b> While you can think of props as arguments you use to configure how components render, state is like a component&apos;s personal data storage. State is useful for handling data that changes over time or that comes from user interaction. State gives your components memory!</p>
+      </section>
+      <section id="input">
+          <div class="wrap-title-section">
+            <h2 class="title-section">Handling text input</h2>
+            <small class="small-text">Chapter 4</small>
+          </div>
+          <p class="pt-sans-reg margin-inside5">TextInput is a Core Component that allows the user to enter text. It has an <i>onChangeText</i> prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called when the text is submitted.</p>
+          <p class="pt-sans-reg">For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way<span class="colon">:</span>🍕. So the sentence "Hello there Bob" would be translated as "🍕<span class="pizza">🍕".</span></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
