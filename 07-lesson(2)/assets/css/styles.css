@@ -36,10 +36,7 @@ ul {
   background-color: #fff;
 }
 li {
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
+  border: 2px solid #fff;
   outline: 2px solid #fff; 
 }
 .block-item.quarter {
