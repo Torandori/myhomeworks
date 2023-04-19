@@ -39,7 +39,6 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-  /* border: 2px solid blue; */
   margin-bottom: 70px;
 }
 nav ul {
@@ -165,9 +164,6 @@ h1 {
 .icon-list li {
   flex-basis: 25%;
 }
-/* li {
-  border: 2px solid orange;
-} */
 div.flex-btn-second-sec {
   display: flex;
   justify-content: center;
@@ -189,19 +185,19 @@ div.flex-btn-second-sec {
   font-size: 20px;
   line-height: 30px;
   color: var(--sub-text-color);
+  margin-bottom: 30px;
+}
+.h3.last {
+  margin-bottom: 0px;
 }
 /*===#SECOND-SECTION===*/
 /*===FOOTER===*/
-ul.footer-list-one, ul.footer-list-two {
+/* ul.footer-list-one, ul.footer-list-two {
   display: flex;
   flex-direction: column;
-}
-.input {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-.footer-list {
+} */
+
+/* .footer-list {
   display: flex;
 }
 .container.footer-container {
@@ -214,6 +210,11 @@ ul.footer-list-one li,  ul.footer-list-two li {
 ul.footer-list-one li:first-child,  ul.footer-list-two li:first-child {
   padding-bottom: 19px;
   padding-top: 0;
+} */
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 .btn.btn-footer {
   width: 180px;
@@ -222,32 +223,39 @@ ul.footer-list-one li:first-child,  ul.footer-list-two li:first-child {
   padding: 15px 10px;
   width: 340px;
 }
-/* .form {
-  border: 2px solid green;
-} */
-.container.footer-container {
-  display: flex;
-  padding-bottom: 70px;
-}
 .logo-footer {
   width: auto;
   height: auto;
-  align-self: flex-start;
+  align-self: start;
 }
-ul.footer-list-one + ul.footer-list-two {
- margin-left: 130px;
-}
-ul li a:hover {
-  color: var(--orange-color)
-}
-.footer-list-one, .footer-list-two {
-  width: 135px;
-}
-
 ::placeholder {
   color: #BCD0E5;
   font-size: 16px;
   line-height: 19.5px;
   font-weight: 400;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.footer-col {
+  width: 11%;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  line-height: 26px;
+  color: #544837;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: var(--orange-color)
 }
 /*===#FOOTER===*/
