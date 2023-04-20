@@ -2,6 +2,8 @@
   --primary-color: #545454;
   --heading-color: #1C1C1C;
   --secondary-color: #969696;
+  --blue-color: #007BFF;
+  --border-color: #E4E4E4;
 }
 *, *::before, *::after{
   padding: 0;
@@ -12,22 +14,143 @@ body {
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 400;
-  letter-spacing: -0.2px;
+  /* letter-spacing: 0.3px; */
   color: var(--primary-color);
+  padding: 55px 0;
 }
-container {
+.container {
   width: min(90%, 570px);
   margin: 0 auto;
+  padding: 35px 34px 16px;
+  /* border: 1px solid red; */
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+input[type=text]:focus, input[type=email]:focus, select:focus {
+  outline: 0 none;
+  border: 1px solid var(--blue-color);
+}
+button:focus {
+  outline: 0 none;
+  box-shadow: rgba(81, 141, 202, 0.364) 0px 8px 14px;
 }
 h1 {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
   color: var(--heading-color);
+  margin-bottom: 19px;
+  padding-left: 2px;
 }
 .secondary-text {
   color: var(--secondary-color);
   font-size: 13px;
   line-height: 18px;
-  letter-spacing: -0.1px;
+  /* letter-spacing: 0px; */
+}
+input[type=email] {
+  width: 100%;
+}
+input[type=text], input[type=email], select {
+  height: 38px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: serif;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 400;
+  /* margin-right: 12px; */
+}
+label {
+  margin-bottom: 7px;
+  line-height: 22px;
+  /* letter-spacing: 0.2px; */
+  display: inline-block;
+}
+.form-item, select {
+  /* border: 1px solid blue; */
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.form-item label.fake {
+  position: absolute;
+  left: 10px;
+  top: 37px;
+  transition: all .2s ease;
+}
+input[type=text]:focus + .fake, input[type=email]:focus + .fake,
+input[type=text]:not(:placeholder-shown) + .fake, input[type=email]:not(:placeholder-shown) + .fake {
+  top: 19px;
+  background-color: #ffffff;
+  height: 22px;
+  padding: 0 3px;
+  font-size: 12px;
+}
+.half {
+  width: 49%;
+}
+#first-name, #last-name {
+  width: 100%;
+}
+#email {
+  margin-bottom: 7px;
+}
+#city {
+  width: 100%;
+}
+.first {
+  margin-right: 10px;
+}
+.first, .second  {
+  margin-bottom: 20px;
+}
+.third {
+  margin-bottom: 20px;
+}
+.forth {
+  margin-bottom: 10px;
+}
+.fifth {
+  margin-right: 10px;
+}
+.fifth, .six {
+  margin-bottom: 20px;
+}
+.last {
+  text-align: center;
+}
+.last a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+.last .secondary-text {
+  margin-bottom: 20px;
+}
+
+button[type=submit] {
+  width: 100%;
+  background-color: var(--blue-color);
+  border: none;
+  border-radius: 6px;
+  padding: 7px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 22px;
+}
+.line {
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--border-color);
+  margin-bottom: 20px;
+}
+div span + span {
+  margin-left: 14px;
+}
+a {
+  vertical-align: bottom;
 }
