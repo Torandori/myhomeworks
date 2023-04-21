@@ -135,10 +135,7 @@ Additional elements of input field
 #email {
   margin-bottom: 7px;
 }
-.first {
-  margin-right: 10px;
-}
-.fifth {
+.margin-right {
   margin-right: 10px;
 }
 div.last {
