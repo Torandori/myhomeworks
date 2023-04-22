@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/plugins/styler/jquery.formstyler.css">
+  <link rel="stylesheet" href="assets/plugins/styler/jquery.formstyler.theme.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -52,7 +54,6 @@
         </div>
         
         <div class="half form-item margin-right select">
-          <span class="icon"></span>
           <label for="country">Country</label>
           <br>
           <select id="country" name="country">
@@ -85,5 +86,12 @@
       </form>
     </div>
   </main>
+  <script src="assets/js/jquery-3.6.4.min.js"></script>
+  <script src="assets/plugins/styler/jquery.formstyler.min.js"></script>
+  <script>
+    $(function(){
+      $("select").styler();
+    }) 
+  </script>
 </body>
 </html>
