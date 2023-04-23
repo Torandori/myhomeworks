@@ -11,18 +11,29 @@ body {
   color: #ffffff;
 }
 
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+
 h1 {
   font-family: "Delius Unicase";
   font-size: 2.25rem;
   line-height: 2.875rem;
+  color: #000000;
+  letter-spacing: 2px;
+  margin-bottom: 80px;
+  padding-top: 120px;
+  text-align: center;
 }
 
 .card {
-  width: 400px;
+  width: 370px;
   position: relative;
   aspect-ratio: 1;
   border-radius: 20px;
-  background-color: lightblue;
+  background-color: white;
   overflow: hidden;
   cursor: pointer;
 }
@@ -61,7 +72,7 @@ h1 {
   padding: 20px 20px 0;
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 3;
 }
 
 .bottom {
@@ -72,6 +83,7 @@ h1 {
   padding: 0 20px 20px;
   display: flex;
   justify-content: space-between;
+  z-index: 3;
 }
 .bottom .text-below {
   font-weight: 500;
@@ -79,4 +91,30 @@ h1 {
 
 .text-below2 {
   color: #E0E0E0;
+}
+
+.card-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-overlay {
+  background: linear-gradient(360deg, #241F24 1.04%, rgba(91, 91, 91, 0.26) 10.99%, rgba(187, 186, 192, 0) 16.29%);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 29px;
+}
+
+.w2-hor {
+  grid-column: span;
 }
