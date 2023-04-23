@@ -56,8 +56,12 @@ h1 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .3s ease;
     .icon {
       display: inline-block;
+    }
+    &:hover {
+      background-color: #E5E5E5;
     }
   }
 }

@@ -46,9 +46,13 @@ h1 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .card:hover .bg-icon .icon {
   display: inline-block;
+}
+.card:hover .bg-icon:hover {
+  background-color: #E5E5E5;
 }
 
 .top {
