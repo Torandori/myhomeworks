@@ -150,6 +150,7 @@ label:not(label.radio-label) {
 .form-item {
   width: 49%;
   position: relative;
+  height: 67px;
   /* border: 1px solid green; */
 }
 .form-item.w100 {
@@ -180,8 +181,8 @@ input[type=email]:not(:placeholder-shown) + .fake,
 input[type=tel]:not(:placeholder-shown) + .fake,
 input[type=number]:not(:placeholder-shown) + .fake {
   top: 19px;
-  background-color: #ffffff;
-  height: 22px;
+  background-color: red;
+  height: 20px;
   padding: 0 3px;
   font-size: 12px;
 }
@@ -210,7 +211,7 @@ div.last a {
 div.last .secondary-text {
   margin-bottom: 20px;
 }
-.form-element.last {
+.form-item.last {
   height: 38px;
 }
 button[type=submit] {
@@ -225,7 +226,6 @@ button[type=submit] {
   letter-spacing: -0.1px;
   font-weight: 600;
   line-height: 22px;
-  margin-bottom: 23px;
 }
 button[type=submit]:hover {
   background-color: var(--blue-color);
