@@ -125,3 +125,7 @@ body {
 .wrapper .r {
   height: 370px;
 }
+
+.last-card {
+  margin-bottom: 120px;
+}
