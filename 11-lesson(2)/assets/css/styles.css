@@ -101,8 +101,16 @@ input[type=text], input[type=email], input[type=tel], input[type=number] {
   border-left: none;
 }
 .jq-selectbox__trigger-arrow {
-  top: 19px;
-  right: 14px;
+  border: none;
+  background: url('../img/arrow-up-down.svg') 50% 50%/12.5px 15.5px no-repeat;
+  width: 10.5px;
+  height: 13.5px;
+  top: 13px;
+  right: 11px;
+  transition: all .2s ease;
+}
+.jq-selectbox__trigger-arrow:hover {
+  opacity: 0.6;
 }
 .jq-selectbox__select:active {
   box-shadow: none;
@@ -329,7 +337,7 @@ label:hover .circle {
   border: 1px solid var(--border-color);
   border-bottom-color: var(--border-color);
   text-shadow: none;
-  font: 15px/30px 'Roboto', serif;
+  font-size: 0;
   color: var(--primary-color); 
   line-height: 12px;
 }
@@ -337,14 +345,18 @@ label:hover .circle {
 .jq-file__browse {
   padding: 3px 10px;
   box-shadow: none;
-  background: #ffffff;
   border-radius: 0 5px 5px 0;
   text-shadow: none;
   border-left: none;
-  font: 15px/30.5px 'Roboto', serif;
-  top: 1;
-  right: 1;
+  font-size: 0;
   line-height: 22px;
+  background: url('../img/icon-cam.svg') 50% 50%/16px 16px no-repeat;
+  width: 16px;
+  height: 16px;
+  top: 6px;
+  right: 6px;
+  position: absolute;
+  transition: all .2s ease;
   /* border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color); */
 }
@@ -352,11 +364,9 @@ label:hover .circle {
   border-top: 1px solid var(--blue-color);
   border-right: 1px solid var(--blue-color);
 } */
+
 .jq-file:hover .jq-file__browse {
-	background: #fafafa;
-}
-.jq-file:active .jq-file__browse {
-	background:  #f0f0f0f6;
+	opacity: 0.6;
 	box-shadow: none;
 }
 .jq-file.focused .jq-file__name {
@@ -395,6 +405,13 @@ label:hover .circle {
   background-color: #ffffff;
   box-shadow: none;
   cursor: pointer;
+}
+.button-reset:focus, .button-reset:focus-visible {
+  border: 1px solid var(--blue-color);
+  outline: 0;
+}
+.button-reset:hover {
+  opacity: 0.6;
 }
 .reset {
   margin-top: 12px;

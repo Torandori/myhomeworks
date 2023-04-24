@@ -74,9 +74,9 @@
 	color: #333;
 	text-shadow: 1px 1px #FFF;
 }
-.jq-file:hover .jq-file__browse {
+/* .jq-file:hover .jq-file__browse {
 	background: linear-gradient(#F6F6F6, #E6E6E6);
-}
+} */
 .jq-file:active .jq-file__browse {
 	background: #F5F5F5;
 	box-shadow: inset 1px 1px 3px #DDD;

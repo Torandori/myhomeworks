@@ -228,7 +228,6 @@ label:hover .circle {
   padding-right: 5px;
   padding-left: 5px;
 }
-
 .jq-selectbox__select {
   height: 38px;
   padding: 8px 15px;
@@ -250,9 +249,18 @@ label:hover .circle {
 .jq-selectbox__trigger {
   border-left: none;
 }
+
 .jq-selectbox__trigger-arrow {
-  top: 19px;
-  right: 14px;
+  border: none;
+  background: url('../img/arrow-up-down.svg') 50% 50%/12.5px 15.5px no-repeat;
+  width: 10.5px;
+  height: 13.5px;
+  top: 13px;
+  right: 11px;
+  transition: all .2s ease;
+}
+.jq-selectbox__trigger-arrow:hover {
+  opacity: 0.6;
 }
 .jq-selectbox__select:active {
   box-shadow: none;
