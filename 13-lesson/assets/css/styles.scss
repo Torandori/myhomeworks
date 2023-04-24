@@ -1,0 +1,128 @@
+$color-yellow: #FFCC00;
+$color-title: #666666;
+$color-text: #333;
+
+@mixin fz($size_px) {
+  font-size: ($size_px / 16) * 1rem;
+}
+
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  @include fz(14);
+  line-height: 24px;
+  color: $color-text;
+}
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+}
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+  margin: 121px 0 122px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  .separator {
+    width: min(100%, 450px);
+    height: 1px;
+    background-color: $color-yellow;
+    position: relative;
+    margin: 0 auto;
+    .icon-wrap {
+      background-color: #fff;
+      position: absolute;
+      top: -7px;
+      padding: 0 5px;
+      display: inline-block;
+      transform: translateX(-50%)
+    }
+  }
+}
+.suptitle {
+  font-weight: 500;
+  @include fz(18);
+  text-transform: uppercase;
+  color: #898F8F;
+  margin-bottom: 15px;
+}
+h1 {
+  font-weight: 900;
+  @include fz(60);
+  line-height: 66px;
+  text-transform: uppercase;
+  color: $color-yellow;
+  margin-bottom: 40px;
+}
+
+.main-wrap {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  .column {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+.image-wrap {
+  position: relative;
+  padding: 15px;
+  &::after, &::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    border-top: 1px solid $color-yellow;
+  }
+  &::after {
+    right: 0;
+    border-right: 1px solid $color-yellow;
+  }
+  &::before {
+    left: 0;
+    border-left: 1px solid $color-yellow;
+  }
+}
+.column-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid $color-yellow;
+}
+
+.image-wrap2 {
+  border: 1px solid $color-yellow;
+  &::after, &::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid $color-yellow;
+  }
+  &::after {
+    right: 0;
+    border-right: 1px solid $color-yellow;
+  }
+  &::before {
+    left: 0;
+    border-left: 1px solid $color-yellow;
+  }
+}
+
+
