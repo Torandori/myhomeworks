@@ -29,7 +29,7 @@ body {
   margin: 0 auto;
   border: 1px solid blue;
 }
-h1 {
+.h1 {
   font-family: 'Delius Unicase';
   // @include font(36px, 45.07px);
   @include fz(36);
@@ -40,9 +40,9 @@ h1 {
   text-align: center;
 }
 .card {
-  width: 370px;
+  // width: 370px;
   position: relative;
-  aspect-ratio: 1;
+  // aspect-ratio: 1;
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
@@ -128,10 +128,22 @@ h1 {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 370px);
   gap: 29px;
+  
+  // height: 100vh;
 }
 
 .w2-hor {
-  grid-column: span;
+  grid-column: span 2;
+}
+.w2-vert {
+  grid-row: span 2;
+}
+.w4 {
+  grid-area: 2 / 1 / 4 / 3;
+}
+.r {
+  display: grid;
+  grid-auto-rows: minmax(370px, auto);
 }

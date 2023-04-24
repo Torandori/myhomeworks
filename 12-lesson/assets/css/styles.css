@@ -17,7 +17,7 @@ body {
   border: 1px solid blue;
 }
 
-h1 {
+.h1 {
   font-family: "Delius Unicase";
   font-size: 2.25rem;
   line-height: 2.875rem;
@@ -29,9 +29,7 @@ h1 {
 }
 
 .card {
-  width: 370px;
   position: relative;
-  aspect-ratio: 1;
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
@@ -111,10 +109,23 @@ h1 {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 370px);
   gap: 29px;
 }
 
 .w2-hor {
-  grid-column: span;
+  grid-column: span 2;
+}
+
+.w2-vert {
+  grid-row: span 2;
+}
+
+.w4 {
+  grid-area: 2/1/4/3;
+}
+
+.r {
+  display: grid;
+  grid-auto-rows: minmax(370px, auto);
 }
