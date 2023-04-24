@@ -27,7 +27,6 @@ body {
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
-  border: 1px solid blue;
 }
 .h1 {
   font-family: 'Delius Unicase';
@@ -130,20 +129,34 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 370px);
   gap: 29px;
-  
-  // height: 100vh;
+  .w2-hor {
+    grid-column: span 2;
+    height: 370px;
+  }
+  .w2-vert {
+    grid-row: span 2;
+    height: minmax(370px, 770px)
+  }
+  .w4 {
+    grid-area: 2 / 1 / 4 / 3;
+  }
+  .r {
+    height: 370px;
+  }
+
 }
 
-.w2-hor {
-  grid-column: span 2;
-}
-.w2-vert {
-  grid-row: span 2;
-}
-.w4 {
-  grid-area: 2 / 1 / 4 / 3;
-}
-.r {
-  display: grid;
-  grid-auto-rows: minmax(370px, auto);
-}
+// .w2-hor {
+//   grid-column: span 2;
+//   height: 370px;
+// }
+// .w2-vert {
+//   grid-row: span 2;
+//   height: minmax(370px, 770px)
+// }
+// .w4 {
+//   grid-area: 2 / 1 / 4 / 3;
+// }
+// .r {
+//   height: 370px;
+// }

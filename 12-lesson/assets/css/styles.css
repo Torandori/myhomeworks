@@ -14,7 +14,6 @@ body {
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
-  border: 1px solid blue;
 }
 
 .h1 {
@@ -112,20 +111,17 @@ body {
   grid-template-rows: repeat(3, 370px);
   gap: 29px;
 }
-
-.w2-hor {
+.wrapper .w2-hor {
   grid-column: span 2;
+  height: 370px;
 }
-
-.w2-vert {
+.wrapper .w2-vert {
   grid-row: span 2;
+  height: minmax(370px, 770px);
 }
-
-.w4 {
+.wrapper .w4 {
   grid-area: 2/1/4/3;
 }
-
-.r {
-  display: grid;
-  grid-auto-rows: minmax(370px, auto);
+.wrapper .r {
+  height: 370px;
 }
