@@ -32,15 +32,20 @@ body {
   text-transform: uppercase;
   color: $color-sup;
   margin-bottom: 15px;
+  padding-left: 3px;
 }
 .item-link a {
   color: $color-green-text;
   line-height: 18.75px;
   font-weight: 600;
   text-decoration: none;
+  transition: all .2s ease;
+}
+.item-link:hover a {
+  opacity: 0.7;
 }
 h1 {
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito';
   line-height: 52px;
   letter-spacing: 0.2px;
   font-weight: 600;
@@ -55,7 +60,7 @@ h2 {
 }
 p {
   line-height: 28px;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 .item-icon {
   width: 64px; 
@@ -85,6 +90,7 @@ p {
   border: 1px solid #E5EAF4;
   border-radius: 8px;
   padding: 40px;
+  width: 33%;
   &:hover {
     border-color: #3DB370;
     .item-icon {
@@ -145,6 +151,7 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px;
   .logo-footer {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 }
+
