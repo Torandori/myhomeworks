@@ -235,9 +235,6 @@ ul.social-media {
     margin-bottom: 60px;
     flex-wrap: wrap;
 }
-ul.social-media li a {
-    /* width: 23%; */
-}
 
 /*===#CONTACTS===*/
 
@@ -292,7 +289,17 @@ ul.social-media li a {
         margin-bottom: 40px;
      }
      .lang-wrap {
-        display: none;
+        /* display: none; */
+        position: fixed;
+        rotate: -90deg;
+        right: 0;
+        top: 154px;
+        transform: translateY(300%);
+        background-color: #fff;
+        width: 86px;
+        &.open {
+            transform: translateX(0);
+        }
      }
 }
 @media screen and (max-width: 398px) {
@@ -309,9 +316,9 @@ ul.social-media li a {
      .right1 {
         padding-right: 40px;
      }
-     .lang-wrap {
+     /* .lang-wrap {
         display: none;
-     }
+     } */
 
 
 }
