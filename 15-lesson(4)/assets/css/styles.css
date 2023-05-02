@@ -35,6 +35,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 17px 0;
+  margin-bottom: 70px;
 }
 .container {
   max-width: 1200px;
@@ -193,6 +194,9 @@ div.flex-btn-second-sec {
 }
 /*===#SECOND-SECTION===*/
 /*===FOOTER===*/
+.footer {
+  margin-bottom: 70px;
+}
 .input {
   display: flex;
   flex-direction: column;
@@ -203,7 +207,7 @@ div.flex-btn-second-sec {
 }
 .tel {
   padding: 15px 10px;
-  width: 340px;
+  width: 100%;
 }
 .logo-footer {
   width: auto;
@@ -271,23 +275,50 @@ div.flex-btn-second-sec {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .container {
+  /* .container {
     margin-bottom: 40px;
-  }
+  } */
   .btn-first-section {
     margin-bottom: 20px;
   }
   .row {
     flex-wrap: wrap;
+    gap: 30px;
   }
   .row div:last-child {
-    margin: 0 auto;
   }
   .footer-col {
     width: 25%;
   }
   .form {
     width: 34%;
+  }
+  .logo-footer {
+    width: 100%;
+    text-align: center;
+  }
+  .logo-footer img {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .form {
+    width: 43%;
+  }
+  .footer-col {
+    padding-left: 9%;
+    width: 35%;
+  }
+  .logo-footer {
+    text-align: center;
+  }
+  .row div:last-child {
+    margin: auto;
+    text-align: center;
+  }
+  .input {
+    align-items: center;
   }
 }
 
@@ -313,6 +344,7 @@ div.flex-btn-second-sec {
     margin-bottom: 20px;
   }
 
+
 }
 @media screen and (max-width: 660px) {
   .slogan {
@@ -322,5 +354,45 @@ div.flex-btn-second-sec {
 @media screen and (max-width: 544px) {
   .slogan {
     width: 80%;
+  }
+  .row {
+    text-align: center;
+  }
+  .footer-col {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .form {
+    width: 100%;
+  }
+  .header-buttons {
+    display: none;
+  }
+  .logo, .remove {
+    display: none;
+  }
+  body {
+    font-size: 1.1rem;
+  }
+  .h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+    padding-top: 20px;
+  }
+  .h1 {
+    font-size: 36px;
+  }
+  .header {
+    margin-bottom: 28px;
+  }
+  .icon-list {
+    gap: 26px;
+  }
+  .icon-back {
+    margin: 0 auto 20px;
+  }
+  .left-col {
+    gap: 20px;
   }
 }
