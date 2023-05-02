@@ -1,3 +1,73 @@
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-500.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* quicksand-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quicksand/quicksand-v30-latin-regular.woff2") format("woff2"), url("../fonts/quicksand/quicksand-v30-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* quicksand-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/quicksand/quicksand-v30-latin-500.woff2") format("woff2"), url("../fonts/quicksand/quicksand-v30-latin-500.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nunito-sans-v12-latin-regular.woff2") format("woff2"), url("../fonts/nunito-sans-v12-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nun/nunito-v25-latin-regular.woff2") format("woff2"), url("../fonts/nun/nunito-v25-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/nun/nunito-v25-latin-600.woff2") format("woff2"), url("../fonts/nun/nunito-v25-latin-600.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 *, *:before, *:after {
   padding: 0;
   margin: 0;
