@@ -291,6 +291,9 @@ ul.social-media li a {
     button {
         margin-bottom: 40px;
      }
+     .lang-wrap {
+        display: none;
+     }
 }
 @media screen and (max-width: 398px) {
     .item-icon {
