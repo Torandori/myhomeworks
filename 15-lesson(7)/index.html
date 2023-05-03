@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/plugins/styler/jquery.formstyler.css">
+  <link rel="stylesheet" href="assets/plugins/styler/jquery.formstyler.theme.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>Profile</h1>
+      <form class="wrap1">
+        <div class="pic-wrap">
+          <img class="img-avatar" src="assets/img/photo.jpg" alt="Profile photo">
+        </div>
+        <div class="form-item1">
+          <input id="photo" type="file" name="photo">
+          <div class="secondary-text sec1">Up to 1 MB (300x300 px)</div>
+        </div>
+        <div class="reset">
+          <button class="button-reset" onclick="reset($('#file'))"><img class="reset-icon" src="assets/img/icon-trash.svg" alt="trash"></button>
+        </div>
+      </form>
+
+      <form class="wrap" action="#" method="post">
+        <div class="half form-item margin-right">
+          <label for="first-name">Name</label>
+          <br>
+          <input id="first-name" type="text" name="first-name" placeholder=" " required>
+          <label class="fake" for="first-name">Full Name</label>
+        </div>
+        <div class="form-item">
+          <!-- <span class="icon"></span> -->
+          <label for="email">E-mail</label>
+          <br>
+          <input id="email" type="email" name="email" placeholder=" " required>
+          <label class="fake" for="email">E-mail</label>
+        </div>
+        <div class="half form-item margin-right select">
+          <!-- <span class="icon"></span> -->
+          <label for="country">Country</label>
+          <br>
+          <select id="country" name="country">
+            <option disabled="disabled" selected value="select">Select</option>
+            <option value="ukraine">Ukraine</option>
+            <option value="poland">Poland</option>
+            <option value="germany">Germany</option>
+            <option value="france">France</option>
+            <option value="turkey">Turkey</option>
+          </select>
+        </div>
+        <div class="half form-item">
+          <!-- <span class="icon"></span> -->
+          <label for="city">City</label>
+          <br>
+          <input id="city" type="text" name="city" placeholder=" ">
+          <label class="fake" for="city">City</label>
+        </div>
+        <div class="half form-item margin-right">
+          <!-- <span class="icon"></span> -->
+          <label for="zip">Zip Code</label>
+          <br>
+          <input id="zip" type="number" name="zip" placeholder=" ">
+          <label class="fake" for="zip">Zip Code</label>
+        </div>
+        <div class="half form-item">
+          <!-- <span class="icon"></span> -->
+          <label for="phone">Phone Number</label>
+          <br>
+          <input id="phone" type="tel" name="phone" placeholder=" ">
+          <label class="fake" for="phone">Phone Number</label>
+        </div>
+        <div class="form-item last button">
+          <button type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="assets/js/jquery-3.6.4.min.js"></script>
+  <script src="assets/plugins/styler/jquery.formstyler.min.js"></script>
+  <script>
+    $(function(){
+      $("select, input[type='file']").styler();
+    }) 
+  </script>
+  <script>
+    window.reset = function(e) {
+      e.wrap('<form>').closest('form').get(0).reset();
+      e.unwrap();
+    }
+  </script>
+</body>
+</html>
