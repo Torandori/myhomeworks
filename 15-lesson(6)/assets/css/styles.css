@@ -1,0 +1,308 @@
+:root {
+  --primary-color: #545454;
+  --black-color: #1C1C1C;
+  --secondary-color: #969696;
+  --blue-color: #007BFF;
+  --border-color: #E4E4E4;
+  --body-color: #E5E5E5;
+}
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--primary-color);
+  padding: 55px 0;
+  background-color: #E5E5E5;
+}
+.container {
+  width: min(90%, 570px);
+  margin: 0 auto;
+  padding: 35px 34px 16px;
+  background-color: #ffffff;
+  /* border: 1px solid red; */
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+}
+input[type=text]:focus, input[type=email]:focus {
+  outline: 0 none;
+  border: 1px solid var(--blue-color);
+}
+button[type=submit]:focus {
+  outline: 0 none;
+  box-shadow: rgba(81, 141, 202, 0.364) 0px 8px 14px;
+}
+.radio-label:focus .circle {
+  border: 1px solid var(--blue-color);
+}
+h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--black-color);
+  margin-bottom: 19px;
+  padding-left: 2px;
+}
+.secondary-text {
+  color: var(--secondary-color);
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 1px;
+}
+input[type=email] {
+  width: 100%;
+}
+input[type=text], input[type=email] {
+  height: 38px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: serif;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 400;
+  /* margin-right: 12px; */
+}
+.has-err input[type=text], .has-err input[type=email] {
+  border-color: red;
+}
+.has-err input[type=text], .has-err input[type=email] {
+  border-color: red;
+}
+input[type=text]:disabled, input[type=email]:disabled, button:disabled {
+  background-color: #EBEBE4;
+  cursor: not-allowed;
+}
+/* input[type=text]:required + label::after, input[type=email]:required + label::after, select:required + label::after, button:required + label::after, input[type=radio]:required + label::after {
+  content: '*';
+  color: red;
+  display: inline-block;
+  margin-right: 5px;
+} */
+input[type=text]:disabled + label, input[type=email]:disabled + label {
+  opacity: 0.4;
+}
+label:not(label.radio-label) {
+  margin-bottom: 7px;
+  line-height: 22px;
+  display: inline-block;
+}
+.form-item {
+  width: 49%;
+  position: relative;
+  /* border: 1px solid green; */
+}
+.form-item.w100 {
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+input[type=text], button[type=submit], input[type=email] {
+  width: 100%;
+}
+.form-item label.fake {
+  position: absolute;
+  left: 10px;
+  top: 37px;
+  transition: all .2s ease;
+}
+input[type=text]:focus + .fake, input[type=email]:focus + .fake,
+input[type=text]:not(:placeholder-shown) + .fake, input[type=email]:not(:placeholder-shown) + .fake {
+  top: 19px;
+  background-color: #ffffff;
+  height: 22px;
+  padding: 0 3px;
+  font-size: 12px;
+}
+/*
+Additional elements of input field
+*/
+.icon {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: silver;
+  width: 38px;
+  height: 38px;
+  border-radius: 0 6px 6px 0;
+}
+#email {
+  margin-bottom: 7px;
+}
+.margin-right {
+  margin-right: 10px;
+}
+div.last {
+  text-align: center;
+}
+div.last a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+div.last .secondary-text {
+  margin-bottom: 20px;
+}
+button[type=submit] {
+  background-color: var(--blue-color);
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  height: 38px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 23px;
+}
+button[type=submit]:hover {
+  background-color: var(--blue-color);
+  opacity: 0.8;
+  transition: all .2s ease;
+}
+.line {
+  height: 1.5px;
+  background-color: var(--border-color);
+  margin-bottom: 20px;
+}
+div.terms span + span {
+  margin-left: 14px;
+}
+a {
+  vertical-align: bottom;
+}
+.radio {
+  margin-bottom: 3px;
+}
+.radio label {
+  padding-left: 25px;
+  cursor: pointer;
+}
+.radio > label {
+  margin-right: 16px;
+}
+input[type=radio] {
+  opacity: 0;
+  width:0; 
+  height:0;
+}
+.radio-label .circle {
+  position: absolute;
+  top:0;
+  left:0;
+  width:20px; 
+  height:20px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  transition: .3s background-color;
+}
+span.circle.circle2 {
+  left: 83px;
+}
+label:hover .circle {
+  background-color: #ccc;
+}
+.radio-label input:checked ~ .circle {
+  background-color: var(--blue-color);
+}
+.radio-label input:checked ~ .circle::after,
+.radio-label input:checked ~ .circle2::after  {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #ffffff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.spacing {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.jq-selectbox__select {
+  height: 38px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+  border-bottom-color: var(--border-color);
+  text-shadow: none;
+  font: 15px/30px 'Roboto', serif;
+  color: var(--secondary-color); 
+}
+.jq-selectbox {
+  width: 100%;
+}
+.jq-selectbox__select:hover {
+  background: #ffffff;
+}
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  border: none;
+  background: url('../img/arrow-up-down.svg') 50% 50%/12.5px 15.5px no-repeat;
+  width: 10.5px;
+  height: 13.5px;
+  top: 13px;
+  right: 11px;
+  transition: all .2s ease;
+}
+.jq-selectbox__trigger-arrow:hover {
+  opacity: 0.6;
+}
+.jq-selectbox__select:active {
+  box-shadow: none;
+  background: #ffffff;
+  border: 1px solid #007bff48;
+}
+.jq-selectbox.focused .jq-selectbox__select {
+	border: 1px solid var(--blue-color);
+}
+.has-err input[type=text], .has-err input[type=email] {
+  border-color: red;
+}
+.has-err input[type=text], .has-err input[type=email] {
+  border-color: red;
+}
+.jq-selectbox.disabled .jq-selectbox__select { 
+  background-color: #EBEBE4;
+  cursor: not-allowed;
+}
+
+.jq-selectbox__select-text {
+  position: absolute;
+  top: -1px;
+  left: 10px;
+  line-height: 38px;
+}
+
+@media screen and (max-width: 640px) {
+  .form-item {
+    width: 100%;
+    &.margin-right {
+      margin-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 16px;
+    padding: 40px 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+}
