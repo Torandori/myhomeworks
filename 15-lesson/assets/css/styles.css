@@ -323,7 +323,16 @@ ul.social-media {
      /* .lang-wrap {
         display: none;
      } */
-
-
 }
+.hamb-wrap {
+    display: none;
+  }
+@media screen and (max-width: 660px) {
+    .main-menu {
+      display: none;
+    }
+    .hamb-wrap {
+      display: block;
+    }
+  }
 
