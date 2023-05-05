@@ -277,8 +277,9 @@ ul.social-media {
       transform: translateY(72px);
     }
 }
-  .lang-choose {
+.lang-choose {
     margin-left: 54px;
+    display: none;
 }
   #shadow {
     position: fixed;
@@ -395,19 +396,22 @@ ul.social-media {
     button {
         margin-bottom: 40px;
      }
-     .lang-wrap {
-        /* display: none; */
-        position: fixed;
-        rotate: -90deg;
-        right: 0;
-        top: 154px;
-        transform: translateY(300%);
-        background-color: #fff;
-        width: 86px;
-        &.open {
-            transform: translateX(0);
-        }
-     }
+    .lang-wrap {
+    display: none; 
+    position: fixed;
+    rotate: -90deg;
+    right: 0;
+    top: 154px;
+    transform: translateY(300%);
+    background-color: #fff;
+    width: 86px;
+    &.open {
+        transform: translateX(0);
+    }
+    }
+    .lang-choose {
+      display: block;
+    }
 }
 @media screen and (max-width: 398px) {
     .item-icon {

@@ -398,6 +398,7 @@ ul.social-media {
 
 .lang-choose {
   margin-left: 54px;
+  display: none;
 }
 
 #shadow {
@@ -532,7 +533,7 @@ ul.social-media {
   }
 
   .lang-wrap {
-    /* display: none; */
+    display: none;
     position: fixed;
     rotate: -90deg;
     right: 0;
@@ -543,6 +544,10 @@ ul.social-media {
   }
   .lang-wrap.open {
     transform: translateX(0);
+  }
+
+  .lang-choose {
+    display: block;
   }
 }
 @media screen and (max-width: 398px) {
