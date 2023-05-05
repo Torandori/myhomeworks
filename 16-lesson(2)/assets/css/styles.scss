@@ -415,7 +415,7 @@ footer .container {
 
 @media screen and (max-width: 700px) {
   .icon-list li {
-    width: 47%;
+    width: 65%;
     padding-left: 0;
     text-align: center;
     /* border: 1px solid blue; */
@@ -513,5 +513,8 @@ footer .container {
   }
   footer .container {
     padding-bottom: 20px;
+  }
+  .icon-list li {
+    width: 65%;
   }
 }
