@@ -1,0 +1,346 @@
+/* lato-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato/lato-v23-latin-regular.woff2") format("woff2"), url("../fonts/lato/lato-v23-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato/lato-v23-latin-700.woff2") format("woff2"), url("../fonts/lato/lato-v23-latin-700.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* red-hat-display-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/red/red-hat-display-v14-latin-regular.woff2") format("woff2"), url("../fonts/red/red-hat-display-v14-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* red-hat-display-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/red/red-hat-display-v14-latin-500.woff2") format("woff2"), url("../fonts/red/red-hat-display-v14-latin-500.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* red-hat-display-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/red/red-hat-display-v14-latin-600.woff2") format("woff2"), url("../fonts/red/red-hat-display-v14-latin-600.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.hamburger--collapse .hamburger-inner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--collapse.is-active .hamburger-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6875rem;
+  color: #565656;
+}
+
+.red-hat-font {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, button {
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 84px;
+}
+header .logo {
+  margin-right: auto;
+  width: 145px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 100px;
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 42px;
+}
+.main-menu ul a {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  letter-spacing: 0.3em;
+  position: relative;
+}
+.main-menu ul a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  height: 1px;
+  width: 0;
+  background-color: #000;
+  transform: translateX(-50%);
+  transition: all 0.2s ease;
+}
+.main-menu ul a:hover::after, .main-menu ul a.active::after {
+  width: 70%;
+}
+
+.hamb-wrap {
+  display: none;
+}
+
+#mobile-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  transform: translateY(-100%);
+  transition: all 0.4s ease;
+  z-index: 100;
+}
+#mobile-sidebar.open {
+  transform: translateY(80px);
+}
+
+#shadow {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+  display: none;
+}
+#shadow.show {
+  display: block;
+}
+
+.mob-menu ul li {
+  border-bottom: 1px solid blue;
+}
+.mob-menu ul li a {
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 2.5rem;
+  padding: 0 20px;
+}
+
+.search-btn {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.section-first {
+  background-image: url("../images/bg-image.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 144/60;
+  padding-top: 100px;
+}
+
+h1 {
+  color: #000;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  max-width: 770px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-menu {
+    display: none;
+  }
+
+  .hamb-wrap {
+    display: block;
+  }
+
+  .section-first {
+    background-image: url("../images/bg-m-image.jpg");
+    aspect-ratio: 768/320;
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+    max-width: 600px;
+  }
+
+  header .container {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-first {
+    background-image: url("../images/bg-s-image.jpg");
+    aspect-ratio: 32/50;
+    padding-top: 70px;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  header .container {
+    gap: 20px;
+  }
+}
