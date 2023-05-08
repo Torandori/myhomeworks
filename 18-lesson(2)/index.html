@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div id="mobile-sidebar">
+      <div class="logo-cross-wrap">
+        <div class="logo">
+          <a href="index.html">
+            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/logo.svg" alt="Productly Logo">
+          </a>
+        </div>
+        <button class="hamburger hamburger--collapse is-active" type="button" onclick="toggleMenu()">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <nav class="mob-menu">
+        <ul>
+          <li><a href="#" onclick="toggleMenu()">Product</a></li>
+          <li><a href="#" onclick="toggleMenu()">Customers</a></li>
+          <li><a href="#" onclick="toggleMenu()">Pricing</a></li>
+          <li><a href="#" onclick="toggleMenu()">Resources</a></li>
+        </ul>
+      </nav> 
+      <div class="header-buttons mobbar-buttons">
+        <button type="button" class="btn btn-white head-btn">Sign in</button>
+        <button type="button" class="btn btn-orange head-btn">Sign up</button>
+      </div>
+    </div>
+    <div id="shadow" onclick="toggleMenu()"></div>
+
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <a href="index.html">
+            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/logo.svg" alt="Productly Logo">
+          </a>
+        </div>
+        <nav>
+          <ul class="main-menu">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li class="remove"><a href="#">Resources</a></li>
+          </ul>
+        </nav>
+        <div class="header-buttons">
+          <button type="button" class="btn btn-white">Sign in</button>
+          <button type="button" class="btn btn-orange">Sign up</button>
+        </div>
+
+        <div class="hamb-wrap">
+          <button id="hamb-btn" class="hamburger hamburger--collapse" type="button" onclick="toggleMenu()">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+
+    <main>
+      <section class="first-block">
+        <div class="container flex">
+          <div class="left-col">
+            <h1 class="h1">The Design Thinking superpowers</h1>
+            <div class="slogan">Tools, tutorials, design and innovation experts, all in one <br> place! The most intuitive way to imagine your next user <br> experience.</div>
+            <div>
+              <a class="btn btn-first-section" href="#">Get started</a>
+            </div>
+          </div>
+          <div class="right-col">
+            <img class="lazy people" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/image.svg" alt="Picture of people">
+          </div>
+        </div>
+      </section>
+      <section class="second-block" style="background-image: url('assets/img/bg.svg');" lazy-loaded-background>
+        <div class="container second">
+          <div>
+            <h2 class="h2">We design tools to unveil <br> your superpowers</h2>
+            <ul class="icon-list">
+              <li>
+                <div class="icon-back icon-bg-color1"><img class="lazy icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/arrow.svg" alt="Arrow icon"></div>
+                <div class="title-under-icon">First click tests</div>
+                <div class="descr-under-icon">While most people enjoy casino <br> gambling</div>
+              </li>
+              <li>
+                <div class="icon-back icon-bg-color2"><img class="lazy icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/strange.svg" alt="Zig-zag icon"></div>
+                <div class="title-under-icon">Design surveys</div>
+                <div class="descr-under-icon">Sports betting, lottery and bingo <br> playing for the fun</div>
+              </li>
+              <li>
+                <div class="icon-back icon-bg-color3">
+                  <img class="lazy icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/heart.svg" alt="Heart icon">
+                </div>
+                <div class="title-under-icon">Preference tests</div>
+                <div class="descr-under-icon">The Myspace page defines the <br> individual.</div>
+              </li>
+              <li>
+                <div class="icon-back icon-bg-color4">
+                  <img class="lazy icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/time.svg" alt="Time icon">
+                </div>
+                <div class="title-under-icon">Five second tests</div>
+                <div class="descr-under-icon">Personal choices and the overall <br> personality of the person.</div>
+              </li>
+            </ul>
+            <div class="flex-btn-second-sec">
+              <a class="btn btn-second-section" href="#">Sign up now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="logo-footer">
+              <a href="index.html"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/logo.svg" alt="Productly Logo"></a>
+            </div>
+            <div class="footer-col">
+              <h3 class="h3">Quick Links</h3>
+              <ul class="footer-list-one">
+                <li><a href="#" target="_blank">About Us</a></li>
+                <li><a href="#" target="_blank">Blog</a></li>
+                <li><a href="#" target="_blank">Contacts</a></li>
+                <li><a href="#" target="_blank">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3 class="h3">Legal Stuff</h3>
+              <ul class="footer-list-one">
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Financing</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="form">
+              <form class="input">
+                <label class="h3 last" for="tel">Knowing you're always on <br> the best energy deal.</label>
+                <input class="tel" type="tel" id="tel" name="telephone" placeholder="Enter your phone Number">
+                <button class="btn btn-footer" type="submit">Sign up Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div> 
+  <script src="assets/js/lazyload.min.js"></script>
+  <script>
+    var lazyLoadInstance = new LazyLoad({});
+  </script>
+  <script>
+    function toggleMenu(){
+      document.getElementById('hamb-btn').classList.toggle("is-active");
+      document.getElementById('mobile-sidebar').classList.toggle("open");
+      document.getElementById('shadow').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
