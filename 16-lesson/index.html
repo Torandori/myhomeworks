@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 <body>
-  
+
   <div class="page-wrapper">
     <div id="mobile-sidebar">
       <nav class="mob-menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
           <li><a href="#about" onclick="toggleMenu()">About me</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
@@ -53,7 +53,7 @@
       <section id="first-section"> 
         <div class="container">
           <div class="title-wrap">
-            <h1 class="heading">Denis Novik</h1>
+            <h1 class="heading" id="home">Denis Novik</h1>
             <div class="descr">UX | UI designer 24 years old, Minsk</div>
             <div class="lang-wrap">
               <a class="lang" href="#">RU</a>
@@ -61,7 +61,7 @@
               <a class="lang active" href="#">ENG</a>
             </div>
           </div>
-          <img class="image" src="assets/img/denis.jpg" alt="Picture of Denis Novik">
+          <img class="lazy image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/denis.jpg" alt="Picture of Denis Novik">
         </div>
       </section>
       
@@ -84,48 +84,87 @@
           </div>
           <ul class="icon-list">
             <li class="item-icon left">
-              <img src="assets/icons/ps.svg" alt="Adobe Photoshop">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/ps.svg" alt="Adobe Photoshop">
               <div class="item-descr">Adobe <br> Photoshop</div>
               <div class="stars-row">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/grey-star.svg" alt="Grey Star">
-                <img class="stars" src="assets/ui/grey-star.svg" alt="Grey Star">
-                <img class="stars" src="assets/ui/grey-star.svg" alt="Grey Star">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
               </div>
             </li>
             <li class="item-icon right">
-              <img src="assets/icons/ai.svg" alt="Adobe Illustrator">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/ai.svg" alt="Adobe Illustrator">
               <div class="item-descr">Adobe <br> Illustrator</div>
               <div class="stars-row">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/grey-star.svg" alt="Grey Star">
-                <img class="stars" src="assets/ui/grey-star.svg" alt="Grey Star">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
               </div>
             </li>
             <li class="item-icon left">
-              <img src="assets/icons/ae.svg" alt="Adobe After Affects">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/ae.svg" alt="Adobe After Affects">
               <div class="item-descr">Adobe <br> After Affects</div>
               <div class="stars-row">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/grey-star.svg" alt="Grey Star">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>              
               </div>
             </li>
             <li class="item-icon right">
-              <img src="assets/icons/figma.svg" alt="Figma">
+              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/figma.svg" alt="Figma">
               <div class="item-descr f">Figma <br> </div>
-              <div class="stars-row ff">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-                <img class="stars" src="assets/ui/dark-star.svg" alt="Dark Star">
-              </div>
+              <div class="stars-row">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>              </div>
             </li>
           </ul>
         </div>
@@ -135,15 +174,15 @@
         <div class="container">
           <h2>Portfolio</h2>
           <div style="margin-bottom: 70px" class="port-link">
-            <img class="image" src="assets/img/portfolio.jpg" alt="Fashion" width="970" height="540">
+            <img class="image lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/portfolio.jpg" alt="Fashion" width="970" height="540">
             <a class="portfolio-link" href="#">Online fashion store - <br> Homepage</a>
           </div>
           <div style="margin-bottom: 70px" class="port-link">
-            <img class="image" src="assets/img/reebok.jpg" alt="Reebok" width="970" height="540">
+            <img class="image lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/reebok.jpg" alt="Reebok" width="970" height="540">
             <a class="portfolio-link" href="#">Reebok Store - Concept</a>
           </div>
           <div class="port-link">
-            <img class="image" src="assets/img/braun.jpg" alt="Braun" width="970" height="540">
+            <img class="image lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/braun.jpg" alt="Braun" width="970" height="540">
             <a class="portfolio-link" href="#">Braun Landing Page - Concept</a>
           </div>
         </div>
@@ -158,16 +197,16 @@
           <button type="button">Send message</button>
           <ul class="social-media">
             <li class="left1">
-              <a href="#" target="_blank"> <img src="assets/icons/linkedin.svg" alt="Linkedin icon" rel="noreferrer nofollow"></a>
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/linkedin.svg" alt="Linkedin icon" rel="noreferrer nofollow"></a>
             </li>
             <li class="right1">
-              <a href="#" target="_blank"> <img src="assets/icons/instagram.svg" alt="Instagram icon" rel="noreferrer nofollow"></a>
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/instagram.svg" alt="Instagram icon" rel="noreferrer nofollow"></a>
             </li>
             <li class="left1">
-              <a href="#" target="_blank"> <img src="assets/icons/behance.svg" alt="Behance icon" rel="noreferrer nofollow"></a>
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/behance.svg" alt="Behance icon" rel="noreferrer nofollow"></a>
             </li>
             <li class="right1">
-              <a href="#" target="_blank"> <img src="assets/icons/dribbble.svg" alt="Dribbble icon" rel="noreferrer nofollow"></a>
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/dribbble.svg" alt="Dribbble icon" rel="noreferrer nofollow"></a>
             </li>
           </ul>
           <p class="ending">Like me on <br>
@@ -176,6 +215,10 @@
       </div>
     </footer>
   </div>
+  <script src="assets/js/lazyload.min.js"></script>
+  <script>
+    var lazyLoadInstance = new LazyLoad({});
+  </script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script>
     function toggleMenu(){

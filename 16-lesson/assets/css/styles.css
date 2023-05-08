@@ -211,7 +211,7 @@ body {
 
 /*===#HEADER===*/
 main {
-  padding-top: 100px;
+  padding-top: 89px;
 }
 
 /*===FIRST===*/
@@ -274,11 +274,11 @@ p + p {
 }
 
 .item-icon {
-  width: 23%;
+  width: 19%;
 }
 
 .item-icon img {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   width: 80px;
   height: 80px;
   object-fit: contain;
@@ -295,21 +295,15 @@ p + p {
   justify-content: space-between;
 }
 
-.stars-row .stars {
+.stars-row svg {
   width: 26px;
   height: 26px;
 }
 
-.stars + .stars {
-  margin-left: 6px;
-}
-
 .stars-row {
   margin-bottom: 26px;
-}
-
-.stars-row.ff {
-  margin-bottom: 0;
+  display: inline-flex;
+  gap: 10px;
 }
 
 /*===#SKILLS===*/
@@ -489,6 +483,10 @@ ul.social-media {
   #skills .item-descr {
     margin-bottom: 44px;
   }
+
+  .stars-row {
+    margin-bottom: 44px;
+  }
 }
 @media screen and (max-width: 460px) {
   .title-wrap {
@@ -558,6 +556,11 @@ ul.social-media {
   .social-media li {
     width: 30%;
     object-fit: contain;
+  }
+
+  .mob-menu ul li a {
+    width: 100%;
+    display: inline-block;
   }
 
   .left1 {
