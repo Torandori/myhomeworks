@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/hamburger.min.css">
   <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
@@ -21,11 +22,11 @@
           <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
         </ul>
       </nav> 
-      <div class="lang-choose">
+      <!-- <div class="lang-choose">
         <a class="lang" href="#" onclick="toggleMenu()">RU</a>
         <span class="sring">|</span>
         <a class="lang active" href="#" onclick="toggleMenu()">ENG</a>
-      </div>
+      </div> -->
     </div>
     <div id="shadow" onclick="toggleMenu()"></div>
 
@@ -215,11 +216,14 @@
       </div>
     </footer>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  
+  
+  <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/lazyload.min.js"></script>
   <script>
     var lazyLoadInstance = new LazyLoad({});
   </script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script>
     function toggleMenu(){
       document.getElementById('hamb-btn').classList.toggle("is-active");
@@ -233,6 +237,13 @@
         $("html, body").scrollTop(top);
       })
     })
+    wow = new WOW(
+                      {
+                      animateClass: 'animated', // default
+      
+                    }
+                    )
+                    wow.init();
   </script>
 </body>
 </html>
