@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/hamburger.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <div id="mobile-sidebar">
+      <nav class="mob-menu">
+        <ul>
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About me</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+          <li><a href="#contacts" onclick="toggleMenu()">Contacts</a></li>
+        </ul>
+      </nav> 
+      <!-- <div class="lang-choose">
+        <a class="lang" href="#" onclick="toggleMenu()">RU</a>
+        <span class="sring">|</span>
+        <a class="lang active" href="#" onclick="toggleMenu()">ENG</a>
+      </div> -->
+    </div>
+    <div id="shadow" onclick="toggleMenu()"></div>
+
+    <header id="header">
+      <div class="container">
+        <nav class="main-menu">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about" onclick="toSection()">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="hamb-wrap">
+          <button id="hamb-btn" class="hamburger hamburger--elastic" type="button" onclick="toggleMenu()">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="first-section"> 
+        <div class="container">
+          <div class="title-wrap">
+            <h1 class="heading wow animate__fadeInTopLeft" id="home">Denis Novik</h1>
+            <div class="descr">UX | UI designer 24 years old, Minsk</div>
+            <div class="lang-wrap">
+              <a class="lang" href="#">RU</a>
+              <div class="sring">|</div>
+              <a class="lang active" href="#">ENG</a>
+            </div>
+          </div>
+          <div class="wow animate__bounceInRight">
+            <picture>
+              <source srcset="assets/img/denis-s.jpg" media="max-width: 460px">
+              <img class="lazy image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/denis.jpg" alt="Picture of Denis Novik">
+            </picture>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about" class="grey-bg">
+        <div class="container">
+          <h2 class="wow animate__fadeInUp">About me</h2>
+          <p class="wow animate__fadeInUp"  data-wow-delay=".3s">Hi, I'm Denis - UX/UI designer from Minsk. <br>
+            I'm interested in design and everything connected with it.</p>
+          <p class="wow animate__fadeInUp"  data-wow-delay=".5s">I'm studying at courses "Web and mobile design <br>
+              interfaces" in IT-Academy.</p>
+          <p class="wow animate__fadeInUp"  data-wow-delay=".7s">Ready to implement excellent projects <br>
+              with wonderful people.</p>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="container">
+          <div class="text-skills">
+            <h2>Skills</h2>
+            <p>I work in such programs as</p>
+          </div>
+          <ul class="icon-list">
+            <li class="item-icon left">
+              <img class="lazy wow animate__flipInX" data-wow-delay=".1s" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/ps.svg" alt="Adobe Photoshop">
+              <div class="item-descr">Adobe <br> Photoshop</div>
+              <div class="stars-row wow animate__zoomIn" data-wow-delay=".5s">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="item-icon right">
+              <img class="lazy wow animate__flipInX" data-wow-delay=".2s" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/ai.svg" alt="Adobe Illustrator">
+              <div class="item-descr">Adobe <br> Illustrator</div>
+              <div class="stars-row wow animate__zoomIn" data-wow-delay=".5s">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="item-icon left">
+              <img class="lazy wow animate__flipInX" data-wow-delay=".3s" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/ae.svg" alt="Adobe After Affects">
+              <div class="item-descr">Adobe <br> After Affects</div>
+              <div class="stars-row wow animate__zoomIn" data-wow-delay=".5s">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-grey"></use>
+                </svg>              
+              </div>
+            </li>
+            <li class="item-icon right">
+              <img class="lazy wow animate__flipInX" data-wow-delay=".4s" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/figma.svg" alt="Figma">
+              <div class="item-descr f">Figma <br> </div>
+              <div class="stars-row wow animate__zoomIn" data-wow-delay=".5s">
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="assets/img/stars-sprite.svg#star-black"></use>
+                </svg>             
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section id="portfolio" class="grey-bg">
+        <div class="container">
+          <h2>Portfolio</h2>
+          <div style="margin-bottom: 70px" class="port-link">
+            <img class="image lazy wow animate__slideInLeft" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/portfolio.jpg" alt="Fashion" width="970" height="540">
+            <a class="portfolio-link" href="#">Online fashion store - <br> Homepage</a>
+          </div>
+          <div style="margin-bottom: 70px" class="port-link">
+            <img class="image lazy wow animate__slideInRight" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/reebok.jpg" alt="Reebok" width="970" height="540">
+            <a class="portfolio-link" href="#">Reebok Store - Concept</a>
+          </div>
+          <div class="port-link">
+            <img class="image lazy wow animate__slideInLeft" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/braun.jpg" alt="Braun" width="970" height="540">
+            <a class="portfolio-link" href="#">Braun Landing Page - Concept</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contacts" class="container">
+      <div class="container">
+        <h2>Contacts</h2>
+        <p>Want to know more or just chat? <br>
+          You are welcome!</p>
+        <div>
+          <button class="wow animate__bounceIn" type="button">Send message</button>
+          <ul class="social-media">
+            <li class="left1">
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/linkedin.svg" alt="Linkedin icon" rel="noreferrer nofollow"></a>
+            </li>
+            <li class="right1">
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/instagram.svg" alt="Instagram icon" rel="noreferrer nofollow"></a>
+            </li>
+            <li class="left1">
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/behance.svg" alt="Behance icon" rel="noreferrer nofollow"></a>
+            </li>
+            <li class="right1">
+              <a href="#" target="_blank"> <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/icons/dribbble.svg" alt="Dribbble icon" rel="noreferrer nofollow"></a>
+            </li>
+          </ul>
+          <p class="ending">Like me on <br>
+            LinkedIn, Instagram, Behance, <br> Dribble</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="assets/js/lazyload.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+    var lazyLoadInstance = new LazyLoad({});
+  </script>
+  <script>
+    function toggleMenu(){
+      document.getElementById('hamb-btn').classList.toggle("is-active");
+      document.getElementById('mobile-sidebar').classList.toggle("open");
+      document.getElementById('shadow').classList.toggle('show');
+    }
+    $(function() {
+      $(".main-menu a, .mob-menu a").on("click", function(e){
+        e.preventDefault();
+        const top=$($(this).attr("href")).offset().top-70;
+        $("html, body").scrollTop(top);
+      })
+    })
+    wow = new WOW(
+                      {
+                      animateClass: 'animate__animated'
+                    }
+                    )
+                    wow.init();
+  </script>
+</body>
+</html>
