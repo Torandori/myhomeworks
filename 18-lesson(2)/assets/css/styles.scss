@@ -38,6 +38,9 @@ body {
   color: $text-color;
   @include fz(16);
 }
+main {
+  padding-top: 70px;
+}
 .header {
   display: flex;
   align-items: center;
@@ -49,7 +52,6 @@ body {
   max-width: 1200px;
   width: calc(100% - 40px);
   margin: 0 auto;
-  margin-bottom: 70px;
 }
 header nav ul {
   display: flex;
@@ -100,20 +102,28 @@ ul.main-menu li a:hover {
   justify-content: space-between;
 }
 .left-col {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  justify-content: center;
   width: 46.34%;
+}
+.left-col.first-sec {
+  padding-top: 97px;
 }
 h1 {
   @include fz(44);
   font-weight: 700;
   line-height: 54px;
+  margin-bottom: 30px;
 }
 .slogan {
+  @include fz(16);
+  @include lh(26);
+}
+.second-sec .slogan {
+  max-width: 500px;
+}
+.first-sec .slogan {
+  margin-bottom: 30px;
   @include fz(18);
-  line-height: 28px;
+  @include lh(28);
 }
 .btn-first-section {
   width: 180px;
@@ -153,9 +163,10 @@ h1 {
   @include fz(36);
   font-weight: 700;
   line-height: 44px;
+}
+.h2.first-title {
   text-align: center;
   margin-bottom: 50px;
-  padding-top: 28px;
 }
 .title-under-icon {
   @include fz(22);
@@ -187,9 +198,9 @@ div.flex-btn-second-sec {
 }
 .second-block {
   // background-image: url('../img/bg.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center bottom;
+  // background-size: cover;
+  background-repeat: no-repeat;
   // background-color: #fcf1e4;
   aspect-ratio: 2324/388;
 }
@@ -206,6 +217,7 @@ div.flex-btn-second-sec {
 /*===#SECOND-SECTION===*/
 /*===FOOTER===*/
 footer .container {
+  padding-top: 70px;
   padding-bottom: 40px;
 }
 .input {
@@ -256,16 +268,93 @@ footer .container {
   color: $orange-color;
 }
 .form {
-  width: 34%;
+  width: 28%;
+}
+
+
+.h2.second-title {
+  margin-bottom: 20px;
+}
+.h4 {
+  font-weight: 700;
+  @include lh(26);
+  margin-bottom: 12px;
+}
+.tick-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  @include lh(26);
+}
+.title-descr {
+  margin-bottom: 38px;
+  font-weight: 500;
+}
+.forth-sec .title-descr {
+  margin-bottom: 45px;;
+}
+.title-par {
+  margin-bottom: 28px;
+  max-width: 91%;
+  @include lh(26);
+}
+.first-block {
+  margin-bottom: 99px;
+}
+.second-block {
+  margin-bottom: 100px;
+}
+.forth-block {
+  margin-bottom: 100px;
+}
+.sup {
+  margin-bottom: 1px;
 }
 /*===#FOOTER===*/
-
-.people {
+.pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+.pic.designer {
+  aspect-ratio: 562/573;
+}
+.left-col.third-sec {
+  padding-top: 26px;
+}
+.left-col.forth-sec {
+  padding-top: 48px;
+  padding-left: 52px;
+}
+.fifth-block {
+  margin-bottom: 100px;
+}
+.fifth-block .left-col {
+  padding-top: 40px;
+}
+.third-block {
+  margin-bottom: 95px;
+}
+.third-sec .slogan {
+  max-width: 90%;
+}
+.forth-sec .slogan {
+  max-width: 85%;
+}
+.fifth-block .slogan,  {
+  max-width: 95%;
+  @include lh(26);
+}
+.fifth-block .title-par {
+  max-width: 100%;
+}
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #BCD0E5;
+}
 @media screen and (max-width: 1050px) {
   .icon-list {  
     flex-wrap: wrap;
@@ -282,15 +371,15 @@ footer .container {
     align-items: center;
     text-align: center;
   }
+  .left-col.first-sec{
+    padding-top: 40px;
+  }
   .flex {
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* .container {
-    margin-bottom: 40px;
-  } */
   .btn-first-section {
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
   .row {
     flex-wrap: wrap;
@@ -299,7 +388,7 @@ footer .container {
   .row div:last-child {
   }
   .footer-col {
-    width: 25%;
+    width: 12%;
   }
   .form {
     width: 34%;
@@ -311,7 +400,23 @@ footer .container {
   .logo-footer img {
     width: auto;
   }
+  .forth-block {
+    margin-bottom: 0;
+  }
+  .title-par, .slogan, .tick-list {
+    margin: 0 auto 28px;
+  }
+  .right-col {
+    order: 1;
+  }
+  .row {
+    justify-content: space-evenly;
+  }
+  .left-col.forth-sec {
+    padding-left: 0;
+  }
 }
+
 .hamb-wrap {
   display: none;
 }
@@ -342,6 +447,8 @@ footer .container {
         @include lh(40);
         padding: 0 20px;
         color: $text-color;
+        width: 100%;
+        display: block;
         &:active {
           color: $orange-color;
         }
@@ -375,6 +482,7 @@ footer .container {
 .header-buttons.mobbar-buttons {
   display: none;
 }
+
 @media screen and (max-width: 900px) {
   .container.header {
     justify-content: flex-end;
@@ -414,6 +522,10 @@ footer .container {
   .input {
     align-items: center;
   }
+  main {
+    padding-top: 20px;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -461,9 +573,17 @@ footer .container {
     margin-right: 0;
     margin: 0 20px;
   }
-  .left-col {
+  .left-col.third-sec {
+    margin-bottom: 20px;
+    padding-top: 0;
+  }
+  .second-block {
+    margin-bottom: 40px;
+  }
+  .third-block {
     margin-bottom: 20px;
   }
+  
 }
 @media screen and (max-width: 544px) {
   .slogan {
@@ -502,6 +622,18 @@ footer .container {
   }
   .left-col {
     gap: 20px;
+  }
+  .left-col.first-sec {
+    padding: 0;
+  }
+  .first-block {
+    margin-bottom: 0;
+  }
+  .first-block .left-col {
+    padding-top: 0;
+  }
+  .fifth-block {
+    margin-bottom: 0;
   }
 }
 
