@@ -839,3 +839,189 @@ footer .container {
     width: 65%;
   }
 }
+#man {
+  animation: man 2s linear infinite;
+}
+
+@keyframes man {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-20px);
+  }
+  66% {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#girl-viol {
+  animation: girl 2s linear infinite;
+}
+
+@keyframes girl {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-1px);
+  }
+  66% {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#girl-dark {
+  animation: girl1 2s linear infinite 0.2s;
+}
+
+@keyframes girl1 {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-25px);
+  }
+  66% {
+    transform: translateY(1px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#message-red {
+  animation: red-m 1s linear infinite 0.7s;
+}
+
+@keyframes red-m {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-4px);
+  }
+  66% {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#message-yel {
+  animation: yel-m 1s linear infinite;
+}
+
+@keyframes yel-m {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-8px);
+  }
+  66% {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#message-blue {
+  animation: blue-m 1s linear infinite 0.4s;
+}
+
+@keyframes blue-m {
+  from {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-1px);
+  }
+  66% {
+    transform: translateY(7px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#red-s {
+  animation: red-s 2s linear infinite 0.4s;
+}
+
+@keyframes red-s {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+#bl-s {
+  animation: bl-s 2s linear infinite 0.4s;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes bl-s {
+  from {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(15deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+#list {
+  animation: list 2s linear infinite 0.4s;
+  transform-origin: center;
+}
+
+@keyframes list {
+  from {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(15deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+#yellow-rec {
+  animation: rec 1s linear infinite;
+}
+
+@keyframes rec {
+  from {
+    transform: translate(-50px, -50px);
+  }
+  50% {
+    transform: translate(-50px, -60px);
+  }
+  to {
+    transform: translate(-50px, -50px);
+  }
+}
+#red-rec {
+  animation: rec1 1s linear infinite;
+}
+
+@keyframes rec1 {
+  from {
+    transform: translate(-50px, -50px);
+  }
+  50% {
+    transform: translate(-50px, -60px);
+  }
+  to {
+    transform: translate(-50px, -50px);
+  }
+}
