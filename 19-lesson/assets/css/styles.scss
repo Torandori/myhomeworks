@@ -335,6 +335,10 @@ ul.social-media {
       }
     }
   }
+.tick-row .tick {
+    animation: show .3s linear .2s 2;
+}
+
 @media screen and (max-width: 880px) {
     .item-icon {
        width: 50%;
