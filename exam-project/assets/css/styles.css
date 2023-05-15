@@ -571,7 +571,7 @@ figure figcaption {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 87%;
   padding: 31px 70px 31px 30px;
 }
 
@@ -696,6 +696,10 @@ figure figcaption {
   opacity: 80%;
 }
 
+#section-eight {
+  margin-bottom: 82px;
+}
+
 .separator {
   width: 100%;
   height: 1px;
@@ -711,5 +715,99 @@ figure figcaption {
   width: 40%;
 }
 .flex-eight .flex-eight-item h2 {
-  margin-bottom: 29px;
+  margin-bottom: 26px;
+}
+.flex-eight .flex-eight-item h2 .text-italic {
+  margin-left: 12px;
+}
+.flex-eight .flex-eight-item.first {
+  padding-top: 16px;
+}
+
+input:focus, textarea:focus {
+  outline: 0 none;
+}
+
+input[type=text], input[type=email], textarea {
+  height: 32px;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  opacity: 0.75;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #E4E4E4;
+  width: 100%;
+  padding-bottom: 12px;
+  background-color: transparent;
+}
+
+textarea {
+  height: 34px;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  opacity: 0.75;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #E4E4E4;
+  width: 100%;
+  padding-bottom: 12px;
+  background-color: transparent;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border-bottom: 1px solid #515773;
+}
+
+.form-element {
+  margin-bottom: 40px;
+  width: 100%;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  position: relative;
+}
+.form-element label {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  transition: all 0.2s ease;
+}
+.form-element label.fake {
+  opacity: 0.5;
+}
+.form-element.last {
+  margin-bottom: 34px;
+}
+
+input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label, input[type=email]:focus + label, input[type=email]:not(:placeholder-shown) + label, textarea:focus + label, textarea:not(:placeholder-shown) + label {
+  top: -26px;
+  font-size: 1rem;
+  color: #9c9b9bf5;
+}
+
+.separator.last {
+  margin-bottom: 0;
+}
+
+.footer-wrap {
+  padding: 30px 0;
+}
+
+.flex-nine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -145,7 +145,7 @@
       <section id="section-fifth">
         <div class="container">
           <div class="videowrapper">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vnbN9V_2Guk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="100%" height="80%" src="https://www.youtube.com/embed/vnbN9V_2Guk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="fifth-item">
             <h2 class="playfair">A <i class="text-italic">powerful API </i>, easy to use user interface.</h2>
@@ -210,27 +210,51 @@
         <div class="container">
           <div class="separator"></div>
           <div class="flex-eight">
-            <div class="flex-eight-item">
+            <div class="flex-eight-item first">
               <h2 class="playfair">Contact <i class="text-italic">our sales team</i></h2>
               <p>Our team is happy to answer your sales questions. <br> Fill out the form and we&apos;ll be in touch as soon as possible.</p>
             </div>
-            <form action="#" method="post">
-              
-              
-
+            <form class="flex-eight-item" action="#" method="post">
+              <div class="form-element">
+                <input id="full-name" type="text" name="full-name" placeholder=" " required>
+                <label for="full-name" class="fake playfair">Your name</label>
+              </div>
+              <div class="form-element">
+                <input id="email" type="email" name="email" placeholder=" " required>
+                <label for="email" class="fake playfair">Email</label>
+              </div>
+              <div class="form-element last">
+                <textarea name="more" id="more" placeholder=" " required></textarea>
+                <label for="more" class="fake playfair">Tell more</label>
+              </div>
+              <button type="submit" class="btn"><span>send request</span></button>
             </form>
           </div>
         </div>
-
       </section>
-    
-  
+      
+      
     </main>
     <!-- #MAIN  -->
-
-    <footer class="footer">
+    
+    <footer id="footer">
       <div class="container">
-        
+        <div class="separator last"></div>
+        <div class="footer-wrap">
+          <div class="flex-nine">
+            <div class="flex-nine-item">
+              <span>© 2020 Solisgroup. All Rights Reserved.</span>
+            </div>
+            <div class="flex-nine-item">
+              <span>made by</span>
+              <span>Zgraya.digital</span>
+            </div>
+            <div class="flex-nine-item">
+              <a href="#" title="User agreement">User Agreement</a>
+              <a href="#" title="Privacy Policy">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </div>

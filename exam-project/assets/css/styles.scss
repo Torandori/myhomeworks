@@ -475,12 +475,10 @@ figure  {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
-  // height: 601px; 
   width: 83%;
   margin: 0 auto 50px auto;
   border: 1px solid $color-grey;
   border-radius: 32px;
-  // padding-top: 30px;
   &:before {
     content: '';
     left: 7px;
@@ -507,7 +505,7 @@ figure  {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 87%;
   padding: 31px 70px 31px 30px;
 }
 
@@ -631,6 +629,9 @@ figure  {
 }
 // #SECTION_SEVEN
 // SECTION_EIGHT 
+#section-eight {
+  margin-bottom: 82px;
+}
 .separator {
   width: 100%;
   height: 1px;
@@ -643,9 +644,100 @@ figure  {
   .flex-eight-item {
     width: 40%;
     h2 {
-      margin-bottom: 29px;
+      margin-bottom: 26px;
+      .text-italic {
+        margin-left: 12px;
+      }
+    }
+    &.first {
+      padding-top: 16px;
     }
   }
 }
+
+input:focus, textarea:focus {
+  outline: 0 none;
+}
+input[type=text], input[type=email], textarea {
+  height: 32px;
+  font-family: 'Playfair Display', sans-serif;
+  @include fz(18);
+  @include lh(20);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  opacity: 0.75;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid $color-grey;
+  width: 100%;
+  padding-bottom: 12px;
+  background-color: transparent;
+}
+textarea {
+  height: 34px;
+  font-family: 'Playfair Display', sans-serif;
+  @include fz(18);
+  @include lh(20);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  opacity: 0.75;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid $color-grey;
+  width: 100%;
+  padding-bottom: 12px;
+  background-color: transparent;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border-bottom: 1px solid $color-grey-dark;
+}
+.form-element {
+  margin-bottom: 40px;
+  width: 100%;
+  font-family: 'Playfair Display', sans-serif;
+  @include fz(18);
+  @include lh(20);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-style: italic;
+  position: relative;
+  label {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    transition: all .2s ease;
+    &.fake {
+      opacity: 0.5;
+    }
+  }
+  &.last {
+    margin-bottom: 34px;
+  }
+}
+input[type=text], input[type=email], textarea {
+  &:focus + label, &:not(:placeholder-shown) + label {
+    top: -26px;
+    @include fz(16);
+    color: #9c9b9bf5;
+  }
+}
 // #SECTION_EIGHT 
+// FOOTER
+.separator.last {
+  margin-bottom: 0;
+}
+.footer-wrap {
+  padding: 30px 0;
+}
+.flex-nine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// #FOOTER
+
 
