@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solis</title>
-  <link rel="stylesheet" href="assets/css/styles.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 <body class="lazy" data-bg="assets/img/bg-main-white.jpg">
   <div class="page-wrapper">
@@ -31,12 +40,13 @@
     <!-- #MOB_BAR -->
 
     <!-- HEADER -->
-    <header class="header">
+    <div id="header-offset" class="header-offset"></div>
+    <header class="header" id="header">
       <div class="container">
-        <div id="logo">
+        <a href="#" id="logo" title="Main page">
           <img src="assets/img/logo.svg" alt="Logo Solis">
           <span class="logo-text">solis</span>
-        </div>
+        </a>
         <nav class="main-menu">
           <ul>
             <li><a href="#" class="active">Home</a></li>
@@ -67,17 +77,17 @@
           <div class="wrap-first">
             <h1 class="playfair">A peer-to-peer stablecoin <i class="text-italic">clearinghouse</i> for the new economy</h1>
             <p>We are bringing real solutions to the payments world by leveraging public blockchains.</p>
-            <button type="button" class="btn">join now</button>
+            <button type="button" class="btn"><span>join now</span></button>
           </div>
         </div>
       </section>
       <section id="section-second">
         <div class="container">
           <div class="flex-second">
-            <div class="flex-seond-item1">
+            <div class="flex-second-item1">
               <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/skyscrapers.jpg" alt="Picture of Skyscrapers">
             </div>
-            <div class="flex-seond-item2">
+            <div class="flex-item2 flex-second-item2">
               <div class="col-left">
                 <div class="counter playfair"><span>$</span>1 tril</div>
                 <div>Market cap potential</div>
@@ -89,7 +99,7 @@
               <div class="col-right">
                 <p>Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO Ventures and Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind clearing house for stablecoins that seeks to promote the next phase of the market&apos;s development. </p>
                 <p>The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility which are currently preventing the stablecoin market from reaching critical mass. </p>
-                <a href="#" class="btn" title="Contact sales">contact sales</a>
+                <a href="#" class="btn" title="Contact sales"><span>contact sales</span></a>
               </div>
             </div>
           </div>
@@ -107,7 +117,7 @@
               <p>Integrate OTC operations and settlements using our efficient API.</p>
             </div>
           </div>
-          <div class="flex-third">
+          <div class="flex-third last">
             <div class="flex-third-item">
               <h2 class="playfair">The best <i class="text-italic">payments   solutions </i></h2>
               <p>For all stablecoin payments, from point-of-sale transactions to website solutions. If you use stablecoins in your business, Stablehouse is for you.</p>
@@ -121,14 +131,53 @@
       </section>
       <section id="section-forth">
         <div class="container">
-          <div class="lazy bg-forth" data-bg="assets/img/bg-geometry.jpg">
-            <!-- <img class="lazy icon-quote" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/icon-quote.svg" alt="Quote icon"> -->
+          <div class="lazy bg-forth" data-bg="assets/img/bg-quote.jpg">
             <figure>
+              <img class="lazy icon-quote" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/icon-quote.svg" alt="Quote icon">
               <blockquote>
                   <p>Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty over access and liquidity.</p>
               </blockquote>
               <figcaption><i class="playfair">Lennon Burnett, Solis Group CEO</i></figcaption>
           </figure>
+          </div>
+        </div>
+      </section>
+      <section id="section-fifth">
+        <div class="container">
+          <div class="wrap-screen">
+            <iframe width="850" height="539" src="https://www.youtube.com/embed/vnbN9V_2Guk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="fifth-item">
+            <h2 class="playfair">A <i class="text-italic">powerful API </i>, easy to use user interface.</h2>
+            <p>Our API allows all members to interact with Stablehouse&apos;s platform, from effecting transfers to deposits, withdrawals, creation and redemption and reporting.</p>
+          </div>
+        </div>
+      </section>
+      <section id="section-six">
+        <div class="container">
+          <div class="flex-second">
+            <div class="flex-six-item1">
+              <img class="lazy pic-six" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/bg-geometry.jpg" alt="Picture of Skyscrapers">
+            </div>
+            <div class="flex-item2 flex-six-item2">
+              <div class="flex-six-item2-item">
+                <h3 class="six-item-title playfair">On-Exchange Trading</h3>
+                <div>Instant</div>
+                <div>Passive Inventory earns fees</div>
+              </div>
+              <div class="flex-six-item2-item">
+                <h3 class="six-item-title playfair">On-Chain Swaps</h3>
+                <div>Low Counterparty risk</div>
+                <div>Direct transfers</div>
+              </div>
+              <div class="flex-six-item2-item">
+                <h3 class="six-item-title playfair">Time Settlement Swaps</h3>
+                <div>LBTC / Lightning and other sidechain swaps</div>
+              </div>
+              <div class="flex-six-item2-item flex-six-btn-item">
+                <button type="button" class="btn btn-border"><span>join now</span></button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -153,8 +202,19 @@
       document.getElementById('hamb-btn').classList.toggle("is-active");
       document.getElementById('mobile-sidebar').classList.toggle("open");
       document.getElementById('shadow').classList.toggle('show');
-    }
+    };
   </script>
   <!-- #SCRIPT_HAMB -->
+  <!-- SCRIPT_HEADER_SCROLL -->
+  <script>
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > document.getElementById("header-offset").offsetHeight){
+        document.body.classList.add("header-fixed");
+      }else {
+        document.body.classList.remove("header-fixed");
+      }
+    })
+  </script>
+  <!-- #SCRIPT_HEADER_SCROLL -->
 </body>
 </html>
