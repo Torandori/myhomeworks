@@ -14,25 +14,22 @@
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 <body class="lazy" data-bg="assets/img/bg-main-white.jpg">
   <div class="page-wrapper">
     <!-- MOB_BAR -->
+    <div class="sidebar-offset" id="sidebar-offset"></div>
     <div id="mobile-sidebar">
-      <button class="hamburger hamburger--elastic is-active" type="button" onclick="toggleMenu()">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
       <nav class="mob-menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Use Cases</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Resources</a></li>
+          <li><a href="#" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#" onclick="toggleMenu()">About</a></li>
+          <li><a href="#" onclick="toggleMenu()">Products</a></li>
+          <li><a href="#" onclick="toggleMenu()">Use Cases</a></li>
+          <li><a href="#" onclick="toggleMenu()">Pricing</a></li>
+          <li><a href="#" onclick="toggleMenu()">Resources</a></li>
         </ul>
       </nav> 
     </div>
@@ -49,8 +46,8 @@
         </a>
         <nav class="main-menu">
           <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" class="active first">Home</a></li>
+            <li><a href="#" class="second">About</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Use Cases</a></li>
             <li><a href="#">Pricing</a></li>
@@ -74,32 +71,32 @@
     <main>
       <section id="section-first">
         <div class="container">
-          <div class="wrap-first">
+          <div class="wrap-first wow animate__lightSpeedInRight" >
             <h1 class="playfair">A peer-to-peer stablecoin <i class="text-italic">clearinghouse</i> for the new economy</h1>
             <p>We are bringing real solutions to the payments world by leveraging public blockchains.</p>
-            <button type="button" class="btn"><span>join now</span></button>
+            <button type="button" class="btn wow animate__flipInY" data-wow-delay="0.6s"><span>join now</span></button>
           </div>
         </div>
       </section>
       <section id="section-second">
         <div class="container">
           <div class="flex-second">
-            <div class="flex-second-item1">
+            <div class="flex-second-item1 wow animate__fadeInLeftBig">
               <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/skyscrapers.jpg" alt="Picture of Skyscrapers">
             </div>
-            <div class="flex-item2 flex-second-item2">
+            <div class="flex-item2 flex-second-item2 wow animate__fadeInRightBig">
               <div class="col-left">
-                <div class="counter playfair"><span>$</span>1 tril</div>
-                <div>Market cap potential</div>
-                <div class="counter playfair"><span>$</span>3.65 mil</div>
-                <div>Deposited to platform</div>
-                <div class="counter playfair">12</div>
-                <div>Stablecoins</div>
+                <div class="counter playfair wow animate__fadeIn" data-wow-delay=".8s"><span>$</span>1 tril</div>
+                <div class="wow animate__fadeIn" data-wow-delay="0.9s">Market cap potential</div>
+                <div class="counter playfair wow animate__fadeIn" data-wow-delay="1s"><span>$</span>3.65 mil</div>
+                <div class="wow animate__fadeIn" data-wow-delay="1.1s">Deposited to platform</div>
+                <div class="counter playfair wow animate__fadeIn" data-wow-delay="1.2s">12</div>
+                <div class="wow animate__fadeIn" data-wow-delay="1.3s">Stablecoins</div>
               </div>
               <div class="col-right">
                 <p>Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO Ventures and Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind clearing house for stablecoins that seeks to promote the next phase of the market&apos;s development. </p>
                 <p>The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility which are currently preventing the stablecoin market from reaching critical mass. </p>
-                <a href="#" class="btn" title="Contact sales"><span>contact sales</span></a>
+                <a href="#" class="btn wow animate__flipInY" data-wow-delay=".9s" title="Contact sales"><span>contact sales</span></a>
               </div>
             </div>
           </div>
@@ -108,21 +105,21 @@
       <section id="section-third">
         <div class="container">
           <div class="flex-third">
-            <div class="flex-third-item">
+            <div class="flex-third-item wow animate__fadeIn">
               <h2 class="playfair">Qualified <i class="text-italic">traders</i> and liquidty <i class="text-italic">solutions</i></h2>
               <p>Trade easily and efficiently between 12 stablecoins, including USDT, TrueUSD, Dai, Eurs and Gemini Dollar.</p>
             </div>
-            <div class="flex-third-item">
+            <div class="flex-third-item wow animate__fadeIn" data-wow-delay=".3s">
               <h2 class="playfair">Settlement/OTC API and <i class="text-italic">integration</i></h2>
               <p>Integrate OTC operations and settlements using our efficient API.</p>
             </div>
           </div>
           <div class="flex-third last">
-            <div class="flex-third-item">
+            <div class="flex-third-item wow animate__fadeIn" data-wow-delay=".6s">
               <h2 class="playfair">The best <i class="text-italic">payments   solutions </i></h2>
               <p>For all stablecoin payments, from point-of-sale transactions to website solutions. If you use stablecoins in your business, Stablehouse is for you.</p>
             </div>
-            <div class="flex-third-item last">
+            <div class="flex-third-item last wow animate__fadeIn" data-wow-delay=".9s">
               <h2 class="playfair"><i class="text-italic">Treasury</i> and <i class="text-italic">returns </i>for stablecoin stores</h2>
               <p>Automate your stablecoin store with instant payments and on-the-fly conversion between different stablecoins.</p>
             </div>
@@ -131,21 +128,21 @@
       </section>
       <section id="section-forth">
         <div class="container">
-          <div class="lazy bg-forth" data-bg="assets/img/bg-quote.jpg">
+          <div class="lazy bg-forth wow animate__flipInX" data-bg="assets/img/bg-quote.jpg">
             <figure>
               <img class="lazy icon-quote" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/icon-quote.svg" alt="Quote icon">
               <blockquote>
                   <p>Solis Group serves as a liquidity nexus that gives stablecoin issuers, holders and exchanges certainty over access and liquidity</p>
               </blockquote>
               <figcaption><i class="playfair">Lennon Burnett, Solis Group CEO</i></figcaption>
-          </figure>
+            </figure>
           </div>
         </div>
       </section>
       <section id="section-fifth">
         <div class="container">
           <div class="videowrapper">
-            <iframe width="100%" height="80%" src="https://www.youtube.com/embed/vnbN9V_2Guk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" class="lazy" data-src="https://www.youtube.com/embed/vnbN9V_2Guk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="fifth-item">
             <h2 class="playfair">A <i class="text-italic">powerful API </i>, easy to use user interface.</h2>
@@ -156,10 +153,13 @@
       <section id="section-six">
         <div class="container">
           <div class="flex-second">
-            <div class="flex-six-item1">
-              <img class="lazy pic-six" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/bg-geometry.jpg" alt="Picture of Skyscrapers">
+            <div class="flex-six-item1 wow animate__fadeInLeftBig">
+              <picture>
+                <source srcset="assets/img/bg-quote.jpg" media="(max-width: 1080px)">
+                <img class="lazy pic-six" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/img/bg-geometry.jpg" alt="Picture of Skyscrapers">
+              </picture>
             </div>
-            <div class="flex-item2 flex-six-item2">
+            <div class="flex-item2 flex-six-item2 wow animate__fadeInRightBig">
               <div class="flex-six-item2-item">
                 <h3 class="six-item-title playfair">On-Exchange Trading</h3>
                 <div>Instant</div>
@@ -170,12 +170,12 @@
                 <div>Low Counterparty risk</div>
                 <div>Direct transfers</div>
               </div>
-              <div class="flex-six-item2-item">
+              <div class="flex-six-item2-item w">
                 <h3 class="six-item-title playfair">Time Settlement Swaps</h3>
                 <div>LBTC / Lightning and other sidechain swaps</div>
               </div>
-              <div class="flex-six-item2-item flex-six-btn-item">
-                <button type="button" class="btn btn-border"><span>join now</span></button>
+              <div class="flex-six-item2-item w">
+                <button type="button" class="btn btn-border wow animate__flipInY" data-wow-delay=".9s"><span>join now</span></button>
               </div>
             </div>
           </div>
@@ -187,18 +187,18 @@
             <h2 class="playfair">Client <i class="text-italic">reviews</i></h2>
             <p>Happy clients, happy us. Read our client reviews about the work process and results.</p>
           </div>
-          <div class="flex-seven">
+          <div class="flex-seven wow animate__lightSpeedInLeft">
             <div class="flex-seven-item lazy" data-bg="assets/img/bg-light-strip.jpg">
               <div class="overlay-flex-seven-item"></div>
               <p class="review-text">Solis did a great job. Whether providing direct development support or giving us the opportunity to make our development updates, Solis's web design expertise and support services were top notch! It didn't take long to stand up our website, and we were pleased with the design and layout of the graphics and information. </p>
               <div><i class="playfair">Dr. Jamika Burge</i></div>
             </div>
-            <div class="flex-seven-item lazy" data-bg="assets/img/bg-light-strip.jpg">
+            <div class="flex-seven-item lazy" data-bg="assets/img/bg-glass-ceiling.jpg">
               <div class="overlay-flex-seven-item"></div>
               <p class="review-text">Solis is a cutting edge company and knows the importance of excellence. Having been in business for 21 years, I know when I&apos;ve found a competent professional and more importantly a company with integrity. I highly recommend this company and am available for further reference if needed.</p>
               <div><i class="playfair">Evie-Rose Prosse</i></div>
             </div>
-            <div class="flex-seven-item lazy" data-bg="assets/img/bg-light-strip.jpg">
+            <div class="flex-seven-item lazy" data-bg="assets/img/bg-sky.jpg">
               <div class="overlay-flex-seven-item"></div>
               <p class="review-text">I can&apos;t say enough about how knowledgeable Toinette Rorie is in the area of Web Development. She indeed is a developer and can build a site from scratch. She understands functionality and is great at constructing a site that is robust and fully functioning. </p>
               <div><i class="playfair">Elvis Mooney</i></div>
@@ -214,7 +214,7 @@
               <h2 class="playfair">Contact <i class="text-italic">our sales team</i></h2>
               <p>Our team is happy to answer your sales questions. <br> Fill out the form and we&apos;ll be in touch as soon as possible.</p>
             </div>
-            <form class="flex-eight-item" action="#" method="post">
+            <form class="flex-eight-item wow animate__jello" action="#" method="post">
               <div class="form-element">
                 <input id="full-name" type="text" name="full-name" placeholder=" " required>
                 <label for="full-name" class="fake playfair">Your name</label>
@@ -227,7 +227,7 @@
                 <textarea name="more" id="more" placeholder=" " required></textarea>
                 <label for="more" class="fake playfair">Tell more</label>
               </div>
-              <button type="submit" class="btn"><span>send request</span></button>
+              <button type="submit" class="btn wow animate__rubberBand" data-wow-delay=".5s"><span>send request</span></button>
             </form>
           </div>
         </div>
@@ -246,11 +246,11 @@
               <span>© 2020 Solisgroup. All Rights Reserved.</span>
             </div>
             <div class="flex-nine-item">
-              <span>made by</span>
-              <span>Zgraya.digital</span>
+              <span class="margin">made by</span>
+              <a href="#" title="Made by">Zgraya.digital</a>
             </div>
             <div class="flex-nine-item">
-              <a href="#" title="User agreement">User Agreement</a>
+              <a href="#" title="User agreement" class="margin2">User Agreement</a>
               <a href="#" title="Privacy Policy">Privacy Policy</a>
             </div>
           </div>
@@ -258,7 +258,15 @@
       </div>
     </footer>
   </div>
-
+  <!-- SCRIPT_ANIMATION -->
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+    const wow = new WOW({
+      animateClass: "animate__animated",
+    })
+    wow.init();
+  </script>
+  <!-- #SCRIPT_ANIMATION -->
   <!-- SCRIPT_HAMB -->
   <script src="assets/js/lazyload.min.js"></script>
   <script>
@@ -281,6 +289,13 @@
         document.body.classList.remove("header-fixed");
       }
     })
+    // window.addEventListener('scroll', function(){
+    //   if(window.scrollY > document.getElementById("sidebar-offset").offsetHeight){
+    //     document.getElementById("mobile-sidebar").classList.add("scroll");
+    //   }else {
+    //     document.getElementById("mobile-sidebar").classList.remove("scroll");
+    //   }
+    // })
   </script>
   <!-- #SCRIPT_HEADER_SCROLL -->
 </body>
