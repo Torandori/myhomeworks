@@ -850,33 +850,37 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   font-size: 0.875rem;
   line-height: 1.625rem;
 }
-.footer-wrap .flex-nine span {
+.footer-wrap .flex-nine .flex-nine-item {
+  display: flex;
+  gap: 9px;
+}
+.footer-wrap .flex-nine .flex-nine-item span {
   opacity: 0.6;
 }
-.footer-wrap .flex-nine a {
+.footer-wrap .flex-nine .flex-nine-item a {
   letter-spacing: 0.08em;
   font-weight: 400;
   line-height: 1.5rem;
   opacity: 1;
   color: #262A3F;
 }
-.footer-wrap .flex-nine a:hover {
+.footer-wrap .flex-nine .flex-nine-item a:hover {
   opacity: 0.7;
 }
-.footer-wrap .flex-nine a:active {
+.footer-wrap .flex-nine .flex-nine-item a:active {
   opacity: 0.5;
 }
-.footer-wrap .flex-nine a:focus-visible {
+.footer-wrap .flex-nine .flex-nine-item a:focus-visible {
   outline-color: #85BBB1;
   outline-style: groove;
 }
 
-.margin {
-  margin-right: 9px;
+.margin0 {
+  margin-right: -5px;
 }
 
 .margin2 {
-  margin-right: 30px;
+  margin-right: 21px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -907,6 +911,13 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   }
 }
 @media screen and (max-width: 1080px) {
+  .wrap-first {
+    padding-right: 30%;
+  }
+  .wrap-first p {
+    width: 77%;
+  }
+
   .flex-second {
     flex-wrap: wrap;
   }
@@ -957,7 +968,64 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     padding-top: 120px;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 860px) {
+  .header-fixed main {
+    padding-top: 120px;
+  }
+
+  main {
+    padding-top: 40px;
+  }
+
+  .wrap-first {
+    padding-bottom: 60px;
+  }
+  .wrap-first p {
+    width: 77%;
+  }
+
+  #section-second {
+    margin-bottom: 48px;
+  }
+
+  .flex-second-item2 {
+    margin: 0;
+    padding: 48px 0 0 0;
+  }
+
+  #section-third {
+    margin-bottom: 50px;
+  }
+
+  .flex-third {
+    flex-wrap: wrap;
+  }
+  .flex-third .flex-third-item {
+    width: 100%;
+    text-align: center;
+  }
+  .flex-third .flex-third-item.last h2 {
+    width: 100%;
+  }
+  .flex-third .flex-third-item.last p {
+    width: 100%;
+  }
+
+  .bg-forth {
+    padding-right: 6%;
+    padding-top: 16%;
+    padding-left: 18%;
+    padding-bottom: 10%;
+  }
+
+  #section-forth, #section-fifth {
+    margin-bottom: 80px;
+  }
+
+  #section-six, #section-seven, #section-eight {
+    margin-bottom: 60px;
+  }
+
   .flex-six-item2 {
     padding: 0;
     text-align: center;
@@ -978,6 +1046,40 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     padding-top: 28px;
     height: 100%;
   }
+
+  .footer-wrap .flex-nine {
+    gap: 10px;
+  }
+  .footer-wrap .flex-nine .flex-nine-item {
+    flex-direction: column;
+  }
+  .footer-wrap .flex-nine .flex-nine-item span, .footer-wrap .flex-nine .flex-nine-item a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .flex-second-item2 {
+    align-items: center;
+    gap: 40px;
+  }
+  .flex-second-item2 .col-left, .flex-second-item2 .col-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .flex-third .flex-third-item {
+    padding-top: 20px;
+  }
+
+  .flex-eight {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+  }
+  .flex-eight .flex-eight-item {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 500px) {
   .flex-six-item2 {
@@ -989,19 +1091,20 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     width: 100%;
   }
 
-  .flex-eight {
-    flex-wrap: wrap;
-    gap: 42px;
-  }
   .flex-eight .flex-eight-item {
     width: 100%;
   }
 
-  .flex-nine {
-    flex-wrap: wrap;
-    gap: 10px;
+  .footer-wrap .flex-nine {
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
   }
-  .flex-nine .flex-nine-item {
-    width: 100%;
+  .footer-wrap .flex-nine .flex-nine-item {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-wrap .flex-nine .flex-nine-item span, .footer-wrap .flex-nine .flex-nine-item a {
+    margin-right: 0;
   }
 }
