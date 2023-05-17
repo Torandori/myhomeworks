@@ -173,7 +173,6 @@ a, button {
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .page-wrapper {
@@ -488,7 +487,7 @@ p {
   padding: 50px 35px 20px;
   position: relative;
 }
-.flex-third .flex-third-item h2 {
+.flex-third .flex-third-item .h2 {
   margin-bottom: 30px;
   width: 96%;
 }
@@ -501,7 +500,7 @@ p {
   position: absolute;
   background-color: #E4E4E4;
 }
-.flex-third .flex-third-item.last h2 {
+.flex-third .flex-third-item.last .h2 {
   width: 84%;
 }
 .flex-third .flex-third-item.last p {
@@ -516,7 +515,7 @@ p {
   margin-bottom: 0;
 }
 
-h2 {
+.h2 {
   font-size: 2.5rem;
   line-height: 3rem;
 }
@@ -612,7 +611,7 @@ figure figcaption {
   width: 83%;
   margin: 0 auto;
 }
-.fifth-item h2 {
+.fifth-item .h2 {
   margin-bottom: 28px;
 }
 .fifth-item p {
@@ -684,10 +683,10 @@ figure figcaption {
   width: 40%;
   margin-bottom: 50px;
 }
-.seven-item h2 {
+.seven-item .h2 {
   margin-bottom: 23px;
 }
-.seven-item h2 i {
+.seven-item .h2 i {
   margin-left: 6px;
 }
 .seven-item p {
@@ -751,10 +750,10 @@ figure figcaption {
 .flex-eight .flex-eight-item {
   width: 40%;
 }
-.flex-eight .flex-eight-item h2 {
+.flex-eight .flex-eight-item .h2 {
   margin-bottom: 26px;
 }
-.flex-eight .flex-eight-item h2 .text-italic {
+.flex-eight .flex-eight-item .h2 .text-italic {
   margin-left: 12px;
 }
 .flex-eight .flex-eight-item.first {
@@ -911,6 +910,10 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   }
 }
 @media screen and (max-width: 1080px) {
+  #section-second, #section-six {
+    margin-bottom: 54px;
+  }
+
   .wrap-first {
     padding-right: 30%;
   }
@@ -1004,7 +1007,7 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     width: 100%;
     text-align: center;
   }
-  .flex-third .flex-third-item.last h2 {
+  .flex-third .flex-third-item.last .h2 {
     width: 100%;
   }
   .flex-third .flex-third-item.last p {
@@ -1056,6 +1059,20 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   .footer-wrap .flex-nine .flex-nine-item span, .footer-wrap .flex-nine .flex-nine-item a {
     width: 100%;
   }
+
+  .videowrapper:before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .videowrapper:after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .videowrapper {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 720px) {
   .flex-second-item2 {
@@ -1080,8 +1097,67 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   .flex-eight .flex-eight-item {
     width: 80%;
   }
+
+  .videowrapper:after {
+    width: 25px;
+    height: 25px;
+  }
+
+  .videowrapper {
+    width: 90%;
+  }
+  .videowrapper iframe {
+    padding: 24px 50px 24px 28px;
+  }
 }
 @media screen and (max-width: 500px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  #section-first {
+    margin-bottom: 20px;
+  }
+
+  .wrap-first {
+    padding: 0;
+    text-align: center;
+  }
+  .wrap-first h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  .wrap-first p {
+    width: 100%;
+  }
+
+  .flex-second-item2 .col-left .counter {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+  .flex-second-item2 .col-left .counter + div {
+    margin-bottom: 50px;
+  }
+
+  .flex-third .flex-third-item .h2 {
+    width: 100%;
+    font-size: 2.25rem;
+    line-height: 3.5rem;
+  }
+  .flex-third .flex-third-item.last .h2 {
+    width: 100%;
+  }
+
+  blockquote p {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  .fifth-item .h2 {
+    font-size: 2.25rem;
+    line-height: 3.5rem;
+  }
+
   .flex-six-item2 {
     align-items: center;
     justify-content: center;
@@ -1091,8 +1167,18 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     width: 100%;
   }
 
-  .flex-eight .flex-eight-item {
-    width: 100%;
+  .seven-item .h2 {
+    font-size: 2.25rem;
+    line-height: 3.5rem;
+  }
+
+  .flex-seven .flex-seven-item p {
+    font-size: 1.125rem;
+  }
+
+  .flex-eight .flex-eight-item .h2 {
+    font-size: 2.25rem;
+    line-height: 3.5rem;
   }
 
   .footer-wrap .flex-nine {
@@ -1106,5 +1192,68 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   }
   .footer-wrap .flex-nine .flex-nine-item span, .footer-wrap .flex-nine .flex-nine-item a {
     margin-right: 0;
+  }
+
+  .videowrapper:after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .videowrapper {
+    width: 90%;
+  }
+  .videowrapper iframe {
+    padding: 20px 40px 20px 22px;
+  }
+}
+@media screen and (max-width: 460px) {
+  body {
+    font-size: 1.1875rem;
+  }
+
+  #section-first, #section-second, #section-third, #section-forth, #section-fifth, #section-six, #section-seven, #section-eight, #section-nine {
+    margin-bottom: 20px;
+  }
+
+  .flex-second-item2 .col-left .counter {
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+  }
+
+  .flex-third .flex-third-item .h2 {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 3.25rem;
+  }
+  .flex-third .flex-third-item.last .h2 {
+    font-size: 2rem;
+    line-height: 3.25rem;
+  }
+
+  blockquote p {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  .fifth-item .h2 {
+    font-size: 2rem;
+    line-height: 3.25rem;
+  }
+
+  .seven-item .h2 {
+    font-size: 2rem;
+    line-height: 3.25rem;
+  }
+
+  .flex-eight .flex-eight-item .h2 {
+    font-size: 2rem;
+    line-height: 3.25rem;
+  }
+
+  .videowrapper {
+    width: 100%;
+  }
+  .videowrapper iframe {
+    padding: 18px 36px 18px 22px;
   }
 }

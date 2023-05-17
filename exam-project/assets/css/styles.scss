@@ -64,7 +64,7 @@ a, button {
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 .page-wrapper {
   display: flex;
@@ -389,7 +389,7 @@ p {
     width: 50%;
     padding: 50px 35px 20px;
     position: relative;
-    h2 {
+    .h2 {
       margin-bottom: 30px;
       width: 96%;
     }
@@ -404,7 +404,7 @@ p {
 
     }
     &.last {
-      h2 {
+      .h2 {
         width: 84%;
       }
       p {
@@ -420,7 +420,7 @@ p {
 .flex-third.last {
   margin-bottom: 0;
 }
-h2 {
+.h2 {
   @include fz(40);
   @include lh(48);
 }
@@ -471,39 +471,6 @@ figure  {
 #section-fifth {
   margin-bottom: 120px;
 }
-// .wrap-screen {
-//   height: 601px;
-//   width: 83%;
-//   border: 1px solid $color-grey;
-//   border-radius: 32px;
-//   margin: 0 auto 50px auto;
-//   padding: 31px 70px 31px 30px;
-//   position: relative;
-//   aspect-ratio: 870/539;
-//   &:before {
-//     content: '';
-//     left: 7px;
-//     top: 49%;
-//     width: 13px;
-//     height: 13px;
-//     border: 1px solid $color-grey;
-//     border-radius: 50%;
-//     position: absolute;
-//   }
-//   &:after {
-//     content: '';
-//     right: 14px;
-//     top: 47%;
-//     width: 35px;
-//     height: 35px;
-//     border: 1px solid $color-grey;
-//     border-radius: 50%;
-//     position: absolute;
-//   }
-//   iframe {
-//     margin: 0 auto;
-//   }
-// }
 .videowrapper {
   float: none;
   clear: both;
@@ -549,7 +516,7 @@ figure  {
 .fifth-item {
   width: 83%;
   margin: 0 auto;
-  h2 {
+  .h2 {
     margin-bottom: 28px;
   }
   p {
@@ -620,7 +587,7 @@ figure  {
 .seven-item {
   width: 40%;
   margin-bottom: 50px;
-  h2 {
+  .h2 {
     margin-bottom: 23px;
     i {
       margin-left: 6px;
@@ -684,7 +651,7 @@ figure  {
   justify-content: space-between;
   .flex-eight-item {
     width: 40%;
-    h2 {
+    .h2 {
       margin-bottom: 26px;
       .text-italic {
         margin-left: 12px;
@@ -843,6 +810,9 @@ input[type=text], input[type=email], textarea {
   }
 }
 @media screen and (max-width: 1080px) {
+  #section-second, #section-six {
+    margin-bottom: 54px;
+  }
   .wrap-first {
     padding-right: 30%;
     p {
@@ -925,7 +895,7 @@ input[type=text], input[type=email], textarea {
       width: 100%;
       text-align: center;
       &.last {
-        h2 {
+        .h2 {
           width: 100%;
         }
         p {
@@ -982,6 +952,18 @@ input[type=text], input[type=email], textarea {
       }
     }
   }
+  .videowrapper:before {
+    width: 10px;
+    height: 10px;
+  }
+  .videowrapper:after {
+    width: 30px;
+    height: 30px;
+  }
+  .videowrapper {
+    width: 90%;
+  }
+  
 }
 @media screen and (max-width: 720px) {
   .flex-second-item2 {
@@ -1006,10 +988,74 @@ input[type=text], input[type=email], textarea {
       width: 80%;
     }
   }
+  .videowrapper:after {
+    width: 25px;
+    height: 25px;
+  }
+  .videowrapper {
+    width: 90%;
+    iframe {
+    padding: 24px 50px 24px 28px;
+    } 
+  }
 }
 
 
 @media screen and (max-width: 500px) {
+  body {
+    @include fz(18);
+  }
+  #section-first {
+    margin-bottom: 20px;
+  }
+  .wrap-first {
+    padding: 0;
+    text-align: center;
+    h1 {
+      @include fz(36);
+      @include lh(44);
+    }
+    p {
+      width: 100%;
+    }
+  }
+  .flex-second-item2 {
+    .col-left {
+      .counter { 
+        @include fz(56);
+        @include lh(60);
+        &+ div {
+        margin-bottom: 50px;
+        }
+      }
+    }
+  }
+  .flex-third {
+    .flex-third-item {
+      .h2 {
+        width: 100%;
+        @include fz(36);
+        @include lh(56);
+      }
+      &.last {
+        .h2 {
+          width: 100%;
+        }
+      }
+    }
+  }
+  blockquote {
+    p {
+      @include fz(18);
+      @include lh(26);
+    }
+  }
+  .fifth-item {
+    .h2 {
+      @include fz(36);
+      @include lh(56);
+    }
+  }
   .flex-six-item2 {
     align-items: center;
     justify-content: center;
@@ -1018,9 +1064,21 @@ input[type=text], input[type=email], textarea {
       width: 100%;
     }
   }
+  .seven-item {
+    .h2 {
+      @include fz(36);
+      @include lh(56);
+    } 
+  }
+  .flex-seven .flex-seven-item p {
+    @include fz(18);
+  }
   .flex-eight {
     .flex-eight-item {
-      width: 100%;
+      .h2 {
+        @include fz(36);
+        @include lh(56);
+      }
     }
   }
   .footer-wrap {
@@ -1038,6 +1096,78 @@ input[type=text], input[type=email], textarea {
       }
     }
   }
-
+  .videowrapper:after {
+    width: 16px;
+    height: 16px;
+  }
+  .videowrapper {
+    width: 90%;
+    iframe {
+    padding: 20px 40px 20px 22px;
+    } 
+  }
+}
+@media screen and (max-width: 460px) {
+  body {
+    @include fz(19);
+  }
+  #section-first, #section-second, #section-third, #section-forth, #section-fifth, #section-six, #section-seven, #section-eight, #section-nine {
+    margin-bottom: 20px;
+  }
+  .flex-second-item2 {
+    .col-left {
+      .counter { 
+        @include fz(52);
+        @include lh(56);
+      }
+    }
+  }
+  .flex-third {
+    .flex-third-item {
+      .h2 {
+        width: 100%;
+        @include fz(32);
+        @include lh(52);
+      }
+      &.last {
+        .h2 {
+          @include fz(32);
+          @include lh(52);
+        }
+      }
+    }
+  }
+  blockquote {
+    p {
+      @include fz(18);
+      @include lh(26);
+    }
+  }
+  .fifth-item {
+    .h2 {
+      @include fz(32);
+      @include lh(52);
+    }
+  }
+   .seven-item {
+    .h2 {
+      @include fz(32);
+      @include lh(52);
+    } 
+  }
+  .flex-eight {
+    .flex-eight-item {
+      .h2 {
+        @include fz(32);
+        @include lh(52);
+      }
+    }
+  }
+  .videowrapper {
+    width: 100%;
+    iframe {
+    padding: 18px 36px 18px 22px;
+    } 
+  }
 }
 // #RESPONSIVE
