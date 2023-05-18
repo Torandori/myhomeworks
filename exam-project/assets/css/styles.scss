@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 $color-white: #fff;
 $color-red: #F1897B;
 $color-red-dark: #E54F3A;
@@ -18,7 +25,8 @@ $color-grey-dark: #515773;
 *, *::before, *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @mixin fz($px_size) {
@@ -46,7 +54,8 @@ img {
   vertical-align: top;
   width: 100%;
   height: 99%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul, ol {
@@ -58,6 +67,8 @@ a {
 }
 
 a, button {
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
   transition: all .2s ease;
 }
 
@@ -66,8 +77,13 @@ a, button {
   margin: 0 auto;
 }
 .page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
 }
 // THEME
@@ -80,6 +96,7 @@ a, button {
   .main-menu ul li a {
     color: $color-white;
     &:after {
+      background: -o-linear-gradient(353.27deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
       background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
     }
     &:focus-visible {
@@ -165,7 +182,9 @@ a, button {
       background-color: $color-green-neon;
     }
     &:checked + .slider:before {
-      transform: translateX(16px);
+      -webkit-transform: translateX(16px);
+          -ms-transform: translateX(16px);
+              transform: translateX(16px);
       background-color: $color-blue-dark;
     }
     &:focus-visible + .slider {
@@ -180,6 +199,8 @@ a, button {
     right: 0;
     bottom: 0;
     background-color: #a1dddd;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
     border-radius: 34px;
     &:before {
@@ -190,6 +211,8 @@ a, button {
       left: 4px;
       bottom: 3px;
       background-color: #082F40;
+      -webkit-transition: .4s;
+      -o-transition: .4s;
       transition: .4s;
       border-radius: 50%;
     }
@@ -205,19 +228,32 @@ a, button {
 }
 header {
   height: 80px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), color-stop(24.1%, rgba(255, 255, 255, 0.244636)), color-stop(47.19%, rgba(255, 255, 255, 0))), rgba(255, 255, 255, 0.02);
+  background: -o-linear-gradient(right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.244636) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+          backdrop-filter: blur(4.5px);
   z-index: 200;
   scroll-behavior: smooth;
   .container {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   #logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: auto;
     .logo-text {
       @include fz(20);
@@ -242,16 +278,21 @@ header {
   }
 }
 main {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-top: 110px;
 }
 .main-menu {
   ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 27px;
+    gap: 16px;
     a {
+      padding: 0 5px;
       @include fz(14);
-      @include lh(24);
+      @include lh(40);
       font-weight: 400;
       letter-spacing: 0.08rem;
       color: $color-blue-dark;
@@ -264,7 +305,11 @@ main {
         height: 3px;
         width: 0;
         background-color: $color-red;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        -webkit-transition: all .2s ease;
+        -o-transition: all .2s ease;
         transition: all .2s ease;
         opacity: 0.3;
       }
@@ -300,15 +345,23 @@ main {
   top: 0;
   width: 100%;
   background-color: $color-white;
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
   transition: all .4s ease;
   z-index: 100;
   scroll-behavior: smooth;
   &.open {
-    transform: translateY(111px);
+    -webkit-transform: translateY(111px);
+        -ms-transform: translateY(111px);
+            transform: translateY(111px);
   }
   &.scroll {
-    transform: translateY(80px);
+    -webkit-transform: translateY(80px);
+        -ms-transform: translateY(80px);
+            transform: translateY(80px);
   }
 }
 #shadow {
@@ -318,7 +371,8 @@ main {
   width: 100%;
   height: 100vh;
   background-color: rgba(0,0,0,.7);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   z-index: 99;
   display: none;
   &.show {
@@ -394,10 +448,14 @@ p {
       bottom: 15px;
       height: 13px;
       width: 97%;
-      transform: translateX(-44%);
+      -webkit-transform: translateX(-44%);
+          -ms-transform: translateX(-44%);
+              transform: translateX(-44%);
       background-color: $color-red;
       opacity: 30%;
       position: absolute;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
       transition: all .2s ease;
       position: relative;
       display: inline-block;
@@ -432,6 +490,8 @@ p {
   }
 }
 .flex-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .flex-item2 {
@@ -442,8 +502,11 @@ p {
   padding: 47px 0 42px;
   margin: 45px 0 50px -14.4%;
   width: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   .col-left {
     width: 48%;
     text-align: center;
@@ -468,7 +531,9 @@ p {
           height: 1px;
           left: 50%;
           bottom: -39px;
-          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+                  transform: translateX(-50%);
           position: absolute;
           background-color: $color-green;
         }
@@ -498,6 +563,8 @@ p {
   margin-bottom: 127px;
 }
 .flex-third {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
   margin-bottom: 92px;
@@ -651,9 +718,14 @@ figure  {
   margin: 42px 0 44px -17%;
   padding: 78px 0 81px 72px;
   width: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 10%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 10%;
+     -moz-column-gap: 10%;
+          column-gap: 10%;
   row-gap: 66px;
   .flex-six-item2-item {
     width: 45%;
@@ -709,8 +781,12 @@ figure  {
   }
 }
 .flex-seven {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   .flex-seven-item {
     width: 31.5%;
     color: $color-white;
@@ -719,8 +795,13 @@ figure  {
     background-repeat: no-repeat;
     padding: 28px 38px 26px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     .overlay-flex-seven-item {
       position: absolute;
       left: 0;
@@ -758,8 +839,12 @@ figure  {
   margin-bottom: 60px;
 }
 .flex-eight {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   .flex-eight-item {
     width: 40%;
     .h2 {
@@ -827,6 +912,8 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
     position: absolute;
     left: 0;
     top: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
     transition: all .2s ease;
     &.fake {
       opacity: 0.5;
@@ -838,6 +925,16 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
   }
 }
 input[type=text], input[type=email], textarea {
+  &:not(:-moz-placeholder-shown) + label {
+    top: -26px;
+    @include fz(16);
+    color: #9c9b9bf5;
+  }
+  &:not(:-ms-input-placeholder) + label {
+    top: -26px;
+    @include fz(16);
+    color: #9c9b9bf5;
+  }
   &:focus + label, &:not(:placeholder-shown) + label {
     top: -26px;
     @include fz(16);
@@ -852,12 +949,20 @@ input[type=text], input[type=email], textarea {
 .footer-wrap {
   padding: 30px 0;
   .flex-nine {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     @include fz(14);
     @include lh(26);
     .flex-nine-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       gap: 12px;
       span {
@@ -927,7 +1032,8 @@ input[type=text], input[type=email], textarea {
     }
   }
   .flex-second {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     .flex-six-item2 {
       margin-left: 0;
     }
@@ -958,8 +1064,11 @@ input[type=text], input[type=email], textarea {
     }
   }
   .flex-seven {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 24px;
     .flex-seven-item {
       width: 47%;
@@ -997,7 +1106,8 @@ input[type=text], input[type=email], textarea {
     margin-bottom: 50px;
   }
   .flex-third {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     .flex-third-item {
       width: 100%;
       text-align: center;
@@ -1023,7 +1133,9 @@ input[type=text], input[type=email], textarea {
   .flex-six-item2 {
     padding: 0;
     text-align: center;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     .flex-six-item2-item {
       &.w {
         width: 100%;
@@ -1047,7 +1159,10 @@ input[type=text], input[type=email], textarea {
     .flex-nine {
       gap: 10px;
       .flex-nine-item {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         span, a {
           width: 100%;
         }
@@ -1069,7 +1184,9 @@ input[type=text], input[type=email], textarea {
 }
 @media screen and (max-width: 720px) {
   .flex-second-item2 {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 40px;
     .col-left, .col-right {
       width: 100%;  
@@ -1082,9 +1199,14 @@ input[type=text], input[type=email], textarea {
     }
   }
   .flex-eight {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 50px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     .flex-eight-item {
       width: 80%;
@@ -1165,8 +1287,12 @@ input[type=text], input[type=email], textarea {
     }
   }
   .flex-six-item2 {
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
     .flex-six-item2-item {
       width: 100%;
@@ -1192,11 +1318,17 @@ input[type=text], input[type=email], textarea {
   .footer-wrap {
     .flex-nine {
       gap: 20px;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       text-align: center;
 
       .flex-nine-item {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 0;
         span, a {
           margin-right: 0;
@@ -1278,4 +1410,3 @@ input[type=text], input[type=email], textarea {
     } 
   }
 }
-
