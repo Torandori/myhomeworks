@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Sitemap: file:///C:/Users/Vaviktoria/Projects/myhomeworks/sitemap.xml
+Host: torandori.github.io
