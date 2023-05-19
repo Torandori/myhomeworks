@@ -167,6 +167,19 @@ a, button {
   .footer-wrap .flex-nine .flex-nine-item a {
     color: $color-white;
   }
+  input[type=email], input[type=text], textarea {
+    color: $color-white;
+  }
+  .flex-third {
+    .flex-third-item {
+      &:before {
+        background-color: $color-grey-dark;
+      }
+    }
+  }
+  .separator {
+    background-color: $color-grey-dark;
+  }
 }
 .switch {
   position: relative;
@@ -1153,6 +1166,12 @@ input[type=text], input[type=email], textarea {
         padding-top: 28px;
         height: 100%;
       }
+      // &.one {
+      //   height: 288px;
+      //   p {
+      //     margin-bottom: 6px;
+      //   }
+      // }
     }
   }
   .footer-wrap {

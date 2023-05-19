@@ -270,6 +270,15 @@ a, button {
 .dark .footer-wrap .flex-nine .flex-nine-item a {
   color: #fff;
 }
+.dark input[type=email], .dark input[type=text], .dark textarea {
+  color: #fff;
+}
+.dark .flex-third .flex-third-item:before {
+  background-color: #515773;
+}
+.dark .separator {
+  background-color: #515773;
+}
 
 .switch {
   position: relative;
