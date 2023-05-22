@@ -1,43 +1,75 @@
-function secondGrade() {
-  const number = +prompt('Enter number');
-  let result = 0;
-  
-  if(number) {
-    result = Math.pow(number, 2);
-    // result = number * number;
-    alert(`Result = ${result}`);
-  } else {
-    alert(`Enter correct number`);
-  }
+const a = ('Viktoria Vashchuk');
+let distance
+let time
+let length
+let currentYear
+// const distanse
+// const tame
+// let lengh
+/* let carrentYear
+   let usename */
+
+function userName() {
+  const username = prompt('Enter your name');
+
+  if(username){
+    alert(`Hello, ${username}!`);
+  } 
 }
-
-function calcMiddle() {
-  const number1 = parseInt(prompt('Enter first number'));
-  const number2 = parseInt(prompt('Enter second number'));
-
-  let result = (number1 + number2) / 2;
-
-  alert(result);
-}
-
-function revert() {
-  const number = +prompt('Enter number');
+function userBirthDate() {
+  const currentYear = new Date().getFullYear();
+  const year = +prompt('Enter your birth year');
   let result = 0;
-  // 12345 => 51234
-  if (number >= 10000 && number <= 99999) {
-    result = ((number % 10) * 10000) + Math.trunc(number / 10);
+
+  if(year >= 1900){
+    result = currentYear - year;
     alert(result);
   } else {
-    alert('Please enter number between 10000 and 99999');
+    alert('Enter number from 1900')
   }
 }
-function km2ml() {
-  const number = +prompt('Enter km');
-  const k = 0.621371;
+function squarePerimeter(){
+  const squareSideLength = +prompt('Enter square side length in cm');
+  let result = 0;
+
+  if(!Number.isNaN(squareSideLength) && squareSideLength != ''){
+    result = squareSideLength * 4;
+    alert(`${result} cm`);
+  } else {
+    alert('Enter correct number')
+  }
+}
+function radius(){
+  const radius = +prompt('Enter the circle radius in cm');
+  let result = 0;
+
+  if(!Number.isNaN(radius) && radius != ''){
+    result = +  (Math.pow((Math.PI * radius), 2)).toFixed(2);
+    alert(`${result} cm^2`);
+  } else {
+    alert('Enter correct number')
+  }
+}
+function speed(){
+  const distance = +prompt('Enter the distance in km');
+  const time = +prompt('Enter the time in hours');
+  let result = 0;
+
+  if(!Number.isNaN(distance) && distance != '' && !Number.isNaN(time) && time != ''){
+    result = (distance / time);
+    alert(`${result} km / hour`);
+  } else {
+    alert('Enter correct number')
+  }
+}
+
+function currencyConvert() {
+  const number = +prompt('Enter amount in USD');
+  const e = 0.92;
   let result = 0;
   if (number) {
-    result = number * k;
-    alert(`in ${number}km - ${result}ml`);
+    result = +((number * e).toFixed(2));
+    alert(`${number} USD = ${result} EUR`);
   } else {
     alert('Please enter number');
   }

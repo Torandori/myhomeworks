@@ -1,45 +1,82 @@
 "use strict";
 
-function secondGrade() {
-  var number = +prompt('Enter number');
-  var result = 0;
+var a = 'Viktoria Vashchuk';
+var distance;
+var time;
+var length;
+var currentYear; // const distanse
+// const tame
+// let lengh
 
-  if (number) {
-    result = Math.pow(number, 2); // result = number * number;
+/* let carrentYear
+   let usename */
 
-    alert("Result = ".concat(result));
-  } else {
-    alert("Enter correct number");
+function userName() {
+  var username = prompt('Enter your name');
+
+  if (username) {
+    alert("Hello, ".concat(username, "!"));
   }
 }
 
-function calcMiddle() {
-  var number1 = parseInt(prompt('Enter first number'));
-  var number2 = parseInt(prompt('Enter second number'));
-  var result = (number1 + number2) / 2;
-  alert(result);
-}
+function userBirthDate() {
+  var currentYear = new Date().getFullYear();
+  var year = +prompt('Enter your birth year');
+  var result = 0;
 
-function revert() {
-  var number = +prompt('Enter number');
-  var result = 0; // 12345 => 51234
-
-  if (number >= 10000 && number <= 99999) {
-    result = number % 10 * 10000 + Math.trunc(number / 10);
+  if (year >= 1900) {
+    result = currentYear - year;
     alert(result);
   } else {
-    alert('Please enter number between 10000 and 99999');
+    alert('Enter number from 1900');
   }
 }
 
-function km2ml() {
-  var number = +prompt('Enter km');
-  var k = 0.621371;
+function squarePerimeter() {
+  var squareSideLength = +prompt('Enter square side length in cm');
+  var result = 0;
+
+  if (!Number.isNaN(squareSideLength) && squareSideLength != '') {
+    result = squareSideLength * 4;
+    alert("".concat(result, " cm"));
+  } else {
+    alert('Enter correct number');
+  }
+}
+
+function radius() {
+  var radius = +prompt('Enter the circle radius in cm');
+  var result = 0;
+
+  if (!Number.isNaN(radius) && radius != '') {
+    result = +Math.pow(Math.PI * radius, 2).toFixed(2);
+    alert("".concat(result, " cm^2"));
+  } else {
+    alert('Enter correct number');
+  }
+}
+
+function speed() {
+  var distance = +prompt('Enter the distance in km');
+  var time = +prompt('Enter the time in hours');
+  var result = 0;
+
+  if (!Number.isNaN(distance) && distance != '' && !Number.isNaN(time) && time != '') {
+    result = distance / time;
+    alert("".concat(result, " km / hour"));
+  } else {
+    alert('Enter correct number');
+  }
+}
+
+function currencyConvert() {
+  var number = +prompt('Enter amount in USD');
+  var e = 0.92;
   var result = 0;
 
   if (number) {
-    result = number * k;
-    alert("in ".concat(number, "km - ").concat(result, "ml"));
+    result = +(number * e).toFixed(2);
+    alert("".concat(number, " USD = ").concat(result, " EUR"));
   } else {
     alert('Please enter number');
   }
