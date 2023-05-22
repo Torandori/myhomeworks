@@ -41,7 +41,7 @@ body {
   @include lh(26);
   font-weight: 300;
   color: $color-blue-dark;
-  background-image: url("../../assets/img/bg-main-white.jpg");
+  background-image: url("assets/img/bg-main-white.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -89,7 +89,7 @@ a, button {
   body {
     color: $color-white;
     background-color: $color-blue-darker;
-    background-image: url("../../assets/img/bg-main-dark.jpg");
+    background-image: url("assets/img/bg-main-dark.jpg");
   }
   .main-menu ul li a {
     color: $color-white;

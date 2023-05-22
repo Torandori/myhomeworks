@@ -110,7 +110,7 @@ body {
   line-height: 1.625rem;
   font-weight: 300;
   color: #262A3F;
-  background-image: url("../../assets/img/bg-main-white.jpg");
+  background-image: url("assets/img/bg-main-white.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -158,7 +158,7 @@ a, button {
 .dark body {
   color: #fff;
   background-color: #161926;
-  background-image: url("../../assets/img/bg-main-dark.jpg");
+  background-image: url("assets/img/bg-main-dark.jpg");
 }
 .dark .main-menu ul li a {
   color: #fff;
