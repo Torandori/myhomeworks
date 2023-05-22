@@ -45,10 +45,10 @@ function squarePerimeter() {
 }
 
 function radius() {
-  var radius = +prompt('Enter the circle radius in cm');
+  var radius = parseInt(prompt('Enter the circle radius in cm'));
   var result = 0;
 
-  if (!Number.isNaN(radius) && radius != '') {
+  if (!isNaN(radius) && radius != '') {
     result = +Math.pow(Math.PI * radius, 2).toFixed(2);
     alert("".concat(result, " cm^2"));
   } else {
