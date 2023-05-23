@@ -1,16 +1,5 @@
 "use strict";
 
-var a = 'Viktoria Vashchuk';
-var distance;
-var time;
-var length;
-var currentYear; // const distanse
-// const tame
-// let lengh
-
-/* let carrentYear
-   let usename */
-
 function userName() {
   var username = prompt('Enter your name');
 
@@ -49,7 +38,7 @@ function radius() {
   var result = 0;
 
   if (!isNaN(radius) && radius != '') {
-    result = +Math.pow(Math.PI * radius, 2).toFixed(2);
+    result = +(Math.PI * Math.pow(radius, 2)).toFixed(2);
     alert("".concat(result, " cm^2"));
   } else {
     alert('Enter correct number');

@@ -1,13 +1,4 @@
-const a = ('Viktoria Vashchuk');
-let distance
-let time
-let length
-let currentYear
-// const distanse
-// const tame
-// let lengh
-/* let carrentYear
-   let usename */
+
 
 function userName() {
   const username = prompt('Enter your name');
@@ -44,7 +35,7 @@ function radius(){
   let result = 0;
 
   if(!isNaN(radius) && radius != ''){
-    result = +  (Math.pow((Math.PI * radius), 2)).toFixed(2);
+    result = +(Math.PI * Math.pow(radius, 2)).toFixed(2);
     alert(`${result} cm^2`);
   } else {
     alert('Enter correct number')
