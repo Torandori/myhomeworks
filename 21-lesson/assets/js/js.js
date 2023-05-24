@@ -24,7 +24,7 @@ function flashFileQuantity() {
     }
 
   let res = Math.floor((gb * 1024) / 820);
-  document.getElementById("task_3_result").innerText = res 
+  document.getElementById("task_3_result").innerText = `${res} files` 
 }
 
 function chocolade() {
@@ -44,8 +44,7 @@ function chocolade() {
 
   let res = Math.trunc(money / choco_price);
   let res1 = money - (res * choco_price);
-  document.getElementById("task_4_result").innerText = res;
-  document.getElementById("task_4_result1").innerText = res1;
+  document.getElementById("task_4_result").innerText = `You will be able to by ${res} chocolates. The rest of the money will be ${res1} USD.`;
 }
 
 function revert() {
