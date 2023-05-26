@@ -34,23 +34,127 @@
         <p><b>Result: </b><span id="task_2_result"></span></p>
       </div>
       <div class="card-footer">
-        <button type="button" class="btn btn-primary" onclick="symbol1()">Run</button>
+        <button type="button" class="btn btn-primary" onclick="symbol()">Run</button>
       </div>
     </div>
+
+    
+    <div class="card mb-4">
+      <h5 class="card-header">Task 3</h5>
+      <div class="card-body">
+        <p class="card-text">Підрахуй суму всіх чисел в заданому користувачем діапазоні.</p>
+        <label for="task_3_number">Enter initial value</label>
+        <input type="number" id="task_3_number" class="form-control">
+        <br>
+        <label for="task_3_number1">Enter final value</label>
+        <input type="number" id="task_3_number1" class="form-control">
+
+        <br>
+        <p><b>Result: </b><span id="task_3_result"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="sum()">Run</button>
+      </div>
+    </div>
+
+    
+    <div class="card mb-4">
+      <h5 class="card-header">Task 4</h5>
+      <div class="card-body">
+        <p class="card-text">Запитай у користувача 2 числа і знайди найбільший спільний дільник</p>
+        <label for="task_4_number">Enter your first value</label>
+        <input type="number" id="task_4_number" class="form-control">
+        <br>
+        <label for="task_4_number1">Enter your second value</label>
+        <input type="number" id="task_4_number1" class="form-control">
+        <p><b>Result: </b><span id="task_4_result"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="commonDivisor()">Run</button>
+      </div>
+    </div>
+
 
     <div class="card mb-4">
       <h5 class="card-header">Task 5</h5>
       <div class="card-body">
         <p class="card-text">Запитай у користувача число і виведи всі дільники цього числа.</p>
-        <label for="task_2_number">Enter your digit</label>
+        <label for="task_5_number">Enter your digit</label>
         <input type="number" id="task_5_number" class="form-control">
         <br>
         <p><b>Result: </b><span id="task_5_result"></span></p>
       </div>
       <div class="card-footer">
-        <button type="button" class="btn btn-primary" onclick="countDivider()">Run</button>
+        <button type="button" class="btn btn-primary" onclick="countDivisor()">Run</button>
       </div>
     </div>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 1 normal</h5>
+      <div class="card-body">
+        <p class="card-text">Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.</p>
+        <label for="task_1_normal_number">Enter five-digit number</label>
+        <input type="number" id="task_1_normal_number" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_1_normal_result"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="palindrome()">Run</button>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 2 normal</h5>
+      <div class="card-body">
+        <p class="card-text">Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+          від 200 до 300 - знижка буде 3%; 
+          від 300 до 500 - 5%;
+          від 500 і вище - 7%.</p>
+        <label for="task_2_normal_number">Enter perchase amount in USD</label>
+        <input type="number" id="task_2_normal_number" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_2_normal_result"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="beforeDiscount()">Run</button>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 3 normal</h5>
+      <div class="card-body">
+        <p class="card-text">Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому також порахуй, скільки з них парних і непарних. Виведи статистику на екран. Враховуй, що достатньо однієї змінної (не 10) для введення чисел користувачем.</p>
+        <label for="task_2_normal_number">Enter perchase amount in USD</label>
+        <input type="number" id="task_3_normal_number" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_3_normal_result"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="analysis()">Run</button>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 4 normal</h5>
+      <div class="card-body">
+        <p class="card-text">Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому також порахуй, скільки з них парних і непарних. Виведи статистику на екран. Враховуй, що достатньо однієї змінної (не 10) для введення чисел користувачем.</p>
+        <p><b>Result: </b><span id="task_4_normal_result"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="countNumbers()">Run</button>
+      </div>
+    </div>
+
+        <div class="card mb-4">
+      <h5 class="card-header">Task 5 normal</h5>
+      <div class="card-body">
+        <p class="card-text">Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.</p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="dayOfWeek()">Run</button>
+      </div>
+    </div>
+
 
     
   </div>
