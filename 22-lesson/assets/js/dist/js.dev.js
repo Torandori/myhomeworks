@@ -82,3 +82,22 @@ function symbol1() {
       document.getElementById("task_2_result").innerHTML = "<i style=\"color: red\">It is not valid value</i>";
   }
 }
+
+function countDivider() {
+  var num = document.getElementById("task_5_number").valueAsNumber;
+  var result = '';
+
+  if (isNaN(num)) {
+    document.getElementById("task_5_result").innerHTML = "<i style=\"color: red\">Enter value</i>";
+    return false;
+  }
+
+  for (var i = 1; i <= num / 2; i++) {
+    if (num % i === 0) {
+      result += i + ', ';
+    }
+  }
+
+  result += num;
+  document.getElementById("task_5_result").innerHTML = "<i style=\"color: red\">".concat(result, "</i>");
+}

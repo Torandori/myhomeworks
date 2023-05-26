@@ -73,3 +73,20 @@ function symbol1() {
   }
 }
 
+function countDivider() {
+  const num = document.getElementById("task_5_number").valueAsNumber;
+  let result = '';
+
+  if (isNaN(num)) {
+    document.getElementById("task_5_result").innerHTML = `<i style="color: red">Enter value</i>`;
+    return false;
+  }
+
+  for(let i=1;i<=num / 2;i++) {
+    if(num % i === 0){
+      result += i + ', ';
+    }
+  }
+  result += num;
+  document.getElementById("task_5_result").innerHTML = `<i style="color: red">${result}</i>`;
+}
