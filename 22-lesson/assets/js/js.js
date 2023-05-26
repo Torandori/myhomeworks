@@ -176,7 +176,7 @@ function countNumbers() {
   let oddCount = 0;
 
   while (i < 10) {
-    const number = parseInt(prompt(`Enter number ${i + 1}:`));
+    const number = parseInt(prompt(`Enter number ${i + 1}:`)); //Наприклад, якщо count дорівнює 0, тоді ${count + 1} обчислюється як 1. Отже, у повідомленні підказки відображатиметься «Введіть число 1:». Подібним чином, якщо кількість дорівнює 2, підказка відображатиме «Введіть число 3:» тощо.
     
     if (isNaN(number)) {
       alert("Invalid number. Please try again.");

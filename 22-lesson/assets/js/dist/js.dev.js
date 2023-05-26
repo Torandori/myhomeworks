@@ -181,7 +181,7 @@ function countNumbers() {
   var oddCount = 0;
 
   while (i < 10) {
-    var number = parseInt(prompt("Enter number ".concat(i + 1, ":")));
+    var number = parseInt(prompt("Enter number ".concat(i + 1, ":"))); //Наприклад, якщо count дорівнює 0, тоді ${count + 1} обчислюється як 1. Отже, у повідомленні підказки відображатиметься «Введіть число 1:». Подібним чином, якщо кількість дорівнює 2, підказка відображатиме «Введіть число 3:» тощо.
 
     if (isNaN(number)) {
       alert("Invalid number. Please try again.");
