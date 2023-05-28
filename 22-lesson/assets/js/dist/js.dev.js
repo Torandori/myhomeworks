@@ -181,22 +181,23 @@ function countNumbers() {
   var oddCount = 0;
 
   while (i < 10) {
-    var number = parseInt(prompt("Enter number ".concat(i + 1, ":"))); //Наприклад, якщо count дорівнює 0, тоді ${count + 1} обчислюється як 1. Отже, у повідомленні підказки відображатиметься «Введіть число 1:». Подібним чином, якщо кількість дорівнює 2, підказка відображатиме «Введіть число 3:» тощо.
+    var _number = parseInt(prompt("Enter number ".concat(i + 1, ":"))); //Наприклад, якщо count дорівнює 0, тоді ${count + 1} обчислюється як 1. Отже, у повідомленні підказки відображатиметься «Введіть число 1:». Подібним чином, якщо кількість дорівнює 2, підказка відображатиме «Введіть число 3:» тощо.
 
-    if (isNaN(number)) {
+
+    if (isNaN(_number)) {
       alert("Invalid number. Please try again.");
       continue;
     }
 
-    if (number > 0) {
+    if (_number > 0) {
       positiveCount++;
-    } else if (number < 0) {
+    } else if (_number < 0) {
       negativeCount++;
     } else {
       zeroCount++;
     }
 
-    if (number % 2 === 0) {
+    if (_number % 2 === 0) {
       evenCount++;
     } else {
       oddCount++;
@@ -252,4 +253,121 @@ function dayOfWeek() {
 
     dayIndex = (dayIndex + 1) % 7; //For example, if the current value of dayIndex is 6 (Saturday), the expression dayIndex = (dayIndex + 1) % 7 will evaluate to (6 + 1) % 7, which is 0. So, the value of dayIndex will be updated to 0, representing Sunday.
   } while (true);
+} //////
+
+
+function findNumber() {
+  var from = 0;
+  var to = 100;
+  var middle = 0;
+  var answer = '';
+  var steps = 0;
+
+  do {
+    steps++;
+    middle = Math.round((from + to) / 2); // document.getElementById("text").innerHTML = `<p>Bigger, smaller or equal ${middle}</p>`;
+    // answer = document.getElementById("task_1_extra").value;
+
+    answer = prompt("Bigger, smaller or equal ".concat(middle));
+
+    if (answer === '>') {
+      from = middle;
+    }
+
+    if (answer === '<') {
+      to = middle;
+    }
+  } while (answer !== '=');
+
+  document.getElementById("task_1_extra_result").innerHTML = "<i\">Your number is: ".concat(middle, ", steps: ").concat(steps, "</i>");
+}
+
+function multipleTable() {
+  // const num = document.getElementById("task_4_number").valueAsNumber;
+  // const num1 = document.getElementById("task_4_number1").valueAsNumber;
+  for (var _number2 = 2; _number2 <= 9; _number2++) {
+    console.log("Multiplication table for ".concat(_number2, ":"));
+
+    for (var multiplier = 1; multiplier <= 10; multiplier++) {
+      var _result = _number2 * multiplier;
+
+      console.log("".concat(_number2, " x ").concat(multiplier, " = ").concat(_result));
+    }
+
+    console.log('');
+  }
+
+  document.getElementById("task_2_extra_result").innerHTML = "<i style=\"color: red\">Multiplication table for ".concat(number, ": ").concat(result, "</i>");
+}
+
+function nextDate() {
+  var day = parseInt(prompt('Enter day'));
+  var mon = parseInt(prompt('Enter mon'));
+  var year = parseInt(prompt('Enter year')); // let day = getElementById("task_3_extra").valueAsNumber;
+  // let mon = getElementById("task_3_ext").valueAsNumber;
+  // let year = getElementByIdt("task_3_ex:").valueAsNumber;
+
+  var newDay = +day + 1;
+  var newMon = mon;
+  var newYear = year; // 10.02.2019 => 11.02.2019
+  // 31.12.2019 => 01.01.2020
+  // 28.02.2019 => 29.02.2020
+  // 28.02.2021 => 01.03.2021
+  // 31 => 1, 3, 5, 7, 8, 10, 12
+
+  switch (mon) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      if (newDay == 32) {
+        newDay = 1;
+        newMon++;
+      }
+
+      ;
+      break;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      if (newDay == 31) {
+        newDay = 1;
+        newMon++;
+      }
+
+      ;
+      break;
+
+    case 2:
+      if (year % 4 === 0 && year % 100 !== 0 || year % 400 !== 0) {
+        if (newDay == 30) {
+          newDay = 1;
+          newMon++;
+        }
+      } else {
+        if (newDay == 29) {
+          newDay = 1;
+          newMon++;
+        }
+      }
+
+      ;
+      break;
+  }
+
+  if (newMon == 13) {
+    newMon = 1;
+    newYear++;
+  }
+
+  var addZero = function addZero(num) {
+    return num < 10 ? '0' + num : '' + num;
+  };
+
+  document.getElementById("task_3_extra_result").innerHTML = "<i>next date: ".concat(addZero(newDay), "/").concat(addZero(newMon), "/").concat(newYear, "</i>");
 }
