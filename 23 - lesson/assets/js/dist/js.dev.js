@@ -68,14 +68,12 @@ function perfect(sumDiv, initnumber) {
 }
 
 function task7() {
-  debugger;
   var num = getVal("task_7_num");
 
   if (isNaN(num)) {
     showResult("task_7_res", "Error, enter value", 'text');
     return false;
-  } // debugger;
-
+  }
 
   var sum = findDividorsSum(num);
   var res = perfect(sum, num);
