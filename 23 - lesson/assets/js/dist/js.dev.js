@@ -13,6 +13,64 @@ function showResult(id, text) {
     document.getElementById(id).innerHTML = text;
   }
 } // *******#GENERAL func 
+// ===1 Напиши всі можливі варіанти створення функцій.
+// Function declaration
+
+
+function divide(parameters) {} // Function body
+// Function expression (Anonymous)
+
+
+var variable1 = function variable1(parameters) {// Function body
+}; // Function expression (Named)
+
+
+var variable2 = function multiply(parameters) {// Function body
+}; //Arrow function
+
+
+var variable3 = function variable3(parameters) {// Function body
+}; // ===2
+
+
+function countArguments() {
+  return arguments.length;
+}
+
+function task2() {
+  var num = getVal("task_2_num");
+  var num1 = getVal("task_2_num1");
+  var num2 = getVal("task_2_num2");
+  res = countArguments(num, num1, num2);
+  showResult("task_2_res", "Arguments quantity is ".concat(res), 'text');
+} // console.log(task2(1, 2, 3));   
+// =====3
+
+
+function compareNumbers(n, n1) {
+  if (n < n1) {
+    return '-1';
+  } else if (n > n1) {
+    showResult("task_3_res", "1", 'text');
+    return "1";
+  } else {
+    return "0";
+  }
+}
+
+function task3() {
+  // debugger;
+  var num = getVal("task_3_num");
+  var num1 = getVal("task_3_num1");
+
+  if (isNaN(num) && isNaN(num1)) {
+    showResult("task_3_res", "Error, enter value", 'text');
+    return false;
+  }
+
+  var res = compareNumbers(num, num1);
+  showResult("task_3_res", "".concat(res), 'text');
+} // ====4
 
 
 function factorial(n) {
@@ -27,7 +85,40 @@ function task4() {
   var num = getVal("task_4_num");
   var res = factorial(num);
   showResult("task_4_res", "<i>".concat(res, "</i>"), 'html');
-} // =======
+} // =====5
+
+
+function transformToOneDigit(n, n1, n2) {
+  if (n >= 1 && n <= 9 && n1 >= 1 && n1 <= 9 && n2 >= 1 && n2 <= 9) {
+    n *= 100;
+    n1 *= 10;
+    var sum = n + n1 + n2;
+    return sum;
+  } else {
+    showResult("task_5_res", "Error, enter correct value from 1 to 9", 'text');
+    return false;
+  }
+}
+
+function task5() {
+  // debugger;
+  var num = getVal("task_5_num");
+  var num1 = getVal("task_5_num1");
+  var num2 = getVal("task_5_num2");
+
+  if (isNaN(num) && isNaN(num1) && isNaN(num2)) {
+    showResult("task_5_res", "Error, enter value", 'text');
+    return false;
+  }
+
+  var res = transformToOneDigit(num, num1, num2);
+
+  if (res) {
+    showResult("task_5_res", "Your number is ".concat(res), 'text');
+  } else {
+    showResult("task_5_res", "Error, enter correct value from 1 to 9", 'text');
+  }
+} // =======6
 
 
 function square(w, h) {
@@ -43,11 +134,11 @@ function task6() {
   var height = getVal("task_6_num2");
   res = square(width, height);
   showResult("task_6_res", "Square of shape is <i>".concat(res, "</i>"), 'html');
-} // ========
+} // ========7
 
 
 function findDividorsSum(number) {
-  var sum = 0;
+  var sum = 1;
 
   for (var i = 2; i <= number / 2; i++) {
     if (number % i === 0) {
@@ -55,29 +146,64 @@ function findDividorsSum(number) {
     }
   }
 
-  sum += 1;
   return sum;
 }
 
-function perfect(sumDiv, initnumber) {
-  if (sumDiv === initnumber) {
-    return 'perfect';
+function isPerfect(sumDiv, initNumber) {
+  if (sumDiv === initNumber) {
+    return true;
   } else {
-    return 'unperfect';
+    return false;
   }
 }
 
 function task7() {
+  // debugger;
   var num = getVal("task_7_num");
 
   if (isNaN(num)) {
     showResult("task_7_res", "Error, enter value", 'text');
     return false;
+  } else if (num === 1) {
+    showResult("task_7_res", "1 is unperfect value", 'text');
+    return false;
   }
 
   var sum = findDividorsSum(num);
-  var res = perfect(sum, num);
-  showResult("task_7_res", "Your number is ".concat(res), 'text');
+  var res = isPerfect(sum, num);
+
+  if (res) {
+    showResult("task_7_res", "Your number is perfect", 'text');
+  } else {
+    showResult("task_7_res", "Your number is unperfect", 'text');
+  }
+} // ======8
+
+
+function findPerfectInRange() {
+  var min = getVal("task_8_num");
+  var max = getVal("task_8_num2");
+
+  if (isNaN(min) && isNaN(max)) {
+    showResult("task_8_res", "Error, enter value", 'text');
+    return false;
+  }
+
+  var res = '';
+
+  for (var num = min; num <= max; num++) {
+    if (num === 1) {
+      continue; // Skip 1, as it is not a perfect number
+    }
+
+    var sum = findDividorsSum(num);
+
+    if (isPerfect(sum, num)) {
+      res += num + ', ';
+    }
+  }
+
+  showResult("task_8_res", "Following numbers from the indicated range are perfect: ".concat(res), 'text');
 } // FUNC to interact
 
 

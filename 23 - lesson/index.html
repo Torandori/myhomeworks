@@ -10,6 +10,48 @@
 </head>
 <body>
   <div class="container pt-4">
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 2</h5>
+      <div class="card-body">
+        <p class="card-text">Створи функцію, яка буде виводити кількість переданих їй аргументів.</p>
+        <label for="task_3_num">Enter first number</label>
+        <input type="number" id="task_2_num" class="form-control">
+        <br>
+        <label for="task_3_num1">Enter second number</label>
+        <input type="number" id="task_2_num1" class="form-control">
+        <br>
+        <label for="task_2_num2">Enter second number</label>
+        <input type="number" id="task_2_num2" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_2_res"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="task2()">Run</button>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 3</h5>
+      <div class="card-body">
+        <p class="card-text">Напиши функцію, яка приймає 2 числа і повертає :
+          -1, якщо перше число менше, ніж друге; 
+          1 - якщо перше число більше, ніж друге; 
+          0 - якщо числа рівні.</p>
+        <label for="task_3_num">Enter first number</label>
+        <input type="number" id="task_3_num" class="form-control">
+        <br>
+        <label for="task_3_num1">Enter second number</label>
+        <input type="number" id="task_3_num1" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_3_res"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="task3()">Run</button>
+      </div>
+    </div>
+
+
     <div class="card mb-4">
       <h5 class="card-header">Task 4</h5>
       <div class="card-body">
@@ -21,6 +63,26 @@
       </div>
       <div class="card-footer">
         <button type="button" class="btn btn-primary" onclick="task4()">Run</button>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Task 5</h5>
+      <div class="card-body">
+        <p class="card-text">Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.</p>
+        <label for="task_5_num">Enter a figure from 1 to 9</label>
+        <input type="number" id="task_5_num" class="form-control">
+        <br>
+        <label for="task_5_num1">Enter a figure from 1 to 9</label>
+        <input type="number" id="task_5_num1" class="form-control">
+        <br>
+        <label for="task_5_num2">Enter a figure from 1 to 9</label>
+        <input type="number" id="task_5_num2" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_5_res"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="task5()">Run</button>
       </div>
     </div>
 
@@ -55,7 +117,22 @@
       </div>
     </div>
 
-
+    <div class="card mb-4">
+      <h5 class="card-header">Task 8</h5>
+      <div class="card-body">
+        <p class="card-text">Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.</p>
+        <label for="task_8_num">Enter min value</label>
+        <input type="number" id="task_8_num" class="form-control">
+        <br>
+        <label for="task_8_num2">Enter max value</label>
+        <input type="number" id="task_8_num2" class="form-control">
+        <br>
+        <p><b>Result: </b><span id="task_8_res"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn btn-primary" onclick="findPerfectInRange()">Run</button>
+      </div>
+    </div>
 
   </div>
   <script src="assets/js/js.js"></script>
