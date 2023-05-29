@@ -14,6 +14,7 @@ function divide(parameters) {
   // Function body
 }
 
+
 // Function expression (Anonymous)
 const variable1 = function(parameters) {
   // Function body
