@@ -25,9 +25,26 @@ var car = {
 }; // Метод, який виводить на екран інформацію про автомобіль.
 
 car.displayInfo = function () {
-  var carInfoElement = document.getElementById("carInfo");
-  var infoHTML = "\n  <p><strong>Make:</strong> ".concat(this.make, "<p>\n  <p><strong>Model:</strong> ").concat(this.model, "<p>\n  <p><strong>Year:</strong> ").concat(this.year, "<p>\n  <p><strong>Top Speed:</strong> ").concat(this["average speed"], "\n  <p><strong>Fuel Tank:</strong> ").concat(this["fuel tank"], "\n  <p><strong>Average fuel consumption per 100km:</strong> ").concat(this["average fuel consumption per 100km"], "<p>");
-  carInfoElement.innerHTML = infoHTML;
+  var carInfoElement = document.getElementById("carInfo"); // let infoHTML = `
+  // <p><strong>Make:</strong> ${this.make}<p>
+  // <p><strong>Model:</strong> ${this.model}<p>
+  // <p><strong>Year:</strong> ${this.year}<p>
+  // <p><strong>Top Speed:</strong> ${this["average speed"]}
+  // <p><strong>Fuel Tank:</strong> ${this["fuel tank"]}
+  // <p><strong>Average fuel consumption per 100km:</strong> ${this["average fuel consumption per 100km"]}<p>`;
+  // carInfoElement.innerHTML = infoHTML;
+
+  var rez = '';
+
+  for (var key in car) {
+    var val = car[key];
+
+    if (typeof val !== 'function') {
+      rez += "<p><strong>".concat(key, ": </strong>").concat(val, "<p>");
+    }
+  }
+
+  carInfoElement.innerHTML = rez;
 };
 
 car.displayInfo(); // ===

@@ -19,14 +19,23 @@ let car = {
 // Метод, який виводить на екран інформацію про автомобіль.
 car.displayInfo = function(){
   let carInfoElement = document.getElementById("carInfo");
-  let infoHTML = `
-  <p><strong>Make:</strong> ${this.make}<p>
-  <p><strong>Model:</strong> ${this.model}<p>
-  <p><strong>Year:</strong> ${this.year}<p>
-  <p><strong>Top Speed:</strong> ${this["average speed"]}
-  <p><strong>Fuel Tank:</strong> ${this["fuel tank"]}
-  <p><strong>Average fuel consumption per 100km:</strong> ${this["average fuel consumption per 100km"]}<p>`;
-  carInfoElement.innerHTML = infoHTML;
+  // let infoHTML = `
+  // <p><strong>Make:</strong> ${this.make}<p>
+  // <p><strong>Model:</strong> ${this.model}<p>
+  // <p><strong>Year:</strong> ${this.year}<p>
+  // <p><strong>Top Speed:</strong> ${this["average speed"]}
+  // <p><strong>Fuel Tank:</strong> ${this["fuel tank"]}
+  // <p><strong>Average fuel consumption per 100km:</strong> ${this["average fuel consumption per 100km"]}<p>`;
+  // carInfoElement.innerHTML = infoHTML;
+
+  let rez = '';
+  for(let key in car){
+    const val = car[key];
+    if(typeof(val) !== 'function'){
+      rez += `<p><strong>${key}: </strong>${val}<p>`;
+    }
+  }
+  carInfoElement.innerHTML = rez;
 }
 car.displayInfo();
 
