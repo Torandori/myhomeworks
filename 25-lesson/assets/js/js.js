@@ -5,6 +5,13 @@ let CART = [
     price: 30.00,
     total: 60.00,
     isBuy: false,
+  },
+  {
+    name: 'Apple',
+    qty: 3,
+    price: 10.25,
+    total: 30.75,
+    isBuy: false,
   }
 ];
 
@@ -103,8 +110,33 @@ function viewCartList(){
     </tr>`
   });
   document.getElementById("cart_tbody").innerHTML = tBody;
+  const totals = calcTotal();
+  document.getElementById("cartTotal").innerHTML = (totals.totalSum).toFixed(2);
+  document.getElementById("bought").innerHTML = (totals.bought).toFixed(2);
+  document.getElementById("notBought").innerHTML = (totals.notBought).toFixed(2);
 } 
 viewCartList();
+
+function calcTotal() {
+  // return CART.reduce((acc, val) => acc + val.total, 0);
+  let bought = 0,
+      notBought = 0,
+      totalSum = 0;
+
+  CART.forEach((product) => {
+    if(product.isBuy){
+      bought += product.total;
+    } else {
+      notBought += product.total;
+    }
+  });
+  totalSum = bought + notBought;
+
+  return {bought, notBought, totalSum};
+
+}
+
+
 // Додавати кнопку bought тілтки коли isBuy = false 
 
 // independent plugin, not to do chenges in html, just to add ready plugin, better than 

@@ -6,6 +6,12 @@ var CART = [{
   price: 30.00,
   total: 60.00,
   isBuy: false
+}, {
+  name: 'Apple',
+  qty: 3,
+  price: 10.25,
+  total: 30.75,
+  isBuy: false
 }];
 
 function addToCart() {
@@ -89,9 +95,33 @@ function viewCartList() {
     tBody += "\n    <tr>\n      <td>".concat(product.name, "</td>\n      <td>").concat(badge, "</td>\n      <td>\n        <div class=\"input-group mb-3\">\n          <button class=\"btn btn-outline-secondary\" type=\"button\" onclick=\"changeProductQty(").concat(index, ", 'minus')\">-</button>\n          <input type=\"number\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with two button addons\" value=\"").concat(product.qty, "\" readonly>\n          <button class=\"btn btn-outline-secondary\" type=\"button\" onclick=\"changeProductQty(").concat(index, ", 'plus')\">+</button>\n        </div>\n      </td>\n      <td>").concat(product.price.toFixed(2), "</td>\n      <td>").concat(product.total.toFixed(2), "</td>\n      <td>\n        ").concat(!product.isBuy ? '<button type="button" class="btn btn-warning" onclick="buyProduct(' + index + ')">Buy</button>' : '', "\n        ").concat(!product.isBuy ? '<button type="button" class="btn btn-danger" onclick="removeProduct(' + index + ')">Delete</button>' : '', "\n      </td>\n    </tr>");
   });
   document.getElementById("cart_tbody").innerHTML = tBody;
+  var totals = calcTotal();
+  document.getElementById("cartTotal").innerHTML = totals.totalSum.toFixed(2);
+  document.getElementById("bought").innerHTML = totals.bought.toFixed(2);
+  document.getElementById("notBought").innerHTML = totals.notBought.toFixed(2);
 }
 
-viewCartList(); // Додавати кнопку bought тілтки коли isBuy = false 
+viewCartList();
+
+function calcTotal() {
+  // return CART.reduce((acc, val) => acc + val.total, 0);
+  var bought = 0,
+      notBought = 0,
+      totalSum = 0;
+  CART.forEach(function (product) {
+    if (product.isBuy) {
+      bought += product.total;
+    } else {
+      notBought += product.total;
+    }
+  });
+  totalSum = bought + notBought;
+  return {
+    bought: bought,
+    notBought: notBought,
+    totalSum: totalSum
+  };
+} // Додавати кнопку bought тілтки коли isBuy = false 
 // independent plugin, not to do chenges in html, just to add ready plugin, better than 
 // // To add element to html, not to replace
 // function toast(text = 'Hello', type = 'info') {

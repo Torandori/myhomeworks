@@ -42,24 +42,24 @@
     <div class="card mb-4">
       <div class="card-header">
         <h4>Adding goods</h4>
-        <div class="card-body">
-          <form>
-            <div class="row">
-              <div class="col-6">
-                <input type="text" class="form-control" id="prod-name" placeholder="Product name">
-              </div>
-              <div class="col-2">
-                <input type="number" class="form-control" id="prod-qty" placeholder="Quantity" min="1" value="1">
-              </div>
-              <div class="col-2">
-                <input type="number" class="form-control" id="prod-price" placeholder="Price">
-              </div>
-              <div class="col-2">
-                <button type="button" class="btn btn-success" onclick="addToCart()">Add to cart</button>
-              </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-6">
+              <input type="text" class="form-control" id="prod-name" placeholder="Product name">
             </div>
-          </form>
-        </div>
+            <div class="col-2">
+              <input type="number" class="form-control" id="prod-qty" placeholder="Quantity" min="1" value="1">
+            </div>
+            <div class="col-2">
+              <input type="number" class="form-control" id="prod-price" placeholder="Price">
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-success" onclick="addToCart()">Add to cart</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     
@@ -67,7 +67,7 @@
       <div class="card-header">
         <h4>Cart</h4>
       </div>
-      <card-body>
+      <div class="card-body">
         <table class="table">
           <thead>
             <tr>
@@ -81,8 +81,22 @@
           </thead>
           <tbody id="cart_tbody">
           </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">Bought</td>
+              <td colspan="2"><span id="bought"></span></td>
+            </tr>
+            <tr>
+              <td colspan="4">Not Bought</td>
+              <td colspan="2"><span id="notBought"></span></td>
+            </tr>
+            <tr>
+              <td colspan="4">Total Sum</td>
+              <td colspan="2"><span id="cartTotal"></span></td>
+            </tr>
+          </tfoot>
         </table>
-      </card-body>
+      </div>
     </div>
   </div>
   <script src="assets/js/toast.js"></script>
