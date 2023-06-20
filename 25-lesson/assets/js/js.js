@@ -1,5 +1,6 @@
 let CART = [
   {
+    id: 1234,
     name: 'Milk',
     qty: 2,
     price: 30.00,
@@ -7,6 +8,7 @@ let CART = [
     isBuy: false,
   },
   {
+    id: 2345,
     name: 'Bread',
     qty: 3,
     price: 10.00,
@@ -14,6 +16,7 @@ let CART = [
     isBuy: false,
   },
   {
+    id: 3456,
     name: 'Cheese',
     qty: 2,
     price: 30.00,
@@ -26,6 +29,12 @@ function addToCart() {
   const name = document.getElementById("prod-name").value;
   const qty = document.getElementById("prod-qty").valueAsNumber;
   const price = document.getElementById("prod-price").valueAsNumber;
+  // below fun is used to assign a random ID to a new product added to the cart.
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
   
   // validation for inputs 
   if(name === '' || isNaN(price) || isNaN(qty))  {
@@ -43,6 +52,8 @@ function addToCart() {
   } else {
     // add el at the end of arr 
     CART.push({
+      // random 4 because from 1000 to 9999
+      id: getRandomIntInclusive(1000, 9999),
       name,
       qty,
       price,
@@ -65,7 +76,11 @@ function addToCart() {
 // Щоб працювало тыльки для тих елементыв якы додані 
 function buyProduct($btn) {
   const tr = $btn.closest('tr');
-  const index = tr.dataset.index;
+  const id = +tr.dataset.id;
+  const index = CART.findIndex((product) => product.id === id);
+
+  console.log(index, id);
+
   CART[index].isBuy = true;
 
   tr.children[1].innerHTML = '<span class="badge text-bg-success">Bought</span>';
@@ -77,7 +92,8 @@ function buyProduct($btn) {
 
 function removeProduct($btn) {
   if (confirm('Delete product?')) {
-    const index = $btn.closest('tr').dataset.index;
+    const id = +$btn.closest('tr').dataset.id;
+    const index = CART.findIndex((product) => product.id === id);
     CART.splice(index, 1);
 
     $btn.closest('tr').remove();
@@ -85,10 +101,12 @@ function removeProduct($btn) {
     // viewCartList();
   }
 }
+// $btn means that an object coming as argument 
 function changeProductQty($btn){
   const action = $btn.dataset.change;
   const tr = $btn.closest('tr');
-  const index = tr.dataset.index;
+  const id = +tr.dataset.id;
+  const index = CART.findIndex((product) => product.id === id);
 
   if(action === 'plus') {
     CART[index].qty++;
@@ -111,22 +129,22 @@ function changeProductQty($btn){
 function viewCartList(){
   let tBody = '';
   
-  CART.forEach(function(product, index){
-    tBody += cartListRow(product, index);
+  CART.forEach(function(product){
+    tBody += cartListRow(product);
    
   });
   document.getElementById("cart_tbody").innerHTML = tBody;
   const totals = calcTotal();
-  document.getElementById("cartTotal").innerHTML = (totals.totalSum).toFixed(2);
+  document.getElementById("cartTotal").innerHTML = (totals.totalSum).toFixed(2); //if totals is obj, we refer to property of this obj
   document.getElementById("bought").innerHTML = (totals.bought).toFixed(2);
   document.getElementById("notBought").innerHTML = (totals.notBought).toFixed(2);
 } 
 
 // take content of tr and put in separate func. Приймає в себе об тов і повертає цю розмітку. Get one particular tr with all changes. Малювання списку тільки один раз, а потім вже окремо кожен елемент змінювати
-function cartListRow(product, index = 0){
+function cartListRow(product){
   let badge = product.isBuy ? '<span class="badge text-bg-success">Bought</span>' : '<span class="badge text-bg-danger">Not bought</span>';
   return `
-  <tr data-index="${index}">
+  <tr data-id="${product.id}">
     <td>${product.name}</td>
     <td>${badge}</td>
     <td>
@@ -164,6 +182,8 @@ function calcTotal() {
   totalSum = bought + notBought;
 
   return {bought, notBought, totalSum};
+  // function returns an object with three properties: bought, notBought, and totalSum;
+  // If you modify the calcTotal() function to only return the bought property, the function would return a single value representing the total value of bought products. The returned value would be a number. 
 }
 
 
@@ -187,3 +207,45 @@ function calcTotal() {
 // }
 
 
+// SLICK SLIDER
+$(function(){
+  $('.list').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    dots: true,
+    vertical: true,
+    // },
+    // slidesToShow: 5
+    // infinity: true,
+  });
+  $('.list2').lightSlider({
+    item: 1,
+    slideMargin: 50,
+    loop: true,
+    vertical: true,
+    // dots: true,
+    // },
+    // slidesToShow: 5
+    // infinity: true,
+  });
+  // forHamburger in Jquery
+  $('.hamburger').on('click', function(){
+    $('.hamburger').classToggle('is-active');
+    $('#mob-menu').classToggle('open');
+  })
+
+  $('#card-number').mask('9999 9999 9999 9999');
+  $('#phone-number').mask('+38 (099) 9999 999');
+
+
+  // встановити маску за замочуванням
+  $('#phone1-number').mask($('#country').val());
+  $('#country').on('change', function(){
+    $('#phone1-number').val('').mask($(this).val()).focus();
+  });
+// поверне ел на як спрацювала подыя - те саме що event target 
+// val('') - скидаэ значення инпуту, коли перемикаюсь на іншу країну
+})
+
+$()

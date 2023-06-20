@@ -159,7 +159,6 @@ a, button {
 .container {
   width: min(90%, 1200px);
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .page-wrapper {
@@ -174,7 +173,6 @@ main {
 
 header {
   height: 80px;
-  border: 1px solid blue;
   background-color: #F8F1EA;
 }
 header .container {
@@ -244,8 +242,7 @@ header .container .header-icons a:last-child:hover path {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
 }
 #first-sec-slider div .container {
-  padding: 120px 0 470px 797px;
-  border: 1px solid blue;
+  padding: 120px 0 24% 55%;
 }
 #first-sec-slider div h1, #first-sec-slider div .h2 {
   font-size: 3.125rem;
@@ -317,6 +314,7 @@ header .container .header-icons a:last-child:hover path {
 
 .second-sec-slider {
   margin-bottom: 52px;
+  overflow: hidden;
 }
 
 .second-sec-slider-item {
@@ -366,7 +364,6 @@ header .container .header-icons a:last-child:hover path {
   border-color: #F16A50;
 }
 
-/* the slides */
 .slick-slide {
   margin: 0 10px;
 }
@@ -375,7 +372,6 @@ header .container .header-icons a:last-child:hover path {
   display: flex;
 }
 
-/* the parent */
 .slick-list {
   margin: 0 -10px;
 }
@@ -393,7 +389,7 @@ header .container .header-icons a:last-child:hover path {
   position: absolute;
   top: 46%;
   transform: translateY(-50%);
-  width: 30px;
+  width: 40px;
   /* Adjust as needed */
   height: 30px;
   /* Adjust as needed */
@@ -407,12 +403,12 @@ header .container .header-icons a:last-child:hover path {
 }
 
 .second-prev {
-  left: -60px;
+  left: 0px;
   /* Adjust as needed */
 }
 
 .second-next {
-  right: -60px;
+  right: 0px;
   /* Adjust as needed */
 }
 
@@ -457,9 +453,9 @@ header .container .header-icons a:last-child:hover path {
 .third-prev,
 .third-next {
   position: absolute;
-  top: 46%;
+  top: 43%;
   transform: translateY(-50%);
-  width: 30px;
+  width: 39px;
   /* Adjust as needed */
   height: 30px;
   /* Adjust as needed */
@@ -473,12 +469,12 @@ header .container .header-icons a:last-child:hover path {
 }
 
 .third-prev {
-  left: -60px;
+  left: 0px;
   /* Adjust as needed */
 }
 
 .third-next {
-  right: -60px;
+  right: 0px;
   /* Adjust as needed */
 }
 
@@ -486,12 +482,10 @@ header .container .header-icons a:last-child:hover path {
   overflow: hidden;
 }
 .third-sec-slider .third-sec-slider-item {
-  width: 114px !important;
   height: 65px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
   margin: 0 10px;
 }
 .third-sec-slider .third-sec-slider-item img {
@@ -562,6 +556,28 @@ header .container .header-icons a:last-child:hover path {
   text-align: center;
 }
 
+@media screen and (max-width: 1360px) {
+  .second-prev, .second-next {
+    width: 20px;
+    height: 0;
+  }
+
+  .second-prev svg, .second-next svg {
+    width: 20px;
+    height: 37px;
+  }
+
+  .third-prev, .third-next {
+    height: 0;
+    top: 44%;
+    width: 6px;
+  }
+
+  .third-prev svg, .third-next svg {
+    width: 20px;
+    height: 37px;
+  }
+}
 @media screen and (max-width: 860px) {
   .main-menu {
     display: none;
@@ -577,5 +593,57 @@ header .container .header-icons a:last-child:hover path {
 
   #logo {
     margin-right: auto;
+  }
+
+  #first-sec-slider div .container {
+    padding-left: 40%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .footer .footer-wrap {
+    padding: 70px 0 0 0;
+  }
+
+  #first-sec-slider div .container {
+    padding-left: 30%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .footer .footer-wrap {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .footer .footer-wrap .footer-col-left {
+    width: 100%;
+  }
+  .footer .footer-wrap .footer-col-right {
+    width: 100%;
+  }
+
+  .footer-icons {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  #logo-light img {
+    width: 44%;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .container .header-icons {
+    margin-left: 0;
+  }
+
+  #first-sec-slider div .h2, #first-sec-slider div h1 {
+    font-size: 2.5rem;
+  }
+
+  .footer-icons {
+    gap: 30px;
+  }
+
+  #first-sec-slider div .container {
+    padding: 40% 0;
+    height: 384px;
   }
 }

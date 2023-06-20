@@ -9,6 +9,7 @@ body {
   font-size: 1rem;
   line-height: 1.25rem;
   color: #232323;
+  background-color: lightblue;
 }
 
 img {
@@ -50,4 +51,17 @@ header {
 
 main {
   flex-grow: 1;
+}
+
+.list li {
+  padding: 40px;
+}
+.list li div {
+  padding: 20px;
+  background-color: pink;
+}
+
+.list2 li {
+  background-color: pink;
+  padding: 40px;
 }

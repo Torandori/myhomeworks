@@ -19,6 +19,7 @@ body {
   @include fz(16);
   @include lh(20);
   color: $color-font;
+  background-color: lightblue;
 }
 
 img {
@@ -60,4 +61,16 @@ header {
 
 main {
   flex-grow: 1;
+}
+.list li {
+  padding: 40px;
+  div {
+    padding: 20px;
+    background-color: pink;
+  }
+}
+.list2 li {
+  background-color: pink;
+  padding: 40px;
+
 }
