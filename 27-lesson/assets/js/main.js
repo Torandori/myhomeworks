@@ -19,25 +19,17 @@ $(function(){
   $('.second-sec-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 5,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: $('.second-prev'),
+    nextArrow: $('.second-next'),
   });
-
+  
   $('.third-sec-slider').slick({
     slidesToShow: 9,
     slidesToScroll: 5,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    prevArrow: $('.third-prev'),
+    nextArrow: $('.third-next'),
   });
-
-  // $('.third-sec-slider').slick({
-  //   slidesToShow: 9,
-  //   slidesToScroll: 5,
-  //   prevArrow: $('.prev'),
-  //   nextArrow: $('.next'),
-  // });
-
-
+  
 
   
 })

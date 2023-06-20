@@ -388,8 +388,8 @@ header .container .header-icons a:last-child:hover path {
   text-align: center;
 }
 
-.prev,
-.next {
+.second-prev,
+.second-next {
   position: absolute;
   top: 46%;
   transform: translateY(-50%);
@@ -401,17 +401,17 @@ header .container .header-icons a:last-child:hover path {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.prev:hover path,
-.next:hover path {
+.second-prev:hover path,
+.second-next:hover path {
   fill: #F16A50;
 }
 
-.prev {
+.second-prev {
   left: -60px;
   /* Adjust as needed */
 }
 
-.next {
+.second-next {
   right: -60px;
   /* Adjust as needed */
 }
@@ -452,6 +452,34 @@ header .container .header-icons a:last-child:hover path {
   padding: 0 !important;
   overflow: visible;
   margin-bottom: 70px;
+}
+
+.third-prev,
+.third-next {
+  position: absolute;
+  top: 46%;
+  transform: translateY(-50%);
+  width: 30px;
+  /* Adjust as needed */
+  height: 30px;
+  /* Adjust as needed */
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.third-prev:hover path,
+.third-next:hover path {
+  fill: #F16A50;
+}
+
+.third-prev {
+  left: -60px;
+  /* Adjust as needed */
+}
+
+.third-next {
+  right: -60px;
+  /* Adjust as needed */
 }
 
 .third-sec-slider {
