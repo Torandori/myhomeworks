@@ -453,7 +453,7 @@ header .container .header-icons a:last-child:hover path {
 .third-prev,
 .third-next {
   position: absolute;
-  top: 43%;
+  top: 8%;
   transform: translateY(-50%);
   width: 39px;
   /* Adjust as needed */
