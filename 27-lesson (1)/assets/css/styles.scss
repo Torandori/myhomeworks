@@ -136,6 +136,7 @@ main {
   width: 62%;
   padding-top: 12px;
   h1 {
+    position: relative;
     @include fz(32);
     @include lh(32);
     font-weight: 400;
@@ -181,9 +182,38 @@ main {
     border: none;
     border-radius: 2px;
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
     
+  }
+  // [data-donutty] {
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   transform: translateY(50%);
+  // }
+  #donut {
+    position: absolute;
+    right: 38px;
+    top: 27%;
+    transform: translateY(50%);
+    width: 77.9px;
+    height: 77.9px;
+    svg circle:last-child {
+      stroke: #00D4BE;
+      // background: linear-gradient(196deg, #00D4BE 0%, #1AE780 18.75%, #1AE780 83.33%, #00D4BE 100%);
+      // stroke: linear-gradient(196deg, #00D4BE 0%, #1AE780 18.75%, #1AE780 83.33%, #00D4BE 100%);
+    }
+  }
+  .donut-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include fz(20);
+    @include lh(22);
+    color: $color-light-grey;
+
   }
 }
 
@@ -220,10 +250,6 @@ main {
         flex-direction: column;
         align-items: center;
       }
-      // &.active {
-
-
-      // }
     };
   }
 }
