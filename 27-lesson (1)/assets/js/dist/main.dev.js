@@ -47,10 +47,60 @@ $(function () {
     text: function text(state) {
       return state.value;
     }
-  }); // or
-  // const myChart = $("#donut").donutty({
-  //   min: 0, 
-  //   max: 10, 
-  //   value: 8.7
+  }); // window.contacts.addEventListener('submit', function(event) {
+  //   event.preventDefault();
+  //   const errors = [];
+  //   let msg = '',
+  //     name = window.username.value,
+  //     email = window.email.value,
+  //     text = window.message.value;
+  //   if (name === '') {
+  //     errors.push('Enter your name');
+  //   }
+  //   if (email === '') {
+  //     errors.push('Enter your email');
+  //   }
+  //   if (errors.length === 0) {
+  //     msg = `
+  //       <b>Name: </b>${name}
+  //       <b>Email: </b>${email}
+  //       <b>Message: </b>${text}
+  //     `;
+  //     sendMessage(msg);
+  //   } else {
+  //     alert(errors.join(' '));
+  //   }
   // });
+  // async function sendMessage(message) {
+  //   const apiToken = "6124279978:AAHpO-C5Brpm2HgIpkDOpy7Zjkr5539aSMk";
+  //   const chatId = "-1001969020828";
+  //   let urlString = `https://api.telegram.org/bot${apiToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}&parse_mode=html`;
+  //   const response = await fetch(`https://api.telegram.org/bot${apiToken}/sendMessage`, {
+  //     method: 'post',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json' 
+  //     },
+  //     body: JSON.stringify({
+  //       chat_id: chatId,
+  //       text: message,
+  //       parse_mode: 'HTML',
+  //     })
+  //   });
+  //   const resp = await response.json();
+  //   console.log(resp);
+  //   // let request = new XMLHttpRequest();
+  //   // request.open("GET", urlString);
+  //   // request.send();
+  //   // // request.addEventListener('load', function() {
+  //   // //   if (request.status >= 200 && request.status < 400) {
+  //   // //     // Request successful
+  //   // //     let response = request.response;
+  //   // //     console.log(response);
+  //   // //   } else {
+  //   // //     // Request failed
+  //   // //     console.error("Error sending message:", request.status, request.statusText);
+  //   // //   }
+  //   // // });
+  // }
 });

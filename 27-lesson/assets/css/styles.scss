@@ -300,6 +300,14 @@ header {
 .second-next {
   right: 0px; /* Adjust as needed */
 }
+.second-prev.slick-arrow {
+  border: none;
+  background-color: transparent;
+}
+.second-next.slick-arrow {
+  border: none;
+  background-color: transparent;
+}
 .button.btn-black {
   color: #000;
   border-color: #000;
@@ -360,7 +368,14 @@ header {
 .third-prev {
   left: 0px; /* Adjust as needed */
 }
-
+.third-prev.slick-arrow {
+  border: none;
+  background-color: transparent;
+}
+.third-next.slick-arrow {
+  border: none;
+  background-color: transparent;
+}
 .third-next {
   right: 0px; /* Adjust as needed */
 }
