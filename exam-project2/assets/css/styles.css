@@ -145,6 +145,10 @@ body {
   color: #2C4058;
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
 img {
   vertical-align: top;
   width: 100%;
@@ -167,6 +171,7 @@ a, button {
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 header {
@@ -174,6 +179,11 @@ header {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.header-background header {
+  background: linear-gradient(207deg, #7E5AFF 0%, #55B7FF 100%);
+  height: 100px;
 }
 
 .page-wrapper {
@@ -309,6 +319,26 @@ header .header-icons a:hover svg circle {
   opacity: 1;
 }
 
+.hamburger-inner {
+  background-color: #fff;
+}
+.hamburger-inner::before {
+  background-color: #fff;
+}
+.hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::after,
+.hamburger.is-active .hamburger-inner::before {
+  background-color: #fff;
+}
+
+#first-sec {
+  margin-bottom: 100px;
+}
+
 #first-sec-slider div {
   background-position: center;
   background-size: cover;
@@ -318,12 +348,12 @@ header .header-icons a:hover svg circle {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 800px;
+  height: 100vh;
+  min-height: 600px;
   position: relative;
 }
 
 .slider-text {
-  font-family: "Montserrat", sans-serif;
   color: #fff;
   text-transform: uppercase;
   left: 0;
@@ -340,12 +370,32 @@ header .header-icons a:hover svg circle {
   letter-spacing: 5.4px;
 }
 
+.lSSlideWrapper.usingCss {
+  height: 100vh !important;
+  min-height: 600px;
+}
+
+.clone.left {
+  height: 100vh !important;
+  min-height: 600px;
+}
+
+.lslide.active {
+  height: 100vh !important;
+  min-height: 600px;
+}
+
+.lslide {
+  height: 100vh !important;
+  min-height: 600px;
+}
+
 .lSSlideOuter.vertical {
   position: relative;
 }
 .lSSlideOuter.vertical .lSPager.lSpg {
   position: absolute;
-  right: 0%;
+  right: 0;
   bottom: 50%;
   transform: translate3d(0, 0, 0) rotate(90deg) !important;
 }
@@ -371,4 +421,67 @@ header .header-icons a:hover svg circle {
 
 .lSSlideOuter .lSPager.lSpg > li a {
   border: 1px solid #fff;
+}
+
+.btn-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+#second-sec .container {
+  text-align: center;
+}
+#second-sec .container .h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 90px;
+}
+#second-sec .container .h2::before {
+  content: "";
+  top: -28px;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: #000;
+  position: absolute;
+}
+#second-sec .container .text-content div {
+  font-size: 1.375rem;
+  text-transform: uppercase;
+}
+#second-sec .container .text-content .h3 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+
+.picture {
+  width: 585px;
+  height: 470px;
+  position: relative;
+  background-color: #55B7FF;
+  margin: 0 -215px;
+}
+.picture::after {
+  content: "";
+  top: 57px;
+  left: 215px;
+  aspect-ratio: 63/47;
+  width: 630px;
+  height: 470px;
+  background-image: url("../images/build-circle-white.jpg");
+  background-color: lightgreen;
+  position: absolute;
 }

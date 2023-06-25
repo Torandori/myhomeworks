@@ -26,7 +26,9 @@ body {
   font-weight: 400;
   color: $color-black;
 }
-
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
 img {
   vertical-align: top;
   width: 100%;
@@ -49,6 +51,7 @@ a, button {
 .container {
   width: min(90%, 1170px);
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 header {
@@ -57,6 +60,17 @@ header {
   top: 0;
   width: 100%;
 }
+
+.header-background {
+  header {
+    background: linear-gradient(207deg, #7E5AFF 0%, #55B7FF 100%);
+    // background-color: #000;
+    // background: linear-gradient(207deg, #694bd7 0%, #3f9bdd 100%);
+    // backdrop-filter: blur(4px);
+    height: 100px
+  }
+}
+
 
 .page-wrapper {
   display: flex;
@@ -178,8 +192,6 @@ main {
 // HEADER
 header {
   height: 162px;
-  // background-color: lightgreen;
-  // backdrop-filter: blur(4.5px);
   z-index: 200;
   scroll-behavior: smooth;
   .container {
@@ -200,9 +212,26 @@ header {
     }
   }
 }
+.hamburger-inner {
+  background-color: #fff;
+  &::before {
+    background-color: #fff;
+  };
+  &::after {
+    background-color: #fff;
+  };
+}
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner::after, 
+.hamburger.is-active .hamburger-inner::before {
+  background-color: #fff;
+}
 // #HEADER 
 
 // FIRST SEC 
+#first-sec {
+  margin-bottom: 100px;
+}
 #first-sec-slider div {
   background-position: center;
   background-size: cover;
@@ -212,16 +241,14 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 800px;
+  height: 100vh;
+  min-height: 600px;
   position: relative;
 }
+
 .slider-text {
-  // transform: translateY(-20%);
-  // margin: auto auto;
-  font-family: 'Montserrat', sans-serif;
   color: #fff;
   text-transform: uppercase;
-  // position: absolute;
   left: 0;
   top: 0;
   h1, .h2 {
@@ -229,18 +256,35 @@ header {
     @include lh(80);
     letter-spacing: 8px;
     font-weight: 700;
-    // display: inline-block;
   }
   p {
     @include fz(18);
     letter-spacing: 5.4px;
   }
 }
+
+// slider specifications
+.lSSlideWrapper.usingCss {
+  height: 100vh !important;
+  min-height: 600px;
+}
+.clone.left {
+  height: 100vh !important;
+  min-height: 600px;
+}
+.lslide.active {
+  height: 100vh !important;
+  min-height: 600px;
+}
+.lslide {
+  height: 100vh !important;
+  min-height: 600px;
+}
 .lSSlideOuter.vertical{
   position: relative;
   .lSPager.lSpg {
     position: absolute;
-    right: 0%;
+    right: 0;
     bottom: 50%;
     transform: translate3d(0, 0, 0) rotate(90deg) !important;
   }
@@ -254,7 +298,6 @@ header {
     transition: all .2s ease;
   }
 }
-
 .lSSlideOuter .lSPager.lSpg>li {
   &.active a {
     background-color: #fff;
@@ -267,12 +310,74 @@ header {
 .lSSlideOuter .lSPager.lSpg>li a {
   border: 1px solid #fff;
 }
-// .lightSlider.lSSlide.lsGrab {
-//   // transform: translate3d(0px, , 0px);
-// }
-// .lSSlideWrapper .usingCss {
-//   .lSPager.lSpg {
-//     translate: rotate(90deg) !important;
-//   }
-// }
+.btn-scroll {
+  position: absolute; 
+  left: 50%;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+// #slider specifications
 // #FIRST SEC 
+
+// SECOND SEC 
+#second-sec {
+  .container {
+    text-align: center;
+    .h2 {
+      @include fz(44);
+      font-weight: 700;
+      text-align: center;
+      position: relative;
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 90px;
+      &::before {
+        content: '';
+        top: -28px;
+        left: 50%;
+        width: 100px;
+        height: 2px;
+        transform: translateX(-50%);
+        background-color: #000;
+        position: absolute;
+      }
+    }
+    .text-content {
+      div {
+        @include fz(22);
+        text-transform: uppercase;
+      }
+      .h3 {
+        @include fz(44);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 19px;
+      }
+    }
+  }
+}
+
+.picture {
+  width: 585px;
+  height: 470px;
+  position: relative;
+  background-color: $color-blue;
+  margin: 0 -215px;
+  // z-index: 20000;
+  &::after {
+    content: '';
+    top: 57px;
+    left: 215px;
+    aspect-ratio: 63/47;
+    width: 630px;
+    height: 470px;
+    background-image: url('../images/build-circle-white.jpg');
+    background-color: lightgreen;
+    position: absolute;
+  }
+}
+// #SECOND SEC 
