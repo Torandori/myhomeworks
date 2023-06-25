@@ -94,7 +94,7 @@
                   <a href="#second-sec"  class="btn-scroll">
                     <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z" fill="white"/>
-                      <path opacity="0.7" d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z" stroke="white"/>
+                      <path id="circle" opacity="0.7" d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z" stroke="white"/>
                     </svg>
                   </a>
                 </div>
@@ -168,28 +168,64 @@
         </ul>
       </section>
 
-      
+
       <section id="second-sec">
         <div class="similar-sec-wrap">
           <div class="container">
             <h2 class="h2 montserrat">what we do</h2>
             <div class="wrap-picture-text">
-              <div class="picture"></div>
+              <div class="lazy picture" data-bg="assets/images/build-circle-white.jpg"></div>
               <div class="text-content">
                 <div class="descr">one world</div>
                 <h3 class="h3 montserrat">Trade center</h3>
                 <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</p>
-                <div class="btn-wrap">
+                <!-- <div class="btn-wrap montserrat">
+                  <a href="#" class="button">more details</a>
+                </div> -->
+                <div class="content montserrat">
                   <a href="#" class="button">more details</a>
                 </div>
                 <div class="link-map">
-                  <a href="#">New York City, United States - 1776 feet</a>
+                  <span>
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.42857 4.5C6.42857 5.68025 5.46596 6.64286 4.28571 6.64286C3.10547 6.64286 2.14286 5.68025 2.14286 4.5C2.14286 3.31975 3.10547 2.35714 4.28571 2.35714C5.46596 2.35714 6.42857 3.31975 6.42857 4.5ZM8.57143 4.5C8.57143 2.13114 6.65458 0.214285 4.28571 0.214285C1.91685 0.214285 0 2.13114 0 4.5C0 5.0106 0.0585938 5.53795 0.276228 5.99833L3.33147 12.4771C3.49888 12.8454 3.88393 13.0714 4.28571 13.0714C4.6875 13.0714 5.07254 12.8454 5.24833 12.4771L8.2952 5.99833C8.51284 5.53795 8.57143 5.0106 8.57143 4.5Z" fill="#2C4058"/>
+                    </svg>
+                  </span>
+                  <a href="https://www.google.com/maps/place/40%C2%B042'45.9%22N+74%C2%B000'48.2%22W/@40.712742,-74.0140257,19z/data=!3m1!4b1!4m4!3m3!8m2!3d40.712742!4d-74.013382?entry=ttu" target="_blank">New York City, United States - 1776 feet</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section id="third-sec">
+        <div class="similar-sec-wrap">
+          <div class="container">
+            <div class="wrap-picture-text">
+              <div class="lazy picture" data-bg="assets/images/build-orange.jpg"></div>
+              <div class="text-content">
+                <div class="descr">international</div>
+                <h3 class="h3 montserrat">commerce centre</h3>
+                <p>Successful businesses have many things in common, today we'll look at the big 'R' of recognition and how a digital advertising network may help.</p>
+                <div class="content montserrat">
+                  <a href="#" class="button">more details</a>
+                </div>
+                
+                <div class="link-map">
+                  <span>
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.42857 4.5C6.42857 5.68025 5.46596 6.64286 4.28571 6.64286C3.10547 6.64286 2.14286 5.68025 2.14286 4.5C2.14286 3.31975 3.10547 2.35714 4.28571 2.35714C5.46596 2.35714 6.42857 3.31975 6.42857 4.5ZM8.57143 4.5C8.57143 2.13114 6.65458 0.214285 4.28571 0.214285C1.91685 0.214285 0 2.13114 0 4.5C0 5.0106 0.0585938 5.53795 0.276228 5.99833L3.33147 12.4771C3.49888 12.8454 3.88393 13.0714 4.28571 13.0714C4.6875 13.0714 5.07254 12.8454 5.24833 12.4771L8.2952 5.99833C8.51284 5.53795 8.57143 5.0106 8.57143 4.5Z" fill="#2C4058"/>
+                    </svg>
+                  </span>
+                  <a href="https://www.google.com/maps/place/22%C2%B018'12.4%22N+114%C2%B009'36.7%22E/@22.3034379,114.1589058,18z/data=!3m1!4b1!4m4!3m3!8m2!3d22.3034379!4d114.1601933?entry=ttu" target="_blank">Hong Kong - 1588 feet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
 

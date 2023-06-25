@@ -4,6 +4,9 @@ $color-black: #2C4058;
 $color-blue: #55B7FF;
 $color-deep-blue: #7E5AFF;
 $color-grey: #4B5562;
+$primaryColor: #E57373;
+$secondaryColor: #2ecc71;
+
 
 *, *::before, *::after {
   padding: 0;
@@ -17,6 +20,10 @@ $color-grey: #4B5562;
 
 @mixin lh($px_size) {
   line-height: ($px_size / 16) * 1rem;
+}
+@mixin pseudo{
+  position: absolute;
+  content: '';
 }
 
 body {
@@ -50,6 +57,8 @@ a, button {
 
 .container {
   width: min(90%, 1170px);
+  // width: min(calc(100% - 430px));
+
   margin: 0 auto;
   border: 1px solid red;
 }
@@ -143,12 +152,12 @@ main {
 }
 
 .main-menu {
-  margin-right: 9.3%;
+  margin-right: 8.5%;
   ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 94px;
+    gap: 63px;
     align-items: center;
     a {
       font-family: 'Source Sans Pro', sans-serif;
@@ -158,12 +167,14 @@ main {
       color: #fff;
       text-transform: uppercase;
       position: relative;
+      // @include lh(50);
+      padding: 10px 10px 10px 20px;
       &::before {
         content: '';
         position: absolute;
         border-radius: 50%;
-        left: -22px;
-        top: 3px;
+        left: -4px;
+        top: 13px;
         height: 9px;
         width: 9px;
         border: 1px solid #fff;
@@ -318,6 +329,9 @@ header {
   height: 40px;
   transform: translate(-50%, -50%);
   background-color: transparent;
+  &:hover svg #circle {
+    opacity: 1;
+  }
 }
 // #slider specifications
 // #FIRST SEC 
@@ -352,6 +366,7 @@ header {
     .wrap-picture-text {
       display: flex;
       justify-content: space-between;
+      gap: 70px;
       .text-content {
         text-align: left;
         padding-top: 150px;  
@@ -359,53 +374,140 @@ header {
           @include fz(22);
           letter-spacing: 1.8px;
           text-transform: uppercase;
-          margin-bottom: 8px;
         }
         .h3 {
           @include fz(44);
+          @include lh(50);
           font-weight: 700;
           text-transform: uppercase;
-          margin-bottom: 32px;
+          margin-bottom: 20px;
         }
         p {
-          width: 470px;
-          margin-bottom: 40px;
+          width: 100%;
+          margin-bottom: 30px;
         }
       }
     }
   }
 }
-
 .picture {
-  width: 585px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 630px;
   height: 470px;
+  aspect-ratio: 63/47;
+  margin-top: 56px;
   position: relative;
-  background-color: $color-blue;
-  margin: 0 -215px;
-  &::after {
+  &::before {
     content: '';
-    top: 57px;
-    left: 215px;
-    aspect-ratio: 63/47;
-    // width: 630px;
+    top: -57px;
+    left: -260px;
+    width: 630px;
     height: 470px;
-    background-image: url('../images/build-circle-white.jpg');
-    background-color: lightgreen;
+    background-color: $color-blue;
     position: absolute;
+    z-index: -1;
   }
 }
-.btn-wrap {
-  margin-bottom: 60px;
-  .button {
-    @include fz(14);
-    letter-spacing: 0.8px;
-    border: 1px solid red;
-    padding: 16px 41px 15px 41px;
-    text-transform: uppercase;
-  }
-}
-// .link-map {
-//   margin-bottom: 20px;
+
+// BTN 
+// .btn-wrap {
+//   margin-bottom: 66px;
+//   .button {
+    // @include fz(14);
+    // border: 1px solid $color-black;
+    // padding: 16px 41px 15px 41px;
+    // text-transform: uppercase;
+    // color: #000;
+//   }
+//   &:hover {
+//   }
 // }
 
-// #SECOND SEC 
+.button {
+	display: inline-block;
+  padding: 10px 39px 9px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 1px solid $color-black;
+	position: relative;
+	color: $color-black;
+	transition: 0.2s ease-in-out color;
+  @include fz(14);
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 46px;
+}
+
+.button::before {
+	content: " ";
+	display: block;
+	width: 190px;
+	height: 190px;
+	position: absolute;
+	left: 0;
+	top: -66px;
+	background: $color-black;
+  
+	border-radius: 100%;
+	z-index: -10;
+	transform: scale(0);
+
+	-webkit-transition: 0.4s ease-in-out transform;
+	-o-transition: 0.4s ease-in-out transform;
+	-ms-transition: 0.4s ease-in-out transform;
+	-moz-transition: 0.4s ease-in-out transform;
+	transition: 0.4s ease-in-out transform;
+}
+
+.button:hover {
+	color: #fff;
+}
+
+.button:hover::before {
+	transform: scale(1.5);
+}
+
+
+// #BTN 
+
+.link-map {
+  span {
+    margin-right: 5px;
+  }
+  a {
+    @include fz(15);
+    font-style: italic;
+    color: #000;
+  }
+  &:hover { 
+    a {
+      opacity: 0.7;
+    }
+    svg path {
+      opacity: .7; 
+    }
+  }
+  
+}
+// #SECOND SEC
+
+// THIRD SEC
+#third-sec {
+  .similar-sec-wrap .container .wrap-picture-text {
+    flex-direction: row-reverse;
+    gap: 0;
+    .picture {
+      background-color: $color-deep-blue;
+      &::before {
+        left: 260px;
+      }
+    }
+  }
+}
+
+// #THIRD SEC 
