@@ -230,7 +230,7 @@ header {
 
 // FIRST SEC 
 #first-sec {
-  margin-bottom: 100px;
+  margin-bottom: 142px;
 }
 #first-sec-slider div {
   background-position: center;
@@ -324,6 +324,9 @@ header {
 
 // SECOND SEC 
 #second-sec {
+  margin-bottom: 120px;
+};
+.similar-sec-wrap{
   .container {
     text-align: center;
     .h2 {
@@ -334,10 +337,10 @@ header {
       text-transform: uppercase;
       display: inline-block;
       text-align: center;
-      margin-bottom: 90px;
+      margin-bottom: 102px;
       &::before {
         content: '';
-        top: -28px;
+        top: -44px;
         left: 50%;
         width: 100px;
         height: 2px;
@@ -346,16 +349,28 @@ header {
         position: absolute;
       }
     }
-    .text-content {
-      div {
-        @include fz(22);
-        text-transform: uppercase;
-      }
-      .h3 {
-        @include fz(44);
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 19px;
+    .wrap-picture-text {
+      display: flex;
+      justify-content: space-between;
+      .text-content {
+        text-align: left;
+        padding-top: 150px;  
+        .descr {
+          @include fz(22);
+          letter-spacing: 1.8px;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+        }
+        .h3 {
+          @include fz(44);
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 32px;
+        }
+        p {
+          width: 470px;
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -367,17 +382,30 @@ header {
   position: relative;
   background-color: $color-blue;
   margin: 0 -215px;
-  // z-index: 20000;
   &::after {
     content: '';
     top: 57px;
     left: 215px;
     aspect-ratio: 63/47;
-    width: 630px;
+    // width: 630px;
     height: 470px;
     background-image: url('../images/build-circle-white.jpg');
     background-color: lightgreen;
     position: absolute;
   }
 }
+.btn-wrap {
+  margin-bottom: 60px;
+  .button {
+    @include fz(14);
+    letter-spacing: 0.8px;
+    border: 1px solid red;
+    padding: 16px 41px 15px 41px;
+    text-transform: uppercase;
+  }
+}
+// .link-map {
+//   margin-bottom: 20px;
+// }
+
 // #SECOND SEC 

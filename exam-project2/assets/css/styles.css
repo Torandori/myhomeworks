@@ -336,7 +336,7 @@ header .header-icons a:hover svg circle {
 }
 
 #first-sec {
-  margin-bottom: 100px;
+  margin-bottom: 142px;
 }
 
 #first-sec-slider div {
@@ -433,10 +433,14 @@ header .header-icons a:hover svg circle {
   background-color: transparent;
 }
 
-#second-sec .container {
+#second-sec {
+  margin-bottom: 120px;
+}
+
+.similar-sec-wrap .container {
   text-align: center;
 }
-#second-sec .container .h2 {
+.similar-sec-wrap .container .h2 {
   font-size: 2.75rem;
   font-weight: 700;
   text-align: center;
@@ -444,11 +448,11 @@ header .header-icons a:hover svg circle {
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 102px;
 }
-#second-sec .container .h2::before {
+.similar-sec-wrap .container .h2::before {
   content: "";
-  top: -28px;
+  top: -44px;
   left: 50%;
   width: 100px;
   height: 2px;
@@ -456,15 +460,29 @@ header .header-icons a:hover svg circle {
   background-color: #000;
   position: absolute;
 }
-#second-sec .container .text-content div {
-  font-size: 1.375rem;
-  text-transform: uppercase;
+.similar-sec-wrap .container .wrap-picture-text {
+  display: flex;
+  justify-content: space-between;
 }
-#second-sec .container .text-content .h3 {
+.similar-sec-wrap .container .wrap-picture-text .text-content {
+  text-align: left;
+  padding-top: 150px;
+}
+.similar-sec-wrap .container .wrap-picture-text .text-content .descr {
+  font-size: 1.375rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
   font-size: 2.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 19px;
+  margin-bottom: 32px;
+}
+.similar-sec-wrap .container .wrap-picture-text .text-content p {
+  width: 470px;
+  margin-bottom: 40px;
 }
 
 .picture {
@@ -479,9 +497,19 @@ header .header-icons a:hover svg circle {
   top: 57px;
   left: 215px;
   aspect-ratio: 63/47;
-  width: 630px;
   height: 470px;
   background-image: url("../images/build-circle-white.jpg");
   background-color: lightgreen;
   position: absolute;
+}
+
+.btn-wrap {
+  margin-bottom: 60px;
+}
+.btn-wrap .button {
+  font-size: 0.875rem;
+  letter-spacing: 0.8px;
+  border: 1px solid red;
+  padding: 16px 41px 15px 41px;
+  text-transform: uppercase;
 }
