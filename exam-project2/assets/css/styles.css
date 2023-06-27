@@ -299,7 +299,7 @@ main {
 
 header {
   height: 162px;
-  z-index: 200;
+  z-index: 1002;
   scroll-behavior: smooth;
 }
 header .container {
@@ -308,15 +308,15 @@ header .container {
   align-items: center;
   justify-content: flex-end;
 }
-header #logo {
+header .logo {
   margin-right: auto;
 }
-header .header-icons {
+
+.icons-list {
   display: flex;
-  align-items: center;
   gap: 20px;
 }
-header .header-icons a:hover svg circle {
+.icons-list a:hover svg circle {
   opacity: 1;
 }
 
@@ -440,11 +440,11 @@ header .header-icons a:hover svg circle {
 #second-sec {
   margin-bottom: 120px;
 }
-
-.similar-sec-wrap .container {
-  text-align: center;
+#second-sec .button {
+  margin-bottom: 46px;
 }
-.similar-sec-wrap .container .h2 {
+
+.h2 {
   font-size: 2.75rem;
   font-weight: 700;
   text-align: center;
@@ -454,7 +454,7 @@ header .header-icons a:hover svg circle {
   text-align: center;
   margin-bottom: 102px;
 }
-.similar-sec-wrap .container .h2::before {
+.h2::before {
   content: "";
   top: -44px;
   left: 50%;
@@ -463,6 +463,10 @@ header .header-icons a:hover svg circle {
   transform: translateX(-50%);
   background-color: #000;
   position: absolute;
+}
+
+.similar-sec-wrap .container {
+  text-align: center;
 }
 .similar-sec-wrap .container .wrap-picture-text {
   display: flex;
@@ -526,7 +530,6 @@ header .header-icons a:hover svg circle {
   font-size: 0.875rem;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 46px;
 }
 
 .button::before {
@@ -571,6 +574,13 @@ header .header-icons a:hover svg circle {
   opacity: 0.7;
 }
 
+#third-sec .container {
+  overflow: hidden;
+  margin-bottom: 150px;
+}
+#third-sec .container .button {
+  margin-bottom: 46px;
+}
 #third-sec .similar-sec-wrap .container .wrap-picture-text {
   flex-direction: row-reverse;
   gap: 0;
@@ -580,4 +590,111 @@ header .header-icons a:hover svg circle {
 }
 #third-sec .similar-sec-wrap .container .wrap-picture-text .picture::before {
   left: 260px;
+}
+
+#fifth-sec {
+  margin-bottom: 142px;
+}
+#fifth-sec .container {
+  text-align: center;
+}
+#fifth-sec .button {
+  padding: 9px 56px 9px;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 212px);
+  margin-bottom: 63px;
+}
+.gallery a {
+  position: relative;
+}
+.gallery a .gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  display: none;
+  z-index: 2;
+}
+.gallery a:hover div, .gallery a:hover .gallery-icon {
+  display: block;
+}
+.gallery a.gallery-first {
+  grid-area: 1/1/3/3;
+}
+
+.sl-wrapper .sl-close, .sl-wrapper .sl-navigation button, .sl-wrapper .sl-counter {
+  color: #2C4058;
+}
+
+#map {
+  height: 700px;
+}
+
+#map_link {
+  position: relative;
+  display: block;
+}
+#map_link::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(44, 64, 88, 0.4);
+  z-index: 1001;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+#map_link .map-text {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #2C4058;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+}
+#map_link:hover::after {
+  opacity: 0.8;
+}
+#map_link:hover .map-text {
+  opacity: 0.7;
+}
+#map_link img {
+  height: 700px;
+}
+
+#footer > div {
+  height: 549px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#footer .container {
+  padding: 204px 200px 234px;
+  display: flex;
+  justify-content: space-between;
+}
+#footer .container .logo img {
+  width: auto;
+  height: auto;
+  margin-bottom: 31px;
+}
+#footer .container .copy {
+  font-size: 0.875rem;
+  color: #fff;
 }

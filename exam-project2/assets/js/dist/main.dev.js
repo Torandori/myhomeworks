@@ -74,4 +74,34 @@ $(function () {
       });
     }
   }); // #lightslider
+  // simple-gallery 
+
+  var gallery = $('.gallery a').simpleLightbox({}); // #simple-gallery 
+  // leaflet map
+  // window.map_link.onclick = function(){
+  //   window.getElementById('map').innerHTML = '';
+  //   initMap();
+  // };
+
+  function initMap() {
+    var map = L.map('map').setView([40.71275609925605, -74.01339694662713], 13);
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+    }).addTo(map);
+    var circleIcon = L.icon({
+      iconUrl: 'assets/images/marker.svg',
+      iconSize: [106, 106] // size of the icon
+
+    });
+    L.marker([40.71275609925605, -74.01339694662713], {
+      icon: circleIcon,
+      title: 'Here we go'
+    }).addTo(map).bindPopup('<b style="color: #7E5AFF">One World Trade Center<b>'); // .openPopup();
+  } // #leaflet map
+
+
+  $('#map_link').click(function (event) {
+    $('#map').html('');
+    initMap();
+  });
 });
