@@ -7,6 +7,8 @@
   <title>Monticello</title>
   <link rel="stylesheet" href="assets/plugins/lightslider/css/lightslider.min.css">
   <link rel="stylesheet" href="assets/plugins/simple-lightbox/simple-lightbox.min.css">
+  <link rel="stylesheet" href="assets/plugins/slick/slick.css">
+  <link rel="stylesheet" href="assets/plugins/slick/slick-theme.css">
   <link rel="stylesheet" href="assets/plugins/leaflet/leaflet.css">
   <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
@@ -187,7 +189,7 @@
                 <div class="content montserrat">
                   <a href="#" class="button">more details</a>
                 </div>
-                <div class="link-map">
+                <div class="link">
                   <span>
                     <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.42857 4.5C6.42857 5.68025 5.46596 6.64286 4.28571 6.64286C3.10547 6.64286 2.14286 5.68025 2.14286 4.5C2.14286 3.31975 3.10547 2.35714 4.28571 2.35714C5.46596 2.35714 6.42857 3.31975 6.42857 4.5ZM8.57143 4.5C8.57143 2.13114 6.65458 0.214285 4.28571 0.214285C1.91685 0.214285 0 2.13114 0 4.5C0 5.0106 0.0585938 5.53795 0.276228 5.99833L3.33147 12.4771C3.49888 12.8454 3.88393 13.0714 4.28571 13.0714C4.6875 13.0714 5.07254 12.8454 5.24833 12.4771L8.2952 5.99833C8.51284 5.53795 8.57143 5.0106 8.57143 4.5Z" fill="#2C4058"/>
@@ -214,7 +216,7 @@
                   <a href="#" class="button">more details</a>
                 </div>
                 
-                <div class="link-map">
+                <div class="link">
                   <span>
                     <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.42857 4.5C6.42857 5.68025 5.46596 6.64286 4.28571 6.64286C3.10547 6.64286 2.14286 5.68025 2.14286 4.5C2.14286 3.31975 3.10547 2.35714 4.28571 2.35714C5.46596 2.35714 6.42857 3.31975 6.42857 4.5ZM8.57143 4.5C8.57143 2.13114 6.65458 0.214285 4.28571 0.214285C1.91685 0.214285 0 2.13114 0 4.5C0 5.0106 0.0585938 5.53795 0.276228 5.99833L3.33147 12.4771C3.49888 12.8454 3.88393 13.0714 4.28571 13.0714C4.6875 13.0714 5.07254 12.8454 5.24833 12.4771L8.2952 5.99833C8.51284 5.53795 8.57143 5.0106 8.57143 4.5Z" fill="#2C4058"/>
@@ -228,7 +230,117 @@
         </div>
       </section>
 
-      <section id="forth-sec"></section>
+      <section id="forth-sec">
+        <div class="lazy forth-sec-bg" data-bg="assets/images/forth-sec-bg.jpg">
+          <div class="container" id="news-wrap">
+            <h2 class="h2 montserrat">latest news</h2>
+            <!-- news-slider  -->
+            <div class="forth-sec-slider">
+
+              
+
+              <!-- <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/card1.jpg" alt="News picture">
+                </div>
+                <div class="card-wrap-under-img">
+                  <h3 class="h3 montserrat">see the unmatched beauty of the great.</h3>
+                  <p>Free directories: directories are perfect for customers that are searching for...</p>
+                  <div class="user">
+                    <div class="user-avatar">
+                      <img src="assets/images/user1.jpg" alt="User avatar">
+                    </div>
+                    <div class="user-name montserrat">
+                      <div>alja brun</div>
+                      <div>20 Jan 2020</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/card2.jpg" alt="News picture">
+                </div>
+                <div class="card-wrap-under-img">
+                  <h3 class="h3 montserrat">effective advertising pointers.</h3>
+                  <p>Having a home based business is a wonderful asset to your life...</p>
+                  <div class="user">
+                    <div class="user-avatar">
+                      <img src="assets/images/user2.jpg" alt="User avatar">
+                    </div>
+                    <div class="user-name montserrat">
+                      <div>dominic freeman</div>
+                      <div>13 Dec 2019</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/card3.jpg" alt="News picture">
+                </div>
+                <div class="card-wrap-under-img">
+                  <h3 class="h3 montserrat">hypnotize yourself into the ghost.</h3>
+                  <p>There are many things that are important to catalog design...</p>
+                  <div class="user">
+                    <div class="user-avatar">
+                      <img src="assets/images/user3.jpg" alt="User avatar">
+                    </div>
+                    <div class="user-name montserrat">
+                      <div>alice ward</div>
+                      <div>30 Nov 2019</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/card1.jpg" alt="News picture">
+                </div>
+                <div class="card-wrap-under-img">
+                  <h3 class="h3 montserrat">see the unmatched beauty of the great.</h3>
+                  <p>Free directories: directories are perfect for customers that are searching for...</p>
+                  <div class="user">
+                    <div class="user-avatar">
+                      <img src="assets/images/user1.jpg" alt="User avatar">
+                    </div>
+                    <div class="user-name montserrat">
+                      <div>alja brun</div>
+                      <div>20 Jan 2020</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img">
+                  <img src="assets/images/card2.jpg" alt="News picture">
+                </div>
+                <div class="card-wrap-under-img">
+                  <h3 class="h3 montserrat">effective advertising pointers.</h3>
+                  <p>Having a home based business is a wonderful asset to your life...</p>
+                  <div class="user">
+                    <div class="user-avatar">
+                      <img src="assets/images/user2.jpg" alt="User avatar">
+                    </div>
+                    <div class="user-name montserrat">
+                      <div>dominic freeman</div>
+                      <div>13 Dec 2019</div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+            </div>
+            <!-- #news-slider  -->
+          </div>
+        </div>
+        
+
+      </section>
 
       <section id="fifth-sec">
         <div class="container">
@@ -301,22 +413,74 @@
             <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/images/map.jpg" alt="Picture of map">
           </a>
         </div>
-        <div class="container">
-
-        </div>
       </section>
-
-
-
-      <section id="seven-section"></section>
-
 
 
     </main>
 
 
     <footer id="footer">
-      <div class="lazy" data-bg="assets/images/footer-background.jpg">
+      <div id="form-window">
+        <h2 class="h2 montserrat">get in touch</h2>
+        <div class="wrap-form-content">
+          <div class="left-col">
+            <div class="link montserrat">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.42857 4.5C6.42857 5.68025 5.46596 6.64286 4.28571 6.64286C3.10547 6.64286 2.14286 5.68025 2.14286 4.5C2.14286 3.31975 3.10547 2.35714 4.28571 2.35714C5.46596 2.35714 6.42857 3.31975 6.42857 4.5ZM8.57143 4.5C8.57143 2.13114 6.65458 0.214285 4.28571 0.214285C1.91685 0.214285 0 2.13114 0 4.5C0 5.0106 0.0585938 5.53795 0.276228 5.99833L3.33147 12.4771C3.49888 12.8454 3.88393 13.0714 4.28571 13.0714C4.6875 13.0714 5.07254 12.8454 5.24833 12.4771L8.2952 5.99833C8.51284 5.53795 8.57143 5.0106 8.57143 4.5Z" fill="#7E5AFF"/>
+                </svg>
+              </span>
+              <a href="https://www.google.com/maps/place/40%C2%B042'45.9%22N+74%C2%B000'48.2%22W/@40.712742,-74.0140257,19z/data=!3m1!4b1!4m4!3m3!8m2!3d40.712742!4d-74.013382?entry=ttu" target="_blank">91 Nolan Extensions Suite 670</a>
+            </div>
+            <div class="link montserrat">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.2866 17.666L18.8179 15.3223C18.5843 15.2227 18.3246 15.2017 18.078 15.2625C17.8315 15.3232 17.6113 15.4625 17.4507 15.6592L15.0288 18.6182C11.2279 16.8261 8.16904 13.7672 6.37695 9.96631L9.33594 7.54443C9.53305 7.38412 9.67256 7.16395 9.73335 6.91726C9.79414 6.67057 9.7729 6.41079 9.67285 6.17725L7.3291 0.708496C7.21929 0.456742 7.02508 0.251194 6.77996 0.127294C6.53483 0.00339424 6.25416 -0.0310909 5.98633 0.0297849L0.908203 1.20166C0.649985 1.26129 0.419602 1.40668 0.254656 1.6141C0.0897095 1.82153 -5.95125e-05 2.07874 0 2.34375C0 14.8682 10.1514 25 22.6562 25C22.9213 25.0002 23.1787 24.9105 23.3862 24.7455C23.5937 24.5805 23.7392 24.3501 23.7988 24.0918L24.9707 19.0137C25.0312 18.7445 24.996 18.4627 24.8711 18.2168C24.7463 17.9708 24.5396 17.776 24.2866 17.666Z" fill="#7E5AFF"/>
+                  </svg>
+              </span>
+              <a href="tel:+13568682454">+001 356-868-2454</a>
+            </div>
+            <div class="link montserrat">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.6501 7.97517L20.0629 1.09436C19.8727 0.808993 19.6149 0.575012 19.3125 0.41318C19.0101 0.251349 18.6724 0.166672 18.3295 0.166667H6.67053C6.32756 0.166668 5.98989 0.251343 5.68751 0.413175C5.38512 0.575007 5.12736 0.808991 4.93711 1.09436L0.349914 7.97517C0.121749 8.31738 -4.54642e-06 8.71947 4.76837e-07 9.13077L4.76837e-07 14.75C4.76837e-07 15.9006 0.932726 16.8333 2.08333 16.8333H22.9167C24.0673 16.8333 25 15.9006 25 14.75V9.13077C25 8.71947 24.8783 8.31738 24.6501 7.97517ZM7.04219 2.94444H17.9579L21.6615 8.5H16.3194L14.9306 11.2778H10.0694L8.68056 8.5H3.33846L7.04219 2.94444Z" fill="#7E5AFF"/>
+                  </svg>
+              </span>
+              <a href="mailto:montichello@service.com" target="_blank">montichello@service.com</a>
+            </div>
+            <div class="link montserrat">
+              <span>
+                <svg width="15" height="15" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 0.390625C5.81055 0.390625 0.390625 5.81055 0.390625 12.5C0.390625 19.1895 5.81055 24.6094 12.5 24.6094C19.1895 24.6094 24.6094 19.1895 24.6094 12.5C24.6094 5.81055 19.1895 0.390625 12.5 0.390625ZM15.2881 17.4854L10.9814 14.3555C10.8301 14.2432 10.7422 14.0674 10.7422 13.8818V5.66406C10.7422 5.3418 11.0059 5.07812 11.3281 5.07812H13.6719C13.9941 5.07812 14.2578 5.3418 14.2578 5.66406V12.3877L17.3584 14.6436C17.6221 14.834 17.6758 15.2002 17.4854 15.4639L16.1084 17.3584C15.918 17.6172 15.5518 17.6758 15.2881 17.4854Z" fill="#7E5AFF"/>
+                  </svg>
+              </span>
+              <div>From 07:05AM to 19:30PM</div>
+            </div>
+          </div>
+  
+          <div class="right-col">
+            <form id="contacts">
+              <div class="form-element">
+                <input id="fullName" type="text" name="full-name" placeholder=" " required>
+                <label for="fullName" class="fake montserrat">Full name</label>
+              </div>
+              <div class="form-element">
+                <input id="email" type="email" name="email" placeholder=" " required>
+                <label for="email" class="fake montserrat">Email</label>
+              </div>
+              <button type="submit" class="button">submit</button>
+            </form>
+
+            <!-- <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit" class="button">submit</button> -->
+
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="lazy footer-bg" data-bg="assets/images/footer-background.jpg">
         <div class="container">
           <div>
             <a href="#" class="logo" title="Moticello">
@@ -361,6 +525,7 @@
   <script src="assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
   <script src="assets/plugins/lightslider/js/lightslider.min.js"></script>
   <script src="assets/plugins/simple-lightbox/simple-lightbox.jquery.min.js"></script>
+  <script src="assets/plugins/slick/slick.min.js"></script>
   <script src="assets/plugins/leaflet/leaflet.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
