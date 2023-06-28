@@ -1,6 +1,5 @@
 $(function(){
-  // $('.lazy').lazyLoadXT();
-  var lazyLoadInstance = new LazyLoad({});
+  const lazyLoadInstance = new LazyLoad({});
 
   // hamb 
   function toggleMenu(){
@@ -10,18 +9,33 @@ $(function(){
   };
   $('#hamb-btn').click(function(event) {
     toggleMenu();
+    if($('#hamb-btn').hasClass("is-active")){
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    };
   });
+
   $('.menu-link').click(function(event) {
     toggleMenu();
+    if($('#hamb-btn').hasClass("is-active")){
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    };
   });
   $('#shadow').click(function(event) {
     toggleMenu();
+    if($('#hamb-btn').hasClass("is-active")){
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    };
   });
   // #hamb 
 
-  // header scroll
+  // HEADER SCROLLl
   $(window).scroll(function() {
-    // debugger;
     if($(window).scrollTop() > $('#first-sec').outerHeight() / 5){
       $('body').addClass('header-background');
     } else {
@@ -39,7 +53,26 @@ $(function(){
       }, 1000); // smoothing
     }
   });
-  //#header scroll
+  //#HEADER SCROLL
+
+  // <!-- MOBMENU_SCROLL -->
+  $(window).scroll(function() {
+    if($(window).scrollTop() > $('#first-sec').outerHeight() / 5){
+      $('body').addClass('mobbar-fixed');
+    } else {
+      $('body').removeClass('mobbar-fixed');
+    }   
+  })
+
+  // window.addEventListener('scroll', function(){
+  //   if(window.scrollY > document.getElementById("header-offset").offsetHeight){
+  //     document.body.classList.add("mobbar-fixed");
+  //   }else {
+  //     document.body.classList.remove("mobbar-fixed");
+  //   }
+  // })
+
+  // <!-- #MOBMENU_SCROLL -->
 
 
   // lightslider 
@@ -52,8 +85,9 @@ $(function(){
     slideMargin: 0,
     adaptiveHeight: true,
     verticalHeight: 800,
-    // auto: true,
-    pause: 2500,
+    keyPress: false,
+    auto: true,
+    pause: 2000,
 
     onSliderLoad: function (el) {
       var showActiveSlides = function (entries) {
@@ -79,8 +113,10 @@ $(function(){
   });  
   // #lightslider
 
-  // simple-gallery 
-  var gallery = $('.gallery a').simpleLightbox({
+  // simple lightbox gallery 
+  const gallery = $('.gallery a').simpleLightbox({
+    focus: false,
+    enableKeyboard: false,
   });
   // #simple-gallery 
 
@@ -105,14 +141,14 @@ $(function(){
     </button>`,
     responsive: [
       {
-        breakpoint: 880,
+        breakpoint: 1290,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 680,
+        breakpoint: 750,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -154,14 +190,16 @@ $(function(){
           html += `
           <div class="card">
             <div class="card-img">
-              <img src="${item.image}" alt="News picture">
+              <img data-src="${item.image}" class="lazyload" alt="News picture">
             </div>
             <div class="card-wrap-under-img">
-              <h3 class="h3 montserrat">${item.title}</h3>
-              <p>${item.paragraph}</p>
+              <div class="small-text">
+                <h3 class="h3 montserrat">${item.title}</h3>
+                <p>${item.paragraph}</p>
+              </div>
               <div class="user">
                 <div class="user-avatar">
-                  <img src="${item.userAvatar}" alt="User avatar">
+                  <img data-src="${item.userAvatar}" class="lazyload" alt="User avatar">
                 </div>
                 <div class="user-name montserrat">
                   <div>${item.userName}</div>
@@ -178,14 +216,18 @@ $(function(){
         $('.forth-sec-slider').html(html); // apply new data
         applySlider(); // apply slick slider again
         // $(".forth-sec-slider").append(html);
+
+        // lazy load for jquery script 
+        const lazyLoadInstance = new LazyLoad({
+          elements_selector: ".lazyload"
+        });
+        // Trigger lazy loading
+        lazyLoadInstance.update();
+        // lazy load for jquery script 
     })
   }
   getNews();
   // JSON jq get news
-
-  
-  
-    
 
   
   // leaflet map
@@ -266,6 +308,18 @@ $(function(){
     const resp = await response.json();
     console.log(resp);
   }
+
+  var docWidth = document.documentElement.offsetWidth;
+
+  [].forEach.call(
+    document.querySelectorAll('*'),
+    function(el) {
+      if (el.offsetWidth > docWidth) {
+        console.log(el);
+      }
+    }
+  );
+
   // #telegram send message 
 
 
