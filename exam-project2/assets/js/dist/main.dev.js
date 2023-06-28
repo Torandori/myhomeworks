@@ -79,7 +79,7 @@ $(function () {
   var gallery = $('.gallery a').simpleLightbox({}); // #simple-gallery 
   // SLICK SLIDER NEWS 
 
-  var slickSlider = $('.forth-sec-slider').slick({
+  var slickSlider = {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
@@ -100,7 +100,7 @@ $(function () {
         slidesToScroll: 1
       }
     }]
-  });
+  };
   $('.second-prev').on('click', function () {
     slickSlider.slick('slickPrev');
   });
@@ -108,6 +108,16 @@ $(function () {
     slickSlider.slick('slickNext');
   }); // #SLICK SLIDER NEWS 
   // JSON JQ get news
+
+  function destroyCarousel() {
+    if ($('.forth-sec-slider').hasClass('slick-initialized')) {
+      $('.forth-sec-slider').slick('unslick');
+    }
+  }
+
+  function applySlider() {
+    $('.forth-sec-slider').slick(slickSlider);
+  }
 
   function getNews() {
     fetch('data/news.json').then(function (resp) {
@@ -119,7 +129,14 @@ $(function () {
         html += "\n          <div class=\"card\">\n            <div class=\"card-img\">\n              <img src=\"".concat(item.image, "\" alt=\"News picture\">\n            </div>\n            <div class=\"card-wrap-under-img\">\n              <h3 class=\"h3 montserrat\">").concat(item.title, "</h3>\n              <p>").concat(item.paragraph, "</p>\n              <div class=\"user\">\n                <div class=\"user-avatar\">\n                  <img src=\"").concat(item.userAvatar, "\" alt=\"User avatar\">\n                </div>\n                <div class=\"user-name montserrat\">\n                  <div>").concat(item.userName, "</div>\n                  <div>").concat(item.date, "</div>\n                </div>\n              </div>\n            </div>\n          </div>\n        ");
       });
       console.log(html);
-      $(".forth-sec-slider").append(html);
+      destroyCarousel(); // destroy slick slider first
+
+      $('.forth-sec-slider').html(''); // now make html empty          
+
+      $('.forth-sec-slider').html(html); // apply new data
+
+      applySlider(); // apply slick slider again
+      // $(".forth-sec-slider").append(html);
     });
   }
 

@@ -676,8 +676,8 @@ header .logo {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.second-prev:hover svg #circle,
-.second-next:hover svg #circle {
+.second-prev:hover svg circle,
+.second-next:hover svg circle {
   opacity: 1;
 }
 

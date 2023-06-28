@@ -86,7 +86,7 @@ $(function(){
 
   // SLICK SLIDER NEWS 
 
-  const slickSlider = $('.forth-sec-slider').slick({
+  const slickSlider = {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
@@ -119,7 +119,7 @@ $(function(){
         }
       },
     ]
-  });
+  };
 
   $('.second-prev').on('click', function(){
     slickSlider.slick('slickPrev');
@@ -129,12 +129,26 @@ $(function(){
   });
 
   // #SLICK SLIDER NEWS 
+  
   // JSON JQ get news
+
+  function destroyCarousel() {
+    if ($('.forth-sec-slider').hasClass('slick-initialized')) {
+        $('.forth-sec-slider').slick('unslick');
+    }
+  }
+
+  function applySlider() {
+      $('.forth-sec-slider').slick(slickSlider);
+  }
+
+
   function getNews(){
     fetch('data/news.json')
       .then(resp => resp.json())
       .then(resp => {
         console.log(resp);
+       
         let html = '';
         resp.forEach(item => {
           html += `
@@ -159,8 +173,12 @@ $(function(){
         `;
         });
         console.log(html);
-        $(".forth-sec-slider").append(html);
-      })
+        destroyCarousel(); // destroy slick slider first
+        $('.forth-sec-slider').html(''); // now make html empty          
+        $('.forth-sec-slider').html(html); // apply new data
+        applySlider(); // apply slick slider again
+        // $(".forth-sec-slider").append(html);
+    })
   }
   getNews();
   // JSON jq get news
