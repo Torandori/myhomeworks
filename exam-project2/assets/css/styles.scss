@@ -198,7 +198,7 @@ a.button:active {
 
 // THIRD SEC
 #third-sec {
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   .container {
     .wrap-picture-text {
       flex-direction: row-reverse;
@@ -386,7 +386,7 @@ a.button:active {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 212px);
+  grid-template-rows: repeat(2, 214px);
   margin-bottom: 63px;
   a {
     position: relative;
@@ -707,6 +707,24 @@ input[type=text], input[type=email], textarea {
   #fifth-sec {
     margin-bottom: 60px;
   }
+  .slider-text .h2, .slider-text h1 {
+    font-size: 3rem;
+  }
+  .slider-text p {
+    font-size: 1rem;
+  }
+  .h2 {
+    font-size: 2.2rem;
+  }
+  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+    font-size: 1.9rem;
+  }
+  .card .card-wrap-under-img .h3 {
+    font-size: 1.2rem;
+  }
+  #third-sec .container .wrap-picture-text .text-content p {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 750px) {
   #footer .container2, .wrap-form-content {
@@ -740,14 +758,25 @@ input[type=text], input[type=email], textarea {
   }
   .gallery {
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,212px);
+    grid-template-rows: repeat(3,214px);
     a:last-child {
       grid-area: 3/2/4/4;
     }
   }
   .slider-text .h2, .slider-text h1 {
-    @include fz(50);
-    @include lh(70);
+    font-size: 2.2rem;
+  }
+  .slider-text p {
+    font-size: 1rem;
+  }
+  .h2 {
+    font-size: 1.6rem;
+  }
+  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+    font-size: 1.2rem;
+  }
+  .card .card-wrap-under-img .h3 {
+    font-size: 1rem;
   }
 }
 
@@ -757,10 +786,6 @@ input[type=text], input[type=email], textarea {
       display: none;
     }
   }
-  .h2 {
-    margin-bottom: 0;
-    @include fz(32);
-  }
   #forth-sec, #fifth-sec {
     h2 {
       margin-bottom: 40px;
@@ -768,12 +793,6 @@ input[type=text], input[type=email], textarea {
   }
   .picture::before {
     display: none;
-  }
-  .similar-sec-wrap .container .wrap-picture-text .text-content .descr {
-    @include fz(20);
-  }
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
-    @include fz(28);
   }
   #second-sec {
     margin-bottom: 0;
@@ -797,6 +816,24 @@ input[type=text], input[type=email], textarea {
   #footer .container2 .copy {
     order: 1;
   }
+  .slider-text .h2, .slider-text h1 {
+    font-size: 1.9rem;
+  }
+  .slider-text p {
+    font-size: 1rem;
+  }
+  .h2 {
+    font-size: 1.2rem;
+  }
+  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+    font-size: 1rem;
+  }
+  .card .card-wrap-under-img .h3 {
+    font-size: 1rem;
+  }
+  #third-sec {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
   .gallery {
@@ -813,6 +850,9 @@ input[type=text], input[type=email], textarea {
   }
   #mobile-sidebar {
     width: 100%;
+  }
+  .mob-menu ul li a {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 440px) {

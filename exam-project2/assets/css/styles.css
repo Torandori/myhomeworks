@@ -265,7 +265,7 @@ a.button:active {
 }
 
 #third-sec {
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 #third-sec .container .wrap-picture-text {
   flex-direction: row-reverse;
@@ -466,7 +466,7 @@ a.button:active {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 212px);
+  grid-template-rows: repeat(2, 214px);
   margin-bottom: 63px;
 }
 .gallery a {
@@ -799,6 +799,30 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   #fifth-sec {
     margin-bottom: 60px;
   }
+
+  .slider-text .h2, .slider-text h1 {
+    font-size: 3rem;
+  }
+
+  .slider-text p {
+    font-size: 1rem;
+  }
+
+  .h2 {
+    font-size: 2.2rem;
+  }
+
+  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+    font-size: 1.9rem;
+  }
+
+  .card .card-wrap-under-img .h3 {
+    font-size: 1.2rem;
+  }
+
+  #third-sec .container .wrap-picture-text .text-content p {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 750px) {
   #footer .container2, .wrap-form-content {
@@ -838,25 +862,35 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 212px);
+    grid-template-rows: repeat(3, 214px);
   }
   .gallery a:last-child {
     grid-area: 3/2/4/4;
   }
 
   .slider-text .h2, .slider-text h1 {
-    font-size: 3.125rem;
-    line-height: 4.375rem;
+    font-size: 2.2rem;
+  }
+
+  .slider-text p {
+    font-size: 1rem;
+  }
+
+  .h2 {
+    font-size: 1.6rem;
+  }
+
+  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+    font-size: 1.2rem;
+  }
+
+  .card .card-wrap-under-img .h3 {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 580px) {
   #header .icons-list {
     display: none;
-  }
-
-  .h2 {
-    margin-bottom: 0;
-    font-size: 2rem;
   }
 
   #forth-sec h2, #fifth-sec h2 {
@@ -865,14 +899,6 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   .picture::before {
     display: none;
-  }
-
-  .similar-sec-wrap .container .wrap-picture-text .text-content .descr {
-    font-size: 1.25rem;
-  }
-
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
-    font-size: 1.75rem;
   }
 
   #second-sec {
@@ -900,6 +926,30 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   #footer .container2 .copy {
     order: 1;
   }
+
+  .slider-text .h2, .slider-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .slider-text p {
+    font-size: 1rem;
+  }
+
+  .h2 {
+    font-size: 1.2rem;
+  }
+
+  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+    font-size: 1rem;
+  }
+
+  .card .card-wrap-under-img .h3 {
+    font-size: 1rem;
+  }
+
+  #third-sec {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 500px) {
   .gallery {
@@ -920,6 +970,10 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   #mobile-sidebar {
     width: 100%;
+  }
+
+  .mob-menu ul li a {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 440px) {

@@ -22,16 +22,20 @@ $(function(){
     toggleMenu();
     if($('#hamb-btn').hasClass("is-active")){
       $('body').css('overflow', 'hidden');
+      $('#header').addClass('header-mob');
     } else {
       $('body').css('overflow', 'auto');
+      $('#header').removeClass('header-mob');
     };
   });
   $('#shadow').click(function(event) {
     toggleMenu();
     if($('#hamb-btn').hasClass("is-active")){
       $('body').css('overflow', 'hidden');
+      $('#header').addClass('header-mob');
     } else {
       $('body').css('overflow', 'auto');
+      $('#header').removeClass('header-mob');
     };
   });
   // #HAMB 
