@@ -15,8 +15,10 @@ $(function () {
 
     if ($('#hamb-btn').hasClass("is-active")) {
       $('body').css('overflow', 'hidden');
+      $('#header').addClass('header-mob');
     } else {
       $('body').css('overflow', 'auto');
+      $('#header').removeClass('header-mob');
     }
 
     ;
@@ -92,7 +94,7 @@ $(function () {
     verticalHeight: 800,
     keyPress: false,
     auto: true,
-    pause: 2000,
+    pause: 2500,
     onSliderLoad: function onSliderLoad(el) {
       var showActiveSlides = function showActiveSlides(entries) {
         entries.forEach(function (entry) {

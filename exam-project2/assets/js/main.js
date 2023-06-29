@@ -11,8 +11,10 @@ $(function(){
     toggleMenu();
     if($('#hamb-btn').hasClass("is-active")){
       $('body').css('overflow', 'hidden');
+      $('#header').addClass('header-mob');
     } else {
       $('body').css('overflow', 'auto');
+      $('#header').removeClass('header-mob');
     };
   });
 
@@ -87,7 +89,7 @@ $(function(){
     verticalHeight: 800,
     keyPress: false,
     auto: true,
-    pause: 2000,
+    pause: 2500,
 
     onSliderLoad: function (el) {
       var showActiveSlides = function (entries) {
@@ -111,6 +113,7 @@ $(function(){
       });
     }
   });  
+
   // #lightslider
 
   // simple lightbox gallery 

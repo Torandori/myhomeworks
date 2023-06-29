@@ -71,7 +71,9 @@ header {
   top: 0;
   width: 100%;
 }
-
+.header-mob {
+  background: linear-gradient(207deg, #7E5AFF 0%, #55B7FF 100%);
+}
 .header-background {
   header {
     background: linear-gradient(207deg, #7E5AFF 0%, #55B7FF 100%);
@@ -108,6 +110,7 @@ main {
   &.open {
     transform: translateX(0);
   }
+
 }
 #shadow {
   position: fixed;
@@ -126,7 +129,6 @@ main {
 .mob-menu {
   ul {
     li {
-      // border-bottom: 1px solid blue;
       a {
         text-transform: uppercase;
         @include fz(22);
@@ -136,6 +138,9 @@ main {
         padding: 20px 20px;
         display: inline-block;
         letter-spacing: 2px;
+        &:active {
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -1180,6 +1185,9 @@ input[type=text], input[type=email], textarea {
   }
   .gallery a:last-child {
     grid-column: 1/4;
+  }
+  #mobile-sidebar {
+    width: 100%;
   }
 }
 @media screen and (max-width: 440px) {
