@@ -1,10 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,26 +18,66 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Refill =
+var el = React.createElement; //in order to avoid using React.createElement everytime, we assign it to variable
+// COMPONENT
+
+var App =
 /*#__PURE__*/
-function (_Marker) {
-  _inherits(Refill, _Marker);
+function (_React$Component) {
+  _inherits(App, _React$Component);
 
-  function Refill() {
-    _classCallCheck(this, Refill);
+  function App(props) {
+    var _this;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Refill).apply(this, arguments));
+    _classCallCheck(this, App);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props)); // call contsr of parent (super) class
+
+    _this.state = {
+      counter: 0
+    };
+    return _this;
   }
 
-  _createClass(Refill, [{
-    key: "refill",
-    value: function refill() {
-      this.inkLevel = 100;
-      console.log('Marker has been refilled.');
+  _createClass(App, [{
+    key: "clickHandler",
+    value: function clickHandler() {
+      //create own method in order to trasfer into attributes obj to render method (for big func and met), add Handler ending. 
+      // alert('Hello React!');
+      // this.state.counter++;
+      console.log(this);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      //to see result of component call, necessary to return result
+      // return el(
+      //   'button', 
+      //   {
+      //     // onClick: () => {alert('Hello React!')}, 
+      //     onClick: this.clickHandler, //this is iportant, witout ()
+      //     className: 'btn btn-info'
+      //   }, 
+      //   'Click me'
+      // )
+      return el('div', null, [el('button', {
+        // onClick: () => {alert('Hello React!')}, 
+        onClick: this.clickHandler,
+        //this is iportant, witout ()
+        className: 'btn btn-info',
+        key: 'btn'
+      }, 'Click me'), el('span', {
+        key: 'span'
+      }, this.state.counter) // to output value of counter
+      ]);
     }
   }]);
 
-  return Refill;
-}(Marker);
+  return App;
+}(React.Component); // #COMPONENT
 
-exports["default"] = Refill;
+
+var app = document.getElementById('app');
+var root = ReactDOM.createRoot(app); // to create react DOM, root el, in which will render the app
+
+root.render(el(App)); //call render method and transfer there class App
