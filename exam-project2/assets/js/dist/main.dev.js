@@ -1,5 +1,7 @@
 "use strict";
 
+var _toast = require("./toast.js");
+
 $(function () {
   var lazyLoadInstance = new LazyLoad({}); // HAMB 
 
@@ -274,7 +276,11 @@ $(function () {
             resp = _context.sent;
             console.log(resp);
 
-          case 10:
+            _toast.toast.success('Your contacts succesfully sent');
+
+            window.fullName.value = '', window.email.value = '';
+
+          case 12:
           case "end":
             return _context.stop();
         }

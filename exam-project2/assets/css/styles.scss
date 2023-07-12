@@ -66,7 +66,7 @@ $secondaryColor: #2ecc71;
     position: absolute;
   }
 }
-.similar-sec-wrap{
+#second-sec, #third-sec{
   .container {
     text-align: center;
     .wrap-picture-text {
@@ -95,26 +95,24 @@ $secondaryColor: #2ecc71;
     }
   }
 }
-.picture {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.wrap-pic {
   aspect-ratio: 63/47;
   max-width: 630px;
   flex: 1 0 100%;
   position: relative;
   margin-top: 56px;
-  &::before {
-    content: '';
-    position: absolute;
-    left:0;
-    top: 0;
-    width: 585px;
-    height: 470px;
-    background-color: #55B7FF;
-    transform: translateX(-37%) translateY(-12%);
-    z-index: -1;
-  }
+  box-shadow: -150px -56px $color-blue;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left:0;
+  //   top: 0;
+  //   width: 585px;
+  //   height: 470px;
+  //   background-color: #55B7FF;
+  //   transform: translateX(-37%) translateY(-12%);
+  //   z-index: -1;
+  // }
 }
 
 // BTN 
@@ -203,11 +201,8 @@ a.button:active {
     .wrap-picture-text {
       flex-direction: row-reverse;
       gap: 0;
-      .picture {
-        &::before {
-          background-color: $color-deep-blue;
-          transform: translateX(45%) translateY(-12%);
-        }
+      .wrap-pic {
+        box-shadow: 150px -56px $color-blue;
       }
       .text-content p{
         width: 90%;
@@ -434,7 +429,6 @@ a.button:active {
     left: 0;
     top: 0;
     background-color: rgba(#2C4058, .4);
-    z-index: 1001;
     transition: all .2s ease;
     width: 100%;
     height: 100%;
@@ -451,7 +445,7 @@ a.button:active {
     @include fz(30);
     text-transform: uppercase;  
     letter-spacing: 1px;
-    opacity: 0;
+    opacity: 0.7;
   }
   &:hover{
     &::after {
@@ -477,7 +471,7 @@ a.button:active {
   top: -80px;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 402;
+  z-index: 403;
   text-align: center;
   padding: 105px 60px 68px;
   .h2 {
@@ -639,27 +633,29 @@ input[type=text], input[type=email], textarea {
   .main-menu ul {
     gap: 38px;
   }
-  .similar-sec-wrap .container .wrap-picture-text {
-    gap: 28px;
-  }
-  .picture {
+  #second-sec, #third-sec {
+    .container .wrap-picture-text {
+      gap: 28px;
+    }
+  } 
+  .wrap-pic {
     max-width: 540px;
   }
   #third-sec .container .wrap-picture-text {
     gap: 28px;
   }
-  #third-sec .container .wrap-picture-text .picture::before {
+  #third-sec .container .wrap-picture-text .wrap-pic::before {
     transform: translateX(24%) translateY(-12%);
   }
 }
 @media screen and (max-width: 1260px) {
-  .picture {
+  .wrap-pic {
     max-width: 440px;
   }
   .container { 
     width: min(90%, 1170px);
   }
-  #third-sec .container .wrap-picture-text .picture::before {
+  #third-sec .container .wrap-picture-text .wrap-pic::before {
     transform: translateX(18%) translateY(-12%);
   }
   .second-next.slick-arrow, .second-prev.slick-arrow {
@@ -672,15 +668,19 @@ input[type=text], input[type=email], textarea {
   }
 }
 @media screen and (max-width: 880px) {
-  .picture {
+  .wrap-pic {
     max-width: 100%;
   }
-  #third-sec .container .wrap-picture-text .picture::before {
+  #third-sec .container .wrap-picture-text .wrap-pic::before {
     transform: translateX(0) translateY(-12%);
   }
-  .picture::before {
+  .wrap-pic {
+    box-shadow: none;
     transform: translateX(0) translateY(-12%);
     width: 100%;
+  }
+  #third-sec .container .wrap-picture-text .wrap-pic {
+    box-shadow: none;
   }
   #footer .container2 {
     width: 100%;
@@ -691,9 +691,11 @@ input[type=text], input[type=email], textarea {
   .wrap-picture-text {
     flex-wrap: wrap;
   }
-  .similar-sec-wrap .container .wrap-picture-text .text-content {
-    padding-top: 0;
-    text-align: center;
+  #second-sec, #third-sec {
+    .container .wrap-picture-text .text-content {
+      padding-top: 0;
+      text-align: center;
+    }
   }
   #first-sec {
     margin-bottom: 100px;
@@ -716,14 +718,19 @@ input[type=text], input[type=email], textarea {
   .h2 {
     font-size: 2.2rem;
   }
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
-    font-size: 1.9rem;
+  #second-sec, #third-sec {
+    .container .wrap-picture-text .text-content .h3 {
+      font-size: 1.9rem;
+    }
   }
   .card .card-wrap-under-img .h3 {
     font-size: 1.2rem;
   }
   #third-sec .container .wrap-picture-text .text-content p {
     width: 100%;
+  }
+  #map {
+    margin-bottom: 305px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -772,11 +779,16 @@ input[type=text], input[type=email], textarea {
   .h2 {
     font-size: 1.6rem;
   }
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
-    font-size: 1.2rem;
+  #second-sec, #third-sec {
+    .container .wrap-picture-text .text-content .h3 {
+      font-size: 1.2rem;
+    }
   }
   .card .card-wrap-under-img .h3 {
     font-size: 1rem;
+  }
+  .h2 {
+    margin-bottom: 50px;
   }
 }
 
@@ -790,9 +802,6 @@ input[type=text], input[type=email], textarea {
     h2 {
       margin-bottom: 40px;
     }
-  }
-  .picture::before {
-    display: none;
   }
   #second-sec {
     margin-bottom: 0;
@@ -825,14 +834,19 @@ input[type=text], input[type=email], textarea {
   .h2 {
     font-size: 1.2rem;
   }
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
-    font-size: 1rem;
+  #second-sec, #third-sec {
+    .container .wrap-picture-text .text-content .h3 {
+      font-size: 1rem;
+    }
   }
   .card .card-wrap-under-img .h3 {
     font-size: 1rem;
   }
   #third-sec {
     margin-bottom: 50px;
+  }
+  .h2 {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -853,6 +867,9 @@ input[type=text], input[type=email], textarea {
   }
   .mob-menu ul li a {
     font-size: 1.2rem;
+  }
+  .h2 {
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 440px) {

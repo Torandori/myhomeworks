@@ -339,6 +339,24 @@ a:focus-visible .pic-logo img {
 
 #first-sec {
   margin-bottom: 142px;
+  position: relative;
+}
+#first-sec .btn-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  z-index: 403;
+}
+#first-sec .btn-scroll:hover svg #circle {
+  opacity: 1;
+}
+
+#first-sec-slider {
+  position: relative;
 }
 
 #first-sec-slider div {
@@ -425,17 +443,4 @@ a:focus-visible .pic-logo img {
   border: 1px solid #fff;
   color: transparent;
   background-color: transparent;
-}
-
-.btn-scroll {
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-  width: 40px;
-  height: 40px;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-}
-.btn-scroll:hover svg #circle {
-  opacity: 1;
 }

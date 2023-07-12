@@ -1,3 +1,4 @@
+import {toast} from './toast.js';
 $(function(){
   const lazyLoadInstance = new LazyLoad({});
 
@@ -298,6 +299,10 @@ $(function(){
 
     const resp = await response.json();
     console.log(resp);
+    toast.success('Your contacts succesfully sent');
+    window.fullName.value = '',
+    window.email.value = ''
+
   }
 
   var docWidth = document.documentElement.offsetWidth;

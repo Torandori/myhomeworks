@@ -136,54 +136,41 @@
   position: absolute;
 }
 
-.similar-sec-wrap .container {
+#second-sec .container, #third-sec .container {
   text-align: center;
 }
-.similar-sec-wrap .container .wrap-picture-text {
+#second-sec .container .wrap-picture-text, #third-sec .container .wrap-picture-text {
   display: flex;
   justify-content: space-between;
   gap: 70px;
 }
-.similar-sec-wrap .container .wrap-picture-text .text-content {
+#second-sec .container .wrap-picture-text .text-content, #third-sec .container .wrap-picture-text .text-content {
   text-align: left;
   padding-top: 150px;
 }
-.similar-sec-wrap .container .wrap-picture-text .text-content .descr {
+#second-sec .container .wrap-picture-text .text-content .descr, #third-sec .container .wrap-picture-text .text-content .descr {
   font-size: 1.375rem;
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
-.similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+#second-sec .container .wrap-picture-text .text-content .h3, #third-sec .container .wrap-picture-text .text-content .h3 {
   font-size: 2.75rem;
   line-height: 3.125rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.similar-sec-wrap .container .wrap-picture-text .text-content p {
+#second-sec .container .wrap-picture-text .text-content p, #third-sec .container .wrap-picture-text .text-content p {
   margin-bottom: 30px;
 }
 
-.picture {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.wrap-pic {
   aspect-ratio: 63/47;
   max-width: 630px;
   flex: 1 0 100%;
   position: relative;
   margin-top: 56px;
-}
-.picture::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 585px;
-  height: 470px;
-  background-color: #55B7FF;
-  transform: translateX(-37%) translateY(-12%);
-  z-index: -1;
+  box-shadow: -150px -56px #55B7FF;
 }
 
 .button {
@@ -271,9 +258,8 @@ a.button:active {
   flex-direction: row-reverse;
   gap: 0;
 }
-#third-sec .container .wrap-picture-text .picture::before {
-  background-color: #7E5AFF;
-  transform: translateX(45%) translateY(-12%);
+#third-sec .container .wrap-picture-text .wrap-pic {
+  box-shadow: 150px -56px #55B7FF;
 }
 #third-sec .container .wrap-picture-text .text-content p {
   width: 90%;
@@ -514,7 +500,6 @@ a.button:active {
   left: 0;
   top: 0;
   background-color: rgba(44, 64, 88, 0.4);
-  z-index: 1001;
   transition: all 0.2s ease;
   width: 100%;
   height: 100%;
@@ -531,7 +516,7 @@ a.button:active {
   font-size: 1.875rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  opacity: 0;
+  opacity: 0.7;
 }
 #map_link:hover::after {
   opacity: 0.8;
@@ -551,7 +536,7 @@ a.button:active {
   top: -80px;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 402;
+  z-index: 403;
   text-align: center;
   padding: 105px 60px 68px;
 }
@@ -715,11 +700,11 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     gap: 38px;
   }
 
-  .similar-sec-wrap .container .wrap-picture-text {
+  #second-sec .container .wrap-picture-text, #third-sec .container .wrap-picture-text {
     gap: 28px;
   }
 
-  .picture {
+  .wrap-pic {
     max-width: 540px;
   }
 
@@ -727,12 +712,12 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     gap: 28px;
   }
 
-  #third-sec .container .wrap-picture-text .picture::before {
+  #third-sec .container .wrap-picture-text .wrap-pic::before {
     transform: translateX(24%) translateY(-12%);
   }
 }
 @media screen and (max-width: 1260px) {
-  .picture {
+  .wrap-pic {
     max-width: 440px;
   }
 
@@ -740,7 +725,7 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     width: min(90%, 1170px);
   }
 
-  #third-sec .container .wrap-picture-text .picture::before {
+  #third-sec .container .wrap-picture-text .wrap-pic::before {
     transform: translateX(18%) translateY(-12%);
   }
 
@@ -754,17 +739,22 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
   }
 }
 @media screen and (max-width: 880px) {
-  .picture {
+  .wrap-pic {
     max-width: 100%;
   }
 
-  #third-sec .container .wrap-picture-text .picture::before {
+  #third-sec .container .wrap-picture-text .wrap-pic::before {
     transform: translateX(0) translateY(-12%);
   }
 
-  .picture::before {
+  .wrap-pic {
+    box-shadow: none;
     transform: translateX(0) translateY(-12%);
     width: 100%;
+  }
+
+  #third-sec .container .wrap-picture-text .wrap-pic {
+    box-shadow: none;
   }
 
   #footer .container2 {
@@ -779,7 +769,7 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     flex-wrap: wrap;
   }
 
-  .similar-sec-wrap .container .wrap-picture-text .text-content {
+  #second-sec .container .wrap-picture-text .text-content, #third-sec .container .wrap-picture-text .text-content {
     padding-top: 0;
     text-align: center;
   }
@@ -812,7 +802,7 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     font-size: 2.2rem;
   }
 
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+  #second-sec .container .wrap-picture-text .text-content .h3, #third-sec .container .wrap-picture-text .text-content .h3 {
     font-size: 1.9rem;
   }
 
@@ -822,6 +812,10 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   #third-sec .container .wrap-picture-text .text-content p {
     width: 100%;
+  }
+
+  #map {
+    margin-bottom: 305px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -880,12 +874,16 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     font-size: 1.6rem;
   }
 
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+  #second-sec .container .wrap-picture-text .text-content .h3, #third-sec .container .wrap-picture-text .text-content .h3 {
     font-size: 1.2rem;
   }
 
   .card .card-wrap-under-img .h3 {
     font-size: 1rem;
+  }
+
+  .h2 {
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 580px) {
@@ -895,10 +893,6 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   #forth-sec h2, #fifth-sec h2 {
     margin-bottom: 40px;
-  }
-
-  .picture::before {
-    display: none;
   }
 
   #second-sec {
@@ -939,7 +933,7 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
     font-size: 1.2rem;
   }
 
-  .similar-sec-wrap .container .wrap-picture-text .text-content .h3 {
+  #second-sec .container .wrap-picture-text .text-content .h3, #third-sec .container .wrap-picture-text .text-content .h3 {
     font-size: 1rem;
   }
 
@@ -949,6 +943,10 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   #third-sec {
     margin-bottom: 50px;
+  }
+
+  .h2 {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -974,6 +972,10 @@ input[type=text]:focus + label, input[type=text]:not(:placeholder-shown) + label
 
   .mob-menu ul li a {
     font-size: 1.2rem;
+  }
+
+  .h2 {
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 440px) {
